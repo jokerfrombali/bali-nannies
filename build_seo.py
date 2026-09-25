@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Генератор SEO-книги: агентство нянь в Сануре (Бали), Google, EN + RU."""
+"""Генератор SEO-книги: агентство нянь на Бали (районы), Google, EN + RU."""
+import sys, pathlib; sys.path.insert(0, str(pathlib.Path(__file__).parent))
+from areas import AREAS
 import itertools, re
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment
@@ -214,8 +216,16 @@ COMM = [
  ("C16","/book/","Book a Nanny","",[]),
  ("C17","/careers/","Become a Nanny","nanny job sanur",["lowongan baby sitter sanur"]),
  ("C18","/about/","About Us","",[]),
- ("C23","/guides/","Family Guide to Sanur","sanur family guide",[]),
+ ("C23","/guides/","Family Guides","bali family guide",[]),
+ ("C24","/areas/","Nanny Service Areas in Bali","nanny bali areas",[]),
+
 ]
+
+# ---- страницы районов (G01…)
+AREA_PAGES = {}
+for _i,_a in enumerate(AREAS,1):
+    _pid=f"G{_i:02d}"; AREA_PAGES[_a["slug"]]=_pid
+    COMM.append((_pid,f"/areas/{_a['slug']}/",f"Nanny & Babysitter in {_a['en']}, Bali",f"nanny {_a['en'].split(' &')[0].lower()}",[]))
 
 # ---------------------------------------------------------------- СЕМАНТИКА
 queries = []  # dict(q, lang, intent, page, cluster, source, status, reason)
@@ -228,24 +238,23 @@ def addq(q, lang, intent, page, src, status="принято по смыслу", 
 
 # 1) коммерческие: матрица услуга × гео × модификатор
 services_en = ["nanny","babysitter","babysitting","baby sitter","childcare","nanny service","babysitting service","nanny agency","child minder","kids sitter"]
-geo = ["sanur","sanur bali","bali","denpasar","sanur beach"]
+geo = ["bali","sanur","canggu","seminyak","kuta","legian","ubud","uluwatu","jimbaran","nusa dua","denpasar","berawa","pererenan"]
+GEO_PAGE = {"sanur":"G01","canggu":"G02","berawa":"G02","pererenan":"G02","seminyak":"G03","kuta":"G04","legian":"G04","ubud":"G05","uluwatu":"G06","jimbaran":"G07","nusa dua":"G08","denpasar":"G09"}
 mods = ["","best","trusted","english speaking","hourly","private","cheap","24 hour","near me","for tourists","for toddlers","for baby","price","cost","rates","book","agency","reviews","recommendations","tonight","weekend","hotel","villa","experienced","certified"]
 svc_page = {"nanny":"C01","babysitter":"C02","babysitting":"C01","baby sitter":"C02","childcare":"C01","nanny service":"C01","babysitting service":"C01","nanny agency":"C01","child minder":"C02","kids sitter":"C02"}
 mod_page = {"price":"C10","cost":"C10","rates":"C10","cheap":"C10","book":"C11","reviews":"C14","recommendations":"C14","hotel":"C09","villa":"C09","hourly":"C02","tonight":"C02","for baby":"C05"}
 for s,g,m in itertools.product(services_en, geo, mods):
-    if m=="near me" and g not in ("sanur","bali"): continue
+    if m=="near me" and g not in ("sanur","bali","canggu","ubud","seminyak"): continue
     q = (f"{m} {s} {g}" if m in ("best","trusted","english speaking","hourly","private","cheap","24 hour","experienced","certified") else f"{s} {g} {m}").strip()
     if m=="near me": q=f"{s} near me {g}"
-    page = mod_page.get(m, svc_page[s])
+    page = mod_page.get(m) or (GEO_PAGE.get(g) if s in ("nanny","babysitter","babysitting","nanny service","babysitting service","baby sitter") else None) or svc_page[s]
     st = "принято по смыслу"
     rs = "Коммерческий маркер: услуга + гео + модификатор"
-    if g=="denpasar":
-        st="требует проверки"; rs="Денпасар — обслуживается ли реально? Решить с бизнесом; геостраницу не создавать без реального обслуживания"
     if m in ("cheap",):
         st="требует проверки"; rs="Ценовой модификатор; проверить соответствие позиционированию"
     addq(q,"en","Коммерческий",page,"S01",st,rs)
 for sv,pg in [("night nanny","C04"),("overnight nanny","C04"),("newborn nanny","C05"),("baby nurse","C05"),("live in nanny","C06"),("full time nanny","C06"),("long term nanny","C06"),("travel nanny","C07"),("holiday nanny","C07"),("wedding babysitter","C08"),("event babysitting","C08"),("kids club for wedding","C08"),("day nanny","C03"),("full day nanny","C03"),("nanny for twins","C01"),("nanny job","C17"),("babysitter job","C17")]:
-    for g in ["sanur","bali","sanur bali"]:
+    for g in ["bali","sanur","canggu","seminyak","ubud","uluwatu","nusa dua","jimbaran"]:
         for m in ["","price","agency","english speaking","book"]:
             q = f"{m} {sv} {g}".strip() if m=="english speaking" else f"{sv} {g} {m}".strip()
             addq(q,"en","Коммерческий",pg if m!="price" else "C10","S01")
@@ -257,6 +266,9 @@ for q in ["lowongan baby sitter bali","lowongan baby sitter sanur","lowongan nan
 # 3) русские
 RU = [("няня санур","C01"),("няня бали","C01"),("няня на бали","C01"),("няня на бали для ребенка","C01"),("бебиситтер бали","C01"),("бебиситтер санур","C01"),("найти няню на бали","C01"),("агентство нянь бали","C01"),("няня бали отзывы","C01"),("русскоязычная няня бали","C01"),("няня на час бали","C01"),("няня в отель бали","C01"),("няня на виллу бали","C01"),("няня для младенца бали","C04"),("ночная няня бали","C04"),("няня бали цена","C10"),("сколько стоит няня на бали","C10"),("зарплата няни на бали","C10"),("няня с проживанием бали","C06"),("няня на бали на постоянку","C06"),("няня на длительный срок бали","C06"),
       ("санур с детьми","A026"),("бали с детьми","A026"),("куда сходить с детьми санур","A026"),("чем заняться в сануре с детьми","A026"),("пляж санур с детьми","A027"),("санур или нуса дуа с детьми","A060"),("санур или чангу с детьми","A061"),("где жить на бали с детьми","A063"),("отели санур для детей","A056"),("виллы санур с детьми","A057"),("бали с грудничком","A032"),("бали с ребенком до года","A032"),("бали с годовалым ребенком","A031"),("перелет на бали с ребенком","A103"),("виза на бали для ребенка","A104"),("прививки на бали детям","A076"),("педиатр санур","A071"),("детский врач бали","A071"),("больница санур","A072"),("бали белли у ребенка","A073"),("денге бали дети","A075"),("вода на бали ребенку","A082"),("детские рестораны санур","A091"),("детская смесь бали","A093"),("аренда детской коляски бали","A107"),("автокресло бали","A106"),("когда лучше ехать на бали с детьми","A110"),("школы санур","A136"),("детский сад санур","A137"),("международная школа бали","A136"),("переезд на бали с детьми","A140"),("стоимость жизни на бали с семьей","A141"),("нуса пенида с детьми","A123"),("убуд с детьми","A124"),("аквапарк бали с детьми","A041"),("бали зоопарк","A038"),("бали сафари парк","A039"),("ньепи с детьми","A117")]
+RU += [(f"няня {r}", AREA_PAGES[sl]) for r,sl in [("санур","sanur"),("чангу","canggu"),("семиньяк","seminyak"),("кута","kuta-legian"),("убуд","ubud"),("улувату","uluwatu"),("джимбаран","jimbaran"),("нуса дуа","nusa-dua"),("денпасар","denpasar")]]
+RU += [(f"бебиситтер {r}", AREA_PAGES[sl]) for r,sl in [("чангу","canggu"),("убуд","ubud"),("семиньяк","seminyak"),("нуса дуа","nusa-dua")]]
+RU = [(q, AREA_PAGES["sanur"] if (p=="C01" and "санур" in q) else p) for q,p in RU]
 for q,p in RU: addq(q,"ru","Коммерческий" if p.startswith("C") else "Информационный",p,"S02")
 
 # 4) информационные: из плана статей + производные
@@ -286,8 +298,6 @@ for q in queries:
         q.update(status="исключено", reason="Сайт EN + RU; индонезийский вне ядра", page="—")
     elif q["lang"]=="ru":
         q.update(status="принято по смыслу", reason="RU-версия той же страницы (/ru/…), hreflang en↔ru")
-    elif " denpasar" in q["norm"] and q["intent"]=="Коммерческий":
-        q.update(status="исключено", reason="Зона обслуживания — Санур; Денпасар без реального офиса/геостраницы не продвигаем")
     elif q["norm"].endswith(" 2026"):
         q.update(status="исключено", reason="Годовой хвост: покрывается основной фразой страницы, отдельной задачи нет")
     elif q["status"]=="требует проверки" and "cheap" in q["norm"]:
@@ -341,10 +351,10 @@ sheet("01 Резюме",["Показатель","Значение","Знамен
  ("Главное решение","Сайт на EN (Google), хаб-модель «Sanur with Kids» как источник трафика → коммерческие страницы услуг","—","Позиции не гарантируются",""),
 ])
 sheet("02 Паспорт",["Параметр","Значение","Статус","Допущение"],[
- ("Ниша","Агентство нянь и бебиситтеров для семей-туристов и экспатов","дано",""),
+ ("Ниша","Агентство нянь и бебиситтеров для семей-туристов и экспатов, весь Бали","дано",""),
  ("Сайт","Новый, домен не выбран","допущение","[domain] в URL"),
  ("Язык","EN (корень) + RU (/ru/), решение заказчика 25.09.2026","дано","Google + международные семьи"),
- ("Регион","Санур (Бали, Индонезия); сопредельно — выезды по Бали","допущение","Реальная зона обслуживания уточнить"),
+ ("Регион","Бали (решение 25.09.2026): Санур, Чангу, Семиньяк, Кута/Легиан, Убуд, Улувату, Джимбаран, Нуса Дуа, Денпасар","дано","Геостраницы только для районов с реальным выездом нянь; сверить"),
  ("Поисковая система","Google (все измерения — Keyword Planner, GSC, Google Trends)","дано",""),
  ("Аудитория","B2C: семьи на отдыхе (AU, UK, EU, RU, SG), экспаты с детьми, организаторы свадеб/событий; соискатели","допущение",""),
  ("Целевые действия","Заявка на бронь, WhatsApp-клик, звонок; вакансии — отклик","допущение",""),
@@ -463,5 +473,5 @@ sheet("33 Методика",["Пункт","Описание"],[
  ("Кластеризация","ручная по задаче; после SERP-сбора — пересечение ≥3 URL в топ-10 (порог — настройка)"),
  ("Язык","EN в корне, RU в /ru/ с теми же slug; hreflang en/ru/x-default")])
 
-out = r"D:\Няня\SEO-nanny-agency-Sanur-Google-2026-09-25.xlsx"
+out = r"D:\Няня\SEO-nanny-agency-Bali-Google-2026-09-25.xlsx"
 wb.save(out); print(out, len(queries), len(acc), len(chk), len(A))

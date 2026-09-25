@@ -4,12 +4,14 @@ import html, urllib.parse, pathlib, shutil
 
 HERE = pathlib.Path(__file__).parent
 ns = {}
+import sys; sys.path.insert(0, str(HERE))
+from areas import AREAS
 exec((HERE/"build_seo.py").read_text(encoding="utf-8").split("# ---------------------------------------------------------------- СЕМАНТИКА")[0], ns)
 A, HUBS = ns["A"], ns["HUBS"]
 for i, a in enumerate(A, 1): a["id"] = f"A{i:03d}"
 
 # ---- настройки бизнеса (заполнить)
-BRAND = "Sanur Nannies"
+BRAND = "Bali Nannies"
 WA = "62XXXXXXXXXX"            # номер WhatsApp: 62…, без +
 EMAIL = "hello@example.com"
 DOMAIN = "https://[domain]"     # после покупки домена
@@ -26,67 +28,83 @@ LIVE_ARTICLE = "A026"   # статья-образец
 T = {
 "en": dict(
   prefix="", html_lang="en", other="ru", other_label="RU", locale="en",
-  wa_default="Hi! I'd like to book a nanny in Sanur.",
+  wa_default="Hi! I'd like to book a nanny in Bali.",
   wa_service="Hi! I'm interested in: {s}. Dates: ",
-  nav=["Services","Prices","How it works","Safety","Sanur guides"], home="Home",
-  svc=[("Hourly babysitter","Dinner out, spa, a surf lesson — from 3 hours."),("Full-day nanny","Beach, pool, naps and meals while you get a real holiday."),("Night nanny","Settling, feeds and night wakings so you can sleep."),("Newborn & baby care","Nannies experienced with babies under 12 months."),("Travel nanny","Joins your family on day trips and island hops."),("Hotel & villa babysitting","We come to your hotel or villa anywhere in Sanur."),("Weddings & events","Kids' corner and sitters for celebrations."),("Long-term nanny","For expat families living in Sanur.")],
+  nav=["Services","Areas","Prices","Safety","Guides"], safety_nav="Safety", home="Home",
+  svc=[("Hourly babysitter","Dinner out, spa, a surf lesson — from 3 hours."),("Full-day nanny","Beach, pool, naps and meals while you get a real holiday."),("Night nanny","Settling, feeds and night wakings so you can sleep."),("Newborn & baby care","Nannies experienced with babies under 12 months."),("Travel nanny","Joins your family on day trips and island hops."),("Hotel & villa babysitting","We come to your hotel or villa across Bali."),("Weddings & events","Kids' corner and sitters for celebrations."),("Long-term nanny","For expat families living in Bali.")],
   wa_btn="Chat on WhatsApp", wa_short="WhatsApp", book="Book on WhatsApp", see_prices="See prices", prices="Prices",
-  title_home="Nanny & Babysitter in Sanur, Bali", desc_home="English-speaking, first-aid trained nannies and babysitters in Sanur. Hotel & villa visits, night nannies, day trips. Book in minutes on WhatsApp.",
-  eyebrow="Sanur · Bali", h1="Trusted nannies for your family holiday in Sanur",
+  title_home="Nanny & Babysitter in Bali — Sanur, Canggu, Ubud & more", desc_home="English-speaking, first-aid trained nannies and babysitters across Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. Hotel & villa visits, night nannies, day trips. Book in minutes on WhatsApp.",
+  eyebrow="Bali · Indonesia", h1="Trusted nannies for your family holiday in Bali",
   lead="English-speaking, first-aid trained babysitters who come to your hotel or villa — so you can enjoy dinner, the spa or a quiet sunrise.",
   trust=["Background-checked","First aid & CPR","Reply within 15 min"], chip="🟢 Nanny available tonight", photo="Nanny playing with a child in a swimming pool",
   svc_h="Care that fits your trip", svc_p="From a single evening to a full season in Bali.",
   steps_h="Booked in three messages", steps=[("Message us on WhatsApp","Tell us dates, hours, kids' ages and where you're staying."),("Meet your nanny","We send a profile and a short intro. Want a video call first? Just ask."),("Enjoy your time","She arrives at your hotel or villa. Photo updates on WhatsApp, pay after the session.")],
   safe_h="Safety isn't a feature. It's the job.", safe_p="Every nanny is interviewed in person, reference-checked and trained before her first family.", safe_btn="Our safety standards",
   safe_list=["ID and reference checks","Paediatric first aid & CPR","Pool and beach supervision rules","Trial meeting before the first booking"],
-  faq_h="Questions parents ask", faq=[("How quickly can I book?","Often the same day. For evenings and peak season (July–August, Christmas) message us 2–3 days ahead."),("Do your nannies speak English?","Yes — every nanny communicates comfortably in English. We tell you each nanny's level honestly."),("Are nannies first-aid trained?","Every nanny holds a current paediatric first aid & CPR certificate. We can show it before your booking."),("Where do you work?","Anywhere in Sanur — hotels, villas and homes. Day trips across Bali with our travel nanny service."),("How do I pay?","Cash (IDR) or bank transfer after the session. No deposit for single bookings."),("Can a nanny look after my newborn?","Yes. We match babies with nannies who have specific newborn experience.")],
+  faq_h="Questions parents ask", faq=[("How quickly can I book?","Often the same day. For evenings and peak season (July–August, Christmas) message us 2–3 days ahead."),("Do your nannies speak English?","Yes — every nanny communicates comfortably in English. We tell you each nanny's level honestly."),("Are nannies first-aid trained?","Every nanny holds a current paediatric first aid & CPR certificate. We can show it before your booking."),("Where do you work?","Across South Bali and Ubud — Sanur, Canggu, Seminyak, Kuta, Jimbaran, Uluwatu, Nusa Dua, Denpasar and Ubud. Hotels, villas and homes."),("How do I pay?","Cash (IDR) or bank transfer after the session. No deposit for single bookings."),("Can a nanny look after my newborn?","Yes. We match babies with nannies who have specific newborn experience.")],
   guides_h="Sanur with kids", guides_p="Local guides from people who spend every day on these beaches.", n_guides="guides",
-  final_h="Need a nanny in Sanur?", final_p="Tell us your dates — we'll reply with an available nanny.", final_btn="Message us on WhatsApp",
-  services_t="Nanny Services in Sanur", services_h="Our services", services_d="Hourly babysitters, full-day and night nannies, newborn care and travel nannies in Sanur, Bali.",
-  svc_title="{s} in Sanur, Bali", svc_h1="{s} in Sanur", check="Check availability", how="How it works", faq_short="FAQ",
-  prices_t="Nanny & Babysitter Prices in Sanur", prices_h="Simple, transparent prices", prices_p="No deposit for single bookings. Pay after the session.", th=["Service","Rate","Minimum"], price_note="Rates for up to 2 children. Transport within Sanur included.", quote="Get a quote",
-  hiw_t="How Booking Works", hiw_d="Book a nanny in Sanur in three WhatsApp messages.",
-  safety_t="Our Safety Standards", safety_d="How we select, check and train every nanny in Sanur.",
+  final_h="Need a nanny in Bali?", final_p="Tell us your dates — we'll reply with an available nanny.", final_btn="Message us on WhatsApp",
+  services_t="Nanny Services in Bali", services_h="Our services", services_d="Hourly babysitters, full-day and night nannies, newborn care and travel nannies across Bali.",
+  svc_title="{s} in Bali", svc_h1="{s} in Bali", check="Check availability", how="How it works", faq_short="FAQ",
+  prices_t="Nanny & Babysitter Prices in Bali", prices_h="Simple, transparent prices", prices_p="No deposit for single bookings. Pay after the session.", th=["Service","Rate","Minimum"], price_note="Rates for up to 2 children. Transport within the nanny's area included; longer trips by agreement.", quote="Get a quote",
+  hiw_t="How Booking Works", hiw_d="Book a nanny in Bali in three WhatsApp messages.",
+  safety_t="Our Safety Standards", safety_d="How we select, check and train every nanny in Bali.",
   safety_body=[("Selection","In-person interview, ID check, at least two references from previous families."),("Training","Current paediatric first aid & CPR certificate. Pool and beach supervision rules."),("On every booking","Handover checklist, emergency contacts, WhatsApp updates.")],
-  faq_t="Frequently asked questions", faq_d="Answers about booking a nanny in Sanur.",
-  careers_nav="Become a nanny", careers_t="Nanny Jobs in Sanur", careers_h="Become a nanny", careers_p="We work with experienced, English-speaking nannies in Sanur. First aid training provided.", apply="Apply on WhatsApp", apply_msg="Hi! I would like to apply as a nanny.",
+  faq_t="Frequently asked questions", faq_d="Answers about booking a nanny in Bali.",
+  careers_nav="Become a nanny", careers_t="Nanny Jobs in Bali", careers_h="Become a nanny", careers_p="We work with experienced, English-speaking nannies across Bali. First aid training provided.", apply="Apply on WhatsApp", apply_msg="Hi! I would like to apply as a nanny.",
   guides_t="Sanur Family Guides", guides_hh="Sanur family guides", soon="coming soon",
-  company="Company", services_f="Services", guides_f="Guides", foot_p="Trusted English-speaking nannies and babysitters for families in Sanur, Bali.",
+  company="Company", services_f="Services", guides_f="Guides", foot_p="Trusted English-speaking nannies and babysitters for families across Bali.",
   hubs={h:v[0] for h,v in HUBS.items()},
 ),
 "ru": dict(
   prefix="ru/", html_lang="ru", other="en", other_label="EN", locale="ru",
-  wa_default="Здравствуйте! Хочу забронировать няню в Сануре.",
+  wa_default="Здравствуйте! Хочу забронировать няню на Бали.",
   wa_service="Здравствуйте! Интересует: {s}. Даты: ",
-  nav=["Услуги","Цены","Как это работает","Безопасность","Гайды по Сануру"], home="Главная",
-  svc=[("Няня на час","Ужин, спа, урок сёрфинга — от 3 часов."),("Няня на весь день","Пляж, бассейн, сон и еда, пока у вас настоящий отпуск."),("Ночная няня","Укладывание, кормления и ночные пробуждения — а вы высыпаетесь."),("Няня для малыша","Няни с опытом ухода за детьми до года."),("Няня в поездки","Едет с семьёй на экскурсии и острова."),("Няня в отель или виллу","Приедем в ваш отель или виллу в любой части Санура."),("Свадьбы и мероприятия","Детская зона и няни на праздники."),("Няня на длительный срок","Для семей, которые живут в Сануре.")],
+  nav=["Услуги","Районы","Цены","Безопасность","Гайды"], safety_nav="Безопасность", home="Главная",
+  svc=[("Няня на час","Ужин, спа, урок сёрфинга — от 3 часов."),("Няня на весь день","Пляж, бассейн, сон и еда, пока у вас настоящий отпуск."),("Ночная няня","Укладывание, кормления и ночные пробуждения — а вы высыпаетесь."),("Няня для малыша","Няни с опытом ухода за детьми до года."),("Няня в поездки","Едет с семьёй на экскурсии и острова."),("Няня в отель или виллу","Приедем в ваш отель или виллу по всему Бали."),("Свадьбы и мероприятия","Детская зона и няни на праздники."),("Няня на длительный срок","Для семей, которые живут на Бали.")],
   wa_btn="Написать в WhatsApp", wa_short="WhatsApp", book="Забронировать в WhatsApp", see_prices="Цены", prices="Цены",
-  title_home="Няня в Сануре, Бали — бебиситтеры для семей", desc_home="Проверенные няни с сертификатом первой помощи в Сануре. Приезд в отель и виллу, ночные няни, поездки. Бронь за пару минут в WhatsApp.",
-  eyebrow="Санур · Бали", h1="Надёжные няни для семейного отдыха в Сануре",
+  title_home="Няня на Бали — Санур, Чангу, Убуд и другие районы", desc_home="Проверенные няни с сертификатом первой помощи по всему Бали: Санур, Чангу, Семиньяк, Убуд, Улувату, Нуса Дуа. Приезд в отель и виллу, ночные няни, поездки. Бронь за пару минут в WhatsApp.",
+  eyebrow="Бали · Индонезия", h1="Надёжные няни для семейного отдыха на Бали",
   lead="Опытные няни с сертификатом первой помощи приедут в ваш отель или виллу — а вы спокойно поужинаете, сходите в спа или встретите рассвет вдвоём.",
   trust=["Проверенные няни","Первая помощь и СЛР","Ответ за 15 минут"], chip="🟢 Няня свободна сегодня вечером", photo="Няня играет с ребёнком в бассейне",
   svc_h="Помощь под ваш формат отдыха", svc_p="От одного вечера до целого сезона на Бали.",
   steps_h="Бронь в три сообщения", steps=[("Напишите в WhatsApp","Даты, часы, возраст детей и где вы живёте."),("Познакомьтесь с няней","Пришлём профиль и короткое знакомство. Нужен видеозвонок — устроим."),("Отдыхайте","Няня приезжает в отель или виллу. Фото в WhatsApp, оплата после смены.")],
   safe_h="Безопасность — это не опция. Это наша работа.", safe_p="Каждую няню мы лично собеседуем, проверяем рекомендации и обучаем до первой семьи.", safe_btn="Наши стандарты безопасности",
   safe_list=["Проверка документов и рекомендаций","Детская первая помощь и СЛР","Правила присмотра у бассейна и на пляже","Знакомство до первой брони"],
-  faq_h="Частые вопросы родителей", faq=[("Как быстро можно забронировать?","Часто — в тот же день. На вечер и в высокий сезон (июль–август, Новый год) лучше написать за 2–3 дня."),("Няни говорят по-русски?","Все няни свободно общаются на английском. Русскоязычных нянь подбираем по запросу — честно скажем, есть ли свободная."),("У нянь есть навыки первой помощи?","У каждой няни действующий сертификат детской первой помощи и СЛР. Покажем до брони."),("Где вы работаете?","Весь Санур — отели, виллы, дома. Поездки по Бали — с услугой «няня в поездки»."),("Как оплатить?","Наличными (рупии) или переводом после смены. Без предоплаты для разовых броней."),("Няня посидит с новорождённым?","Да. Для малышей подбираем нянь с опытом ухода за новорождёнными.")],
+  faq_h="Частые вопросы родителей", faq=[("Как быстро можно забронировать?","Часто — в тот же день. На вечер и в высокий сезон (июль–август, Новый год) лучше написать за 2–3 дня."),("Няни говорят по-русски?","Все няни свободно общаются на английском. Русскоязычных нянь подбираем по запросу — честно скажем, есть ли свободная."),("У нянь есть навыки первой помощи?","У каждой няни действующий сертификат детской первой помощи и СЛР. Покажем до брони."),("Где вы работаете?","Юг Бали и Убуд — Санур, Чангу, Семиньяк, Кута, Джимбаран, Улувату, Нуса Дуа, Денпасар и Убуд. Отели, виллы и дома."),("Как оплатить?","Наличными (рупии) или переводом после смены. Без предоплаты для разовых броней."),("Няня посидит с новорождённым?","Да. Для малышей подбираем нянь с опытом ухода за новорождёнными.")],
   guides_h="Санур с детьми", guides_p="Гайды от людей, которые каждый день на этих пляжах.", n_guides="статей",
-  final_h="Нужна няня в Сануре?", final_p="Напишите даты — ответим, кто из нянь свободен.", final_btn="Написать в WhatsApp",
-  services_t="Услуги нянь в Сануре", services_h="Наши услуги", services_d="Няня на час, на день, ночная няня, уход за малышами и няня в поездки — Санур, Бали.",
-  svc_title="{s} в Сануре, Бали", svc_h1="{s} в Сануре", check="Узнать, кто свободен", how="Как это работает", faq_short="Вопросы",
-  prices_t="Цены на няню в Сануре", prices_h="Простые и понятные цены", prices_p="Без предоплаты за разовые брони. Оплата после смены.", th=["Услуга","Цена","Минимум"], price_note="Цена за 1–2 детей. Дорога по Сануру включена.", quote="Узнать цену",
-  hiw_t="Как забронировать няню", hiw_d="Бронь няни в Сануре — три сообщения в WhatsApp.",
-  safety_t="Стандарты безопасности", safety_d="Как мы отбираем, проверяем и обучаем нянь в Сануре.",
+  final_h="Нужна няня на Бали?", final_p="Напишите даты — ответим, кто из нянь свободен.", final_btn="Написать в WhatsApp",
+  services_t="Услуги нянь на Бали", services_h="Наши услуги", services_d="Няня на час, на день, ночная няня, уход за малышами и няня в поездки по всему Бали.",
+  svc_title="{s} на Бали", svc_h1="{s} на Бали", check="Узнать, кто свободен", how="Как это работает", faq_short="Вопросы",
+  prices_t="Цены на няню на Бали", prices_h="Простые и понятные цены", prices_p="Без предоплаты за разовые брони. Оплата после смены.", th=["Услуга","Цена","Минимум"], price_note="Цена за 1–2 детей. Дорога в пределах района няни включена, дальние выезды — по договорённости.", quote="Узнать цену",
+  hiw_t="Как забронировать няню", hiw_d="Бронь няни на Бали — три сообщения в WhatsApp.",
+  safety_t="Стандарты безопасности", safety_d="Как мы отбираем, проверяем и обучаем нянь на Бали.",
   safety_body=[("Отбор","Личное собеседование, проверка документов, минимум две рекомендации от семей."),("Обучение","Действующий сертификат детской первой помощи и СЛР. Правила присмотра у воды."),("На каждой смене","Чек-лист передачи ребёнка, экстренные контакты, отчёты в WhatsApp.")],
-  faq_t="Частые вопросы", faq_d="Ответы о бронировании няни в Сануре.",
-  careers_nav="Работа няней", careers_t="Работа няней в Сануре", careers_h="Работа няней", careers_p="Ищем опытных нянь со знанием английского или русского. Обучение первой помощи — за наш счёт.", apply="Откликнуться в WhatsApp", apply_msg="Здравствуйте! Хочу работать няней.",
+  faq_t="Частые вопросы", faq_d="Ответы о бронировании няни на Бали.",
+  careers_nav="Работа няней", careers_t="Работа няней на Бали", careers_h="Работа няней", careers_p="Ищем опытных нянь со знанием английского или русского. Обучение первой помощи — за наш счёт.", apply="Откликнуться в WhatsApp", apply_msg="Здравствуйте! Хочу работать няней.",
   guides_t="Гайды для семей в Сануре", guides_hh="Гайды для семей в Сануре", soon="скоро",
-  company="Компания", services_f="Услуги", guides_f="Гайды", foot_p="Надёжные няни и бебиситтеры для семей в Сануре, Бали.",
+  company="Компания", services_f="Услуги", guides_f="Гайды", foot_p="Надёжные няни и бебиситтеры для семей по всему Бали.",
   hubs={"H01":"Няня в Сануре","H02":"Санур с детьми: чем заняться","H03":"Где жить с детьми","H04":"Здоровье и безопасность","H05":"Еда для семьи","H06":"Перелёт и логистика","H07":"Поездки из Санура","H08":"Жизнь в Сануре с детьми"},
 )}
 
+FLOWER = ('<svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor">'
+  + "".join(f'<path transform="rotate({k*72} 20 20)" d="M20 20C13.5 16 12.5 5 19 2.2c5.2-1.6 8.3 4.4 5.6 10.6C23.6 15.3 22 18 20 20z"/>' for k in range(5))
+  + '</g><circle cx="20" cy="20" r="3.6" fill="#F6C453"/></svg>')
+HDR_JS = ("(()=>{const b=document.querySelector('.hdr-wa'),t=document.querySelector('main .cta-row')||document.querySelector('main h1');"
+  "if(!b||!t)return;new IntersectionObserver(([e])=>b.classList.toggle('show',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(t)})()")
+AREA_LD = ",".join(f'{{"@type":"Place","name":"{a["en"]}, Bali"}}' for a in AREAS)
+
 def wa(text): return f"https://wa.me/{WA}?text={urllib.parse.quote(text)}"
 def hub_slug(h): return HUBS[h][1].split("/")[2]
+
+AT = {
+ "en": dict(nav="Areas", h="Where we work in Bali", p="Our nannies come to hotels, villas and homes across South Bali and Ubud.",
+            title="Nanny Service Areas in Bali", title_one="Nanny & Babysitter in {loc}, Bali", h1="Nanny & babysitter in {loc}",
+            msg="Hi! I need a nanny in {loc}. Dates: ", other="Other areas"),
+ "ru": dict(nav="Районы", h="Где мы работаем на Бали", p="Наши няни приезжают в отели, виллы и дома по всему югу Бали и в Убуд.",
+            title="Районы работы нянь на Бали", title_one="Няня {loc}, Бали", h1="Няня {loc}",
+            msg="Здравствуйте! Нужна няня, район: {loc}. Даты: ", other="Другие районы"),
+}
 
 def build(lang):
     t = T[lang]
@@ -101,20 +119,21 @@ def build(lang):
         other_path = T[t["other"]]["prefix"] + path
         alt = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMAIN}/{T[l]["prefix"]}{path}">' for l in T) + f'<link rel="alternate" hreflang="x-default" href="{DOMAIN}/{path}">' if other_exists else ""
         switch = f'<a class="lang" href="{root}{other_path}index.html">{t["other_label"]}</a>' if other_exists else f'<a class="lang" href="{root}{T[t["other"]]["prefix"]}index.html">{t["other_label"]}</a>'
-        links = ["services","prices","how-it-works","safety","guides"]
-        nav = f"""<header><div class="wrap nav"><a class="logo" href="{home}index.html">Sanur<span>.</span>Nannies</a>
+        links = ["services","areas","prices","safety","guides"]
+        nav = f"""<header><div class="wrap nav"><a class="logo" href="{home}index.html" aria-label="{BRAND}">Bali{FLOWER}Nannies</a>
 <nav class="links">{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(links,t["nav"]))}</nav>
-<div class="right">{switch}{btn(t["wa_short"], cls="btn-sm")}</div></div></header>"""
-        foot = f"""<footer><div class="wrap fgrid"><div><div class="logo">{BRAND}</div><p>{t["foot_p"]}</p>{btn()}</div>
+<div class="right">{switch}{btn(t["wa_short"], cls="btn-sm hdr-wa")}</div></div></header>"""
+        foot = f"""<footer><div class="wrap fgrid"><div><div class="logo">Bali{FLOWER}Nannies</div><p>{t["foot_p"]}</p>{btn()}</div>
 <div><b>{t["services_f"]}</b>{''.join(f'<a href="{home}services/{s}/index.html">{n}</a>' for s,(n,_) in list(zip(SERVICES,t["svc"]))[:5])}</div>
-<div><b>{t["company"]}</b>{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(["how-it-works","safety","prices","faq","careers"],[t["how"],t["nav"][3],t["prices"],t["faq_short"],t["careers_nav"]]))}</div>
+<div><b>{t["company"]}</b>{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(["how-it-works","safety","prices","faq","careers"],[t["how"],t["safety_nav"],t["prices"],t["faq_short"],t["careers_nav"]]))}</div>
+<div><b>{AT[lang]["nav"]}</b>{''.join(f'<a href="{home}areas/{a["slug"]}/index.html">{a[lang]}</a>' for a in AREAS)}</div>
 <div><b>{t["guides_f"]}</b>{''.join(f'<a href="{home}guides/{hub_slug(h)}/index.html">{t["hubs"][h]}</a>' for h in list(HUBS)[:5])}</div></div>
-<div class="wrap"><p class="note" style="margin-top:28px">© 2026 {BRAND} · Sanur, Bali · <a href="mailto:{EMAIL}">{EMAIL}</a></p></div></footer>
-<a class="fab" href="{wa(t['wa_default'])}" target="_blank" rel="noopener" aria-label="{t['wa_btn']}">{WA_SVG}</a>"""
+<div class="wrap"><p class="note" style="margin-top:28px">© 2026 {BRAND} · Bali, Indonesia · <a href="mailto:{EMAIL}">{EMAIL}</a></p></div></footer>
+<script>{HDR_JS}</script>"""
         doc = f"""<!doctype html><html lang="{t['html_lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} | {BRAND}</title><meta name="description" content="{html.escape(desc)}"><link rel="canonical" href="{DOMAIN}/{full}">{alt}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{root}style.css?v={CSS_V}">{schema}</head><body>{nav}<main>{body.replace("{ROOT}", root)}</main>{foot}</body></html>"""
+<link rel="icon" href="{root}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{root}style.css?v={CSS_V}">{schema}</head><body>{nav}<main>{body.replace("{ROOT}", root)}</main>{foot}</body></html>"""
         f = OUT/full/"index.html"
         f.parent.mkdir(parents=True, exist_ok=True); f.write_text(doc, encoding="utf-8")
         return root, home
@@ -127,24 +146,41 @@ def build(lang):
 
     def services_grid(home):
         return '<div class="grid">' + "".join(f'<a class="card card-img" href="{home}services/{s}/index.html"><img class="thumb" src="{{ROOT}}img/{s}.jpg" alt="" loading="lazy" width="960" height="640"><div class="ico">{i}</div><h3>{n}</h3><p>{d}</p></a>' for s,i,(n,d) in zip(SERVICES,ICONS,t["svc"])) + "</div>"
+    area_grid = lambda home: '<div class="grid">' + "".join(f'<a class="card" href="{home}areas/{a["slug"]}/index.html"><div class="ico">📍</div><h3>{a[lang]}</h3><p>{a[lang+"_lead"]}</p></a>' for a in AREAS) + "</div>"
     steps = '<div class="steps">' + "".join(f'<div class="step"><h3>{a}</h3><p>{b}</p></div>' for a,b in t["steps"]) + "</div>"
     faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in t["faq"])
     hub_cards = lambda home: '<div class="grid">' + "".join(f'<a class="card" href="{home}guides/{hub_slug(h)}/index.html"><h3>{t["hubs"][h]}</h3><p>{sum(1 for a in A if a["hub"]==h)} {t["n_guides"]}</p></a>' for h in HUBS) + "</div>"
 
     # HOME
     h = ""
-    schema = f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"ChildCare","name":"{BRAND}","areaServed":"Sanur, Bali","telephone":"+{WA}","url":"{DOMAIN}/{t["prefix"]}"}}</script>'
+    schema = f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"ChildCare","name":"{BRAND}","areaServed":[{AREA_LD}],"telephone":"+{WA}","url":"{DOMAIN}/{t["prefix"]}"}}</script>'
     page("", t["title_home"], t["desc_home"], f"""<div class="wrap hero"><div><span class="eyebrow">{t["eyebrow"]}</span><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>
 <div class="cta-row">{btn(t["book"])}<a class="btn btn-ghost" href="prices/index.html">{t["see_prices"]}</a></div>
 <ul class="trust">{''.join(f'<li>{x}</li>' for x in t["trust"])}</ul></div>
 <div class="photo"><img src="{{ROOT}}img/hero.jpg" alt="{t['photo']}" width="960" height="640" fetchpriority="high"><div class="chip">{t["chip"]}</div></div></div>
 <section><div class="wrap"><div class="sec-head"><h2>{t["svc_h"]}</h2><p>{t["svc_p"]}</p></div>{services_grid("")}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["steps_h"]}</h2></div>{steps}</div></section>
+<section><div class="wrap"><div class="sec-head"><h2>{AT[lang]["h"]}</h2><p>{AT[lang]["p"]}</p></div>{area_grid("")}</div></section>
 <section><div class="wrap"><div class="band"><div><h2>{t["safe_h"]}</h2><p>{t["safe_p"]}</p><a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="safety/index.html">{t["safe_btn"]}</a></div>
 <ul>{''.join(f'<li>{x}</li>' for x in t["safe_list"])}</ul></div></div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["faq_h"]}</h2></div>{faq}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["guides_h"]}</h2><p>{t["guides_p"]}</p></div>{hub_cards("")}</div></section>
 <div class="final"><h2>{t["final_h"]}</h2><p class="lead" style="margin:0 auto 24px">{t["final_p"]}</p>{btn(t["final_btn"])}</div>""", schema)
+
+    # AREAS
+    page("areas/", AT[lang]["title"], AT[lang]["p"], f'<div class="wrap">{crumbs("../",(AT[lang]["nav"],None))}<section><div class="sec-head"><h1>{AT[lang]["h"]}</h1><p>{AT[lang]["p"]}</p></div>{area_grid("../")}</section></div>')
+    for k,ar in enumerate(AREAS):
+        nm = ar[lang]; loc = ar["en"] if lang=="en" else ar["ru_in"]
+        h1 = AT[lang]["h1"].format(loc=loc); img = SERVICES[k % len(SERVICES)] if k else "hero"
+        others = "".join(f'<a class="pill" href="../{o["slug"]}/index.html">{o[lang]}</a>' for o in AREAS if o is not ar)
+        body_txt = "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in ar[lang+"_txt"])
+        page(f"areas/{ar['slug']}/", AT[lang]["title_one"].format(loc=loc), ar[lang+"_lead"], f"""<div class="wrap">{crumbs("../../",(AT[lang]["nav"],"areas/"),(nm,None))}
+<div class="hero" style="padding-top:32px"><div><span class="eyebrow">📍 {nm}</span><h1>{h1}</h1><p class="lead">{ar[lang+"_lead"]}</p>
+<div class="cta-row">{btn(t["check"], AT[lang]["msg"].format(loc=nm))}<a class="btn btn-ghost" href="../../prices/index.html">{t["prices"]}</a></div></div>
+<div class="photo"><img src="{{ROOT}}img/{img}.jpg" alt="{h1}" width="960" height="640"></div></div>
+<div class="article" style="margin:0">{body_txt}</div>
+<section><div class="sec-head"><h2>{t["svc_h"]}</h2></div>{services_grid("../../")}</section>
+<section><div class="sec-head"><h2>{AT[lang]["other"]}</h2></div><div class="pills">{others}</div></section></div>""")
 
     # SERVICES
     page("services/", t["services_t"], t["services_d"], f'<div class="wrap">{crumbs("../",(t["services_h"],None))}<section><div class="sec-head"><h1>{t["services_h"]}</h1></div>{services_grid("../")}</section></div>')
@@ -160,7 +196,7 @@ def build(lang):
     page("prices/", t["prices_t"], t["prices_p"], f"""<div class="wrap">{crumbs("../",(t["prices"],None))}<section><div class="sec-head"><h1>{t["prices_h"]}</h1><p>{t["prices_p"]}</p></div>
 <table class="price-table"><tr>{''.join(f'<th>{x}</th>' for x in t["th"])}</tr>{rows}</table><p class="note" style="margin-top:14px">{t["price_note"]}</p><div class="cta-row">{btn(t["quote"])}</div></section></div>""")
     page("how-it-works/", t["hiw_t"], t["hiw_d"], f'<div class="wrap">{crumbs("../",(t["how"],None))}<section><div class="sec-head"><h1>{t["how"]}</h1></div>{steps}<div class="cta-row">{btn()}</div></section></div>')
-    page("safety/", t["safety_t"], t["safety_d"], f'<div class="wrap article">{crumbs("../",(t["nav"][3],None))}<h1>{t["safety_t"]}</h1><img class="art-img" src="{{ROOT}}img/safety.jpg" alt="{t["safety_t"]}" loading="lazy">' + "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in t["safety_body"]) + f"{btn()}</div>")
+    page("safety/", t["safety_t"], t["safety_d"], f'<div class="wrap article">{crumbs("../",(t["safety_nav"],None))}<h1>{t["safety_t"]}</h1><img class="art-img" src="{{ROOT}}img/safety.jpg" alt="{t["safety_t"]}" loading="lazy">' + "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in t["safety_body"]) + f"{btn()}</div>")
     page("faq/", t["faq_t"], t["faq_d"], f'<div class="wrap article">{crumbs("../",(t["faq_short"],None))}<h1>{t["faq_t"]}</h1>{faq}<div class="cta-row">{btn()}</div></div>')
     page("careers/", t["careers_t"], t["careers_p"], f'<div class="wrap article">{crumbs("../",(t["careers_h"],None))}<h1>{t["careers_h"]}</h1><p>{t["careers_p"]}</p>{btn(t["apply"], t["apply_msg"])}</div>')
 
@@ -214,6 +250,7 @@ for lang in T: build(lang)
 (OUT/"style.css").write_text(CSS, encoding="utf-8")
 shutil.copytree(HERE/"src/img", OUT/"img")
 (OUT/".nojekyll").write_text("")
+(OUT/"favicon.svg").write_text(FLOWER.replace('class="flower" ','xmlns="http://www.w3.org/2000/svg" ').replace("currentColor","#E8845B"), encoding="utf-8")
 (OUT/"robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n", encoding="utf-8")
 urls = sorted(p.relative_to(OUT).as_posix().replace("index.html","") for p in OUT.rglob("index.html"))
 (OUT/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join(f"<url><loc>{DOMAIN}/{u}</loc></url>" for u in urls)+"</urlset>", encoding="utf-8")
