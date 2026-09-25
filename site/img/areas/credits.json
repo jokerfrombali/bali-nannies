@@ -1,0 +1,65 @@
+{
+ "sanur": {
+  "title": "File:250217 Sanur Beach 01.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:250217_Sanur_Beach_01.jpg",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "author": "Aspere"
+ },
+ "canggu": {
+  "title": "File:Canggu beach 1.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Canggu_beach_1.jpg",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "author": "Mx. Granger"
+ },
+ "seminyak": {
+  "title": "File:Jump! (Petitengget Beach, Seminyak, Bali).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jump!_(Petitengget_Beach,_Seminyak,_Bali).jpg",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "author": "Bonita Suraputra"
+ },
+ "kuta-legian": {
+  "title": "File:Jerman Beach, Kuta, Bali, Indonesia, 20220825 1207 0816.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jerman_Beach,_Kuta,_Bali,_Indonesia,_20220825_1207_0816.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Jakub Hałun"
+ },
+ "ubud": {
+  "title": "File:Rice terraces, Bali.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Rice_terraces,_Bali.jpg",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "author": "Vyacheslav Argenberg"
+ },
+ "uluwatu": {
+  "title": "File:Cliff at Uluwatu temple, Bali.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Cliff_at_Uluwatu_temple,_Bali.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Emma THERY"
+ },
+ "jimbaran": {
+  "title": "File:Jimbaran beach at sunset.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jimbaran_beach_at_sunset.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Akmaie Ajam"
+ },
+ "nusa-dua": {
+  "title": "File:Nusa dua beach.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Nusa_dua_beach.jpg",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "author": "Rayansharif"
+ },
+ "denpasar": {
+  "title": "File:005 Bajra Sandhi and Split Gateway, Bajra Sandhi Monument, Denpasar City, Bali, photograph by Anandajoti Bhikkhu.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:005_Bajra_Sandhi_and_Split_Gateway,_Bajra_Sandhi_Monument,_Denpasar_City,_Bali,_photograph_by_Anandajoti_Bhikkhu.jpg",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Anandajoti"
+ }
+}

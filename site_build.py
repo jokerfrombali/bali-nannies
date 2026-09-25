@@ -3,9 +3,11 @@
 import html, urllib.parse, pathlib, shutil
 
 HERE = pathlib.Path(__file__).parent
-ns = {}
+ns = {"__file__": str(HERE/"build_seo.py")}
 import sys; sys.path.insert(0, str(HERE))
 from areas import AREAS
+import json as _json
+AREA_CREDITS = _json.loads((HERE/"src/img/areas/credits.json").read_text(encoding="utf-8"))
 exec((HERE/"build_seo.py").read_text(encoding="utf-8").split("# ---------------------------------------------------------------- СЕМАНТИКА")[0], ns)
 A, HUBS = ns["A"], ns["HUBS"]
 for i, a in enumerate(A, 1): a["id"] = f"A{i:03d}"
@@ -90,13 +92,17 @@ T = {
 FLOWER = ('<svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor">'
   + "".join(f'<path transform="rotate({k*72} 20 20)" d="M20 20C13.5 16 12.5 5 19 2.2c5.2-1.6 8.3 4.4 5.6 10.6C23.6 15.3 22 18 20 20z"/>' for k in range(5))
   + '</g><circle cx="20" cy="20" r="3.6" fill="#F6C453"/></svg>')
-HDR_JS = ("(()=>{const b=document.querySelector('.hdr-wa'),t=document.querySelector('main .cta-row')||document.querySelector('main h1');"
+HDR_JS = ("(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});"
+  "document.querySelectorAll('main section, .reveal').forEach(el=>{el.classList.add('pre');io.observe(el)})})();"
+  "(()=>{const b=document.querySelector('.hdr-wa'),t=document.querySelector('main .cta-row')||document.querySelector('main h1');"
   "if(!b||!t)return;new IntersectionObserver(([e])=>b.classList.toggle('show',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(t)})()")
 AREA_LD = ",".join(f'{{"@type":"Place","name":"{a["en"]}, Bali"}}' for a in AREAS)
 
 def wa(text): return f"https://wa.me/{WA}?text={urllib.parse.quote(text)}"
 def hub_slug(h): return HUBS[h][1].split("/")[2]
 
+SM = {"en": dict(title="Site map", desc="Every page of Bali Nannies in one place."),
+      "ru": dict(title="Карта сайта", desc="Все страницы Bali Nannies в одном месте.")}
 AT = {
  "en": dict(nav="Areas", h="Where we work in Bali", p="Our nannies come to hotels, villas and homes across South Bali and Ubud.",
             title="Nanny Service Areas in Bali", title_one="Nanny & Babysitter in {loc}, Bali", h1="Nanny & babysitter in {loc}",
@@ -123,12 +129,16 @@ def build(lang):
         nav = f"""<header><div class="wrap nav"><a class="logo" href="{home}index.html" aria-label="{BRAND}">Bali{FLOWER}Nannies</a>
 <nav class="links">{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(links,t["nav"]))}</nav>
 <div class="right">{switch}{btn(t["wa_short"], cls="btn-sm hdr-wa")}</div></div></header>"""
-        foot = f"""<footer><div class="wrap fgrid"><div><div class="logo">Bali{FLOWER}Nannies</div><p>{t["foot_p"]}</p>{btn()}</div>
-<div><b>{t["services_f"]}</b>{''.join(f'<a href="{home}services/{s}/index.html">{n}</a>' for s,(n,_) in list(zip(SERVICES,t["svc"]))[:5])}</div>
-<div><b>{t["company"]}</b>{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(["how-it-works","safety","prices","faq","careers"],[t["how"],t["safety_nav"],t["prices"],t["faq_short"],t["careers_nav"]]))}</div>
+        foot = f"""<footer class="site-foot"><div class="wrap">
+<div class="foot-top"><div class="foot-brand"><a class="logo logo-light" href="{home}index.html">Bali{FLOWER}Nannies</a><p>{t["foot_p"]}</p>
+<a class="foot-wa" href="{wa(t['wa_default'])}" target="_blank" rel="noopener">{WA_SVG}<span>WhatsApp · +{WA}</span></a></div>
+<nav class="foot-cols">
+<div><b>{t["services_f"]}</b>{''.join(f'<a href="{home}services/{s}/index.html">{n}</a>' for s,(n,_) in zip(SERVICES,t["svc"]))}</div>
 <div><b>{AT[lang]["nav"]}</b>{''.join(f'<a href="{home}areas/{a["slug"]}/index.html">{a[lang]}</a>' for a in AREAS)}</div>
-<div><b>{t["guides_f"]}</b>{''.join(f'<a href="{home}guides/{hub_slug(h)}/index.html">{t["hubs"][h]}</a>' for h in list(HUBS)[:5])}</div></div>
-<div class="wrap"><p class="note" style="margin-top:28px">© 2026 {BRAND} · Bali, Indonesia · <a href="mailto:{EMAIL}">{EMAIL}</a></p></div></footer>
+<div><b>{t["company"]}</b>{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(["how-it-works","safety","prices","faq","careers","guides"],[t["how"],t["safety_nav"],t["prices"],t["faq_short"],t["careers_nav"],t["guides_f"]]))}</div>
+</nav></div>
+<div class="foot-bottom"><span>© 2026 {BRAND} · Bali, Indonesia</span><span><a href="{home}sitemap/index.html">{SM[lang]["title"]}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a> · {switch}</span></div>
+</div></footer>
 <script>{HDR_JS}</script>"""
         doc = f"""<!doctype html><html lang="{t['html_lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} | {BRAND}</title><meta name="description" content="{html.escape(desc)}"><link rel="canonical" href="{DOMAIN}/{full}">{alt}
@@ -146,7 +156,7 @@ def build(lang):
 
     def services_grid(home):
         return '<div class="grid">' + "".join(f'<a class="card card-img" href="{home}services/{s}/index.html"><img class="thumb" src="{{ROOT}}img/{s}.jpg" alt="" loading="lazy" width="960" height="640"><div class="ico">{i}</div><h3>{n}</h3><p>{d}</p></a>' for s,i,(n,d) in zip(SERVICES,ICONS,t["svc"])) + "</div>"
-    area_grid = lambda home: '<div class="grid">' + "".join(f'<a class="card" href="{home}areas/{a["slug"]}/index.html"><div class="ico">📍</div><h3>{a[lang]}</h3><p>{a[lang+"_lead"]}</p></a>' for a in AREAS) + "</div>"
+    area_grid = lambda home: '<div class="area-grid">' + "".join(f'<a class="area-card reveal" href="{home}areas/{a["slug"]}/index.html"><img src="{{ROOT}}img/areas/{a["slug"]}.jpg" alt="{a[lang]}, Bali" loading="lazy" width="1200" height="800"><span class="area-name">{a[lang]}</span><span class="area-lead">{a[lang+"_lead"]}</span></a>' for a in AREAS) + "</div>"
     steps = '<div class="steps">' + "".join(f'<div class="step"><h3>{a}</h3><p>{b}</p></div>' for a,b in t["steps"]) + "</div>"
     faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in t["faq"])
     hub_cards = lambda home: '<div class="grid">' + "".join(f'<a class="card" href="{home}guides/{hub_slug(h)}/index.html"><h3>{t["hubs"][h]}</h3><p>{sum(1 for a in A if a["hub"]==h)} {t["n_guides"]}</p></a>' for h in HUBS) + "</div>"
@@ -154,7 +164,7 @@ def build(lang):
     # HOME
     h = ""
     schema = f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"ChildCare","name":"{BRAND}","areaServed":[{AREA_LD}],"telephone":"+{WA}","url":"{DOMAIN}/{t["prefix"]}"}}</script>'
-    page("", t["title_home"], t["desc_home"], f"""<div class="wrap hero"><div><span class="eyebrow">{t["eyebrow"]}</span><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>
+    page("", t["title_home"], t["desc_home"], f"""<div class="wrap hero hero-home"><div><span class="eyebrow">{t["eyebrow"]}</span><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>
 <div class="cta-row">{btn(t["book"])}<a class="btn btn-ghost" href="prices/index.html">{t["see_prices"]}</a></div>
 <ul class="trust">{''.join(f'<li>{x}</li>' for x in t["trust"])}</ul></div>
 <div class="photo"><img src="{{ROOT}}img/hero.jpg" alt="{t['photo']}" width="960" height="640" fetchpriority="high"><div class="chip">{t["chip"]}</div></div></div>
@@ -171,16 +181,25 @@ def build(lang):
     page("areas/", AT[lang]["title"], AT[lang]["p"], f'<div class="wrap">{crumbs("../",(AT[lang]["nav"],None))}<section><div class="sec-head"><h1>{AT[lang]["h"]}</h1><p>{AT[lang]["p"]}</p></div>{area_grid("../")}</section></div>')
     for k,ar in enumerate(AREAS):
         nm = ar[lang]; loc = ar["en"] if lang=="en" else ar["ru_in"]
-        h1 = AT[lang]["h1"].format(loc=loc); img = SERVICES[k % len(SERVICES)] if k else "hero"
+        h1 = AT[lang]["h1"].format(loc=loc); cr = AREA_CREDITS[ar["slug"]]
+        credit = f'<p class="credit">Photo: <a href="{cr["page"]}" rel="nofollow noopener" target="_blank">{html.escape(cr["author"][:60])}</a>, {cr["license"]}</p>' if cr["license"]!="CC0" else ""
         others = "".join(f'<a class="pill" href="../{o["slug"]}/index.html">{o[lang]}</a>' for o in AREAS if o is not ar)
         body_txt = "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in ar[lang+"_txt"])
         page(f"areas/{ar['slug']}/", AT[lang]["title_one"].format(loc=loc), ar[lang+"_lead"], f"""<div class="wrap">{crumbs("../../",(AT[lang]["nav"],"areas/"),(nm,None))}
 <div class="hero" style="padding-top:32px"><div><span class="eyebrow">📍 {nm}</span><h1>{h1}</h1><p class="lead">{ar[lang+"_lead"]}</p>
 <div class="cta-row">{btn(t["check"], AT[lang]["msg"].format(loc=nm))}<a class="btn btn-ghost" href="../../prices/index.html">{t["prices"]}</a></div></div>
-<div class="photo"><img src="{{ROOT}}img/{img}.jpg" alt="{h1}" width="960" height="640"></div></div>
+<div><div class="photo"><img src="{{ROOT}}img/areas/{ar["slug"]}.jpg" alt="{nm}, Bali" width="1200" height="800"></div>{credit}</div></div>
 <div class="article" style="margin:0">{body_txt}</div>
 <section><div class="sec-head"><h2>{t["svc_h"]}</h2></div>{services_grid("../../")}</section>
 <section><div class="sec-head"><h2>{AT[lang]["other"]}</h2></div><div class="pills">{others}</div></section></div>""")
+
+    # SITEMAP (HTML)
+    groups = [(t["services_f"], [(f"services/{s}/", n) for s,(n,_) in zip(SERVICES,t["svc"])]),
+              (AT[lang]["nav"], [(f"areas/{a['slug']}/", a[lang]) for a in AREAS]),
+              (t["company"], [("how-it-works/",t["how"]),("safety/",t["safety_nav"]),("prices/",t["prices"]),("faq/",t["faq_short"]),("careers/",t["careers_nav"])]),
+              (t["guides_f"], [(f"guides/{hub_slug(h)}/", t["hubs"][h]) for h in HUBS])]
+    sm = "".join(f'<div class="sm-group"><h2>{g}</h2><ul>' + "".join(f'<li><a href="../{u}index.html">{n}</a></li>' for u,n in items) + "</ul></div>" for g,items in groups)
+    page("sitemap/", SM[lang]["title"], SM[lang]["desc"], f'<div class="wrap">{crumbs("../",(SM[lang]["title"],None))}<section><div class="sec-head"><h1>{SM[lang]["title"]}</h1><p>{SM[lang]["desc"]}</p></div><div class="sm-grid">{sm}</div></section></div>')
 
     # SERVICES
     page("services/", t["services_t"], t["services_d"], f'<div class="wrap">{crumbs("../",(t["services_h"],None))}<section><div class="sec-head"><h1>{t["services_h"]}</h1></div>{services_grid("../")}</section></div>')
@@ -214,7 +233,7 @@ def build(lang):
     a = next(x for x in A if x["id"]==LIVE_ARTICLE)
     art = EN_ARTICLE if lang=="en" else RU_ARTICLE
     toc = "".join(f'<li><a href="#s{i}">{h}</a></li>' for i,(h,_) in enumerate(art["secs"],1))
-    body = "".join(f'<h2 id="s{i}">{h}</h2><p>{p}</p>' + (f'<div class="inline-cta"><div><b>{art["mid_h"]}</b><br><span class="note">{art["mid_p"]}</span></div>{btn(t["book"])}</div>' if i==3 else "") for i,(h,p) in enumerate(art["secs"],1))
+    body = "".join(f'<h2 id="s{i}">{h}</h2><p>{p}</p>'  for i,(h,p) in enumerate(art["secs"],1))
     hm = "../../../"
     page(f"guides/{hub_slug(a['hub'])}/{a['slug']}/", art["title"], art["desc"], f"""<div class="wrap article">{crumbs(hm,(t["guides_f"],"guides/"),(t["hubs"][a["hub"]],f"guides/{hub_slug(a['hub'])}/"))}
 <h1>{art["h1"]}</h1><p class="note">{art["byline"]}</p><p class="lead">{art["lead"]}</p><img class="art-img" src="{{ROOT}}img/article.jpg" alt="{art['h1']}" width="960" height="1440"><div class="toc"><b>{art["toc"]}</b><ol>{toc}</ol></div>{body}
