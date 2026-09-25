@@ -93,7 +93,8 @@ FLOWER = ('<svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="c
   + "".join(f'<path transform="rotate({k*72} 20 20)" d="M20 20C13.5 16 12.5 5 19 2.2c5.2-1.6 8.3 4.4 5.6 10.6C23.6 15.3 22 18 20 20z"/>' for k in range(5))
   + '</g><circle cx="20" cy="20" r="3.6" fill="#F6C453"/></svg>')
 HDR_JS = ("(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});"
-  "document.querySelectorAll('main section, .reveal').forEach(el=>{el.classList.add('pre');io.observe(el)})})();"
+  "const els=[...document.querySelectorAll('main section, .reveal')];els.forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pre');io.observe(el)}});"
+  "const chk=()=>els.forEach(el=>{if(el.classList.contains('pre')&&el.getBoundingClientRect().top<innerHeight*.95)el.classList.add('in')});addEventListener('scroll',chk,{passive:true})})();"
   "(()=>{const b=document.querySelector('.hdr-wa'),t=document.querySelector('main .cta-row')||document.querySelector('main h1');"
   "if(!b||!t)return;new IntersectionObserver(([e])=>b.classList.toggle('show',!e.isIntersecting&&e.boundingClientRect.top<0)).observe(t)})()")
 AREA_LD = ",".join(f'{{"@type":"Place","name":"{a["en"]}, Bali"}}' for a in AREAS)
