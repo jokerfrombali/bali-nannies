@@ -6,6 +6,7 @@ HERE = pathlib.Path(__file__).parent
 ns = {"__file__": str(HERE/"build_seo.py")}
 import sys; sys.path.insert(0, str(HERE))
 from areas import AREAS
+import trust_blocks as TBm
 import json as _json
 AREA_CREDITS = _json.loads((HERE/"src/img/areas/credits.json").read_text(encoding="utf-8"))
 exec((HERE/"build_seo.py").read_text(encoding="utf-8").split("# ---------------------------------------------------------------- СЕМАНТИКА")[0], ns)
@@ -18,7 +19,7 @@ WA = "62XXXXXXXXXX"            # номер WhatsApp: 62…, без +
 EMAIL = "hello@example.com"
 DOMAIN = "https://[domain]"     # после покупки домена
 OUT = HERE/"site"
-CSS = (HERE/"src/style.css").read_text(encoding="utf-8")
+CSS = (HERE/"src/style.css").read_text(encoding="utf-8") + TBm.CSS
 import hashlib
 CSS_V = hashlib.md5(CSS.encode()).hexdigest()[:8]
 WA_SVG = (HERE/"src/wa.svg").read_text(encoding="utf-8")
@@ -115,6 +116,7 @@ AT = {
 
 def build(lang):
     t = T[lang]
+    b = TBm.TB[lang]
     def btn(text=None, msg=None, cls=""):
         return f'<a class="btn btn-wa {cls}" href="{wa(msg or t["wa_default"])}" target="_blank" rel="noopener">{WA_SVG}{text or t["wa_btn"]}</a>'
 
@@ -159,7 +161,7 @@ def build(lang):
         return '<div class="grid">' + "".join(f'<a class="card card-img" href="{home}services/{s}/index.html"><img class="thumb" src="{{ROOT}}img/{s}.jpg" alt="" loading="lazy" width="960" height="640"><div class="ico">{i}</div><h3>{n}</h3><p>{d}</p></a>' for s,i,(n,d) in zip(SERVICES,ICONS,t["svc"])) + "</div>"
     area_grid = lambda home: '<div class="area-grid">' + "".join(f'<a class="area-card reveal" href="{home}areas/{a["slug"]}/index.html"><img src="{{ROOT}}img/areas/{a["slug"]}.jpg" alt="{a[lang]}, Bali" loading="lazy" width="1200" height="800"><span class="area-name">{a[lang]}</span><span class="area-lead">{a[lang+"_lead"]}</span></a>' for a in AREAS) + "</div>"
     steps = '<div class="steps">' + "".join(f'<div class="step"><h3>{a}</h3><p>{b}</p></div>' for a,b in t["steps"]) + "</div>"
-    faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in t["faq"])
+    faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in t["faq"] + b["faq_add"])
     hub_cards = lambda home: '<div class="grid">' + "".join(f'<a class="card" href="{home}guides/{hub_slug(h)}/index.html"><h3>{t["hubs"][h]}</h3><p>{sum(1 for a in A if a["hub"]==h)} {t["n_guides"]}</p></a>' for h in HUBS) + "</div>"
 
     # HOME
@@ -167,13 +169,16 @@ def build(lang):
     schema = f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"ChildCare","name":"{BRAND}","areaServed":[{AREA_LD}],"telephone":"+{WA}","url":"{DOMAIN}/{t["prefix"]}"}}</script>'
     page("", t["title_home"], t["desc_home"], f"""<div class="wrap hero hero-home"><div><span class="eyebrow">{t["eyebrow"]}</span><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>
 <div class="cta-row">{btn(t["book"])}<a class="btn btn-ghost" href="prices/index.html">{t["see_prices"]}</a></div>
-<ul class="trust">{''.join(f'<li>{x}</li>' for x in t["trust"])}</ul></div>
+<ul class="trust">{''.join(f'<li>{x}</li>' for x in b["hero_trust"])}</ul></div>
 <div class="photo"><img src="{{ROOT}}img/hero.jpg" alt="{t['photo']}" width="960" height="640" fetchpriority="high"><div class="chip">{t["chip"]}</div></div></div>
 <section><div class="wrap"><div class="sec-head"><h2>{t["svc_h"]}</h2><p>{t["svc_p"]}</p></div>{services_grid("")}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["steps_h"]}</h2></div>{steps}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{AT[lang]["h"]}</h2><p>{AT[lang]["p"]}</p></div>{area_grid("")}</div></section>
-<section><div class="wrap"><div class="band"><div><h2>{t["safe_h"]}</h2><p>{t["safe_p"]}</p><a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="safety/index.html">{t["safe_btn"]}</a></div>
-<ul>{''.join(f'<li>{x}</li>' for x in t["safe_list"])}</ul></div></div></section>
+<section><div class="wrap">{TBm.meet_html(b, "{ROOT}")}</div></section>
+<section><div class="wrap vet-band"><div class="sec-head"><h2>{b["vet_h"]}</h2><p>{b["vet_p"]}</p></div>{TBm.vet_html(b)}
+<div class="cta-row" style="margin-bottom:0"><a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="safety/index.html">{t["safe_btn"]}</a></div></div></section>
+<section><div class="wrap">{TBm.guar_html(b)}</div></section>
+<section><div class="wrap">{TBm.bring_html(b)}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["faq_h"]}</h2></div>{faq}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["guides_h"]}</h2><p>{t["guides_p"]}</p></div>{hub_cards("")}</div></section>
 <div class="final"><h2>{t["final_h"]}</h2><p class="lead" style="margin:0 auto 24px">{t["final_p"]}</p>{btn(t["final_btn"])}</div>""", schema)
@@ -210,13 +215,13 @@ def build(lang):
 <div class="hero" style="padding-top:32px"><div><span class="eyebrow">{i} {n}</span><h1>{t["svc_h1"].format(s=n)}</h1><p class="lead">{d}</p>
 <div class="cta-row">{btn(t["check"], t["wa_service"].format(s=n))}<a class="btn btn-ghost" href="{hm}prices/index.html">{t["prices"]}</a></div></div>
 <div class="photo"><img src="{{ROOT}}img/{s}.jpg" alt="{n}" width="960" height="640"></div></div>
-<section><div class="sec-head"><h2>{t["how"]}</h2></div>{steps}</section><section><div class="sec-head"><h2>{t["faq_short"]}</h2></div>{faq}</section></div>""")
+<section><div class="sec-head"><h2>{t["how"]}</h2></div>{steps}</section><section>{TBm.guar_html(b)}</section><section>{TBm.bring_html(b)}</section><section><div class="sec-head"><h2>{t["faq_short"]}</h2></div>{faq}</section></div>""")
 
     rows = "".join(f"<tr><td>{n}</td><td>[IDR —]</td><td>[—]</td></tr>" for n,_ in t["svc"])
     page("prices/", t["prices_t"], t["prices_p"], f"""<div class="wrap">{crumbs("../",(t["prices"],None))}<section><div class="sec-head"><h1>{t["prices_h"]}</h1><p>{t["prices_p"]}</p></div>
 <table class="price-table"><tr>{''.join(f'<th>{x}</th>' for x in t["th"])}</tr>{rows}</table><p class="note" style="margin-top:14px">{t["price_note"]}</p><div class="cta-row">{btn(t["quote"])}</div></section></div>""")
-    page("how-it-works/", t["hiw_t"], t["hiw_d"], f'<div class="wrap">{crumbs("../",(t["how"],None))}<section><div class="sec-head"><h1>{t["how"]}</h1></div>{steps}<div class="cta-row">{btn()}</div></section></div>')
-    page("safety/", t["safety_t"], t["safety_d"], f'<div class="wrap article">{crumbs("../",(t["safety_nav"],None))}<h1>{t["safety_t"]}</h1><img class="art-img" src="{{ROOT}}img/safety.jpg" alt="{t["safety_t"]}" loading="lazy">' + "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in t["safety_body"]) + f"{btn()}</div>")
+    page("how-it-works/", t["hiw_t"], t["hiw_d"], f'<div class="wrap">{crumbs("../",(t["how"],None))}<section><div class="sec-head"><h1>{t["how"]}</h1></div>{steps}</section><section>{TBm.meet_html(b, "{ROOT}")}</section><section>{TBm.check_html(b)}</section><section>{TBm.guar_html(b)}</section><div class="cta-row" style="justify-content:center;margin-bottom:64px">{btn()}</div></div>')
+    page("safety/", t["safety_t"], t["safety_d"], f'<div class="wrap">{crumbs("../",(t["safety_nav"],None))}<section><div class="vet-band"><div class="sec-head"><h1 style="color:#fff">{t["safety_t"]}</h1><p>{b["vet_p"]}</p></div>{TBm.vet_html(b)}</div></section><section>{TBm.check_html(b)}</section><section>{TBm.guar_html(b)}</section></div><div class="wrap article" style="padding-top:0"><img class="art-img" src="{{ROOT}}img/safety.jpg" alt="{t["safety_t"]}" loading="lazy">' + "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in t["safety_body"]) + f"{btn()}</div>")
     page("faq/", t["faq_t"], t["faq_d"], f'<div class="wrap article">{crumbs("../",(t["faq_short"],None))}<h1>{t["faq_t"]}</h1>{faq}<div class="cta-row">{btn()}</div></div>')
     page("careers/", t["careers_t"], t["careers_p"], f'<div class="wrap article">{crumbs("../",(t["careers_h"],None))}<h1>{t["careers_h"]}</h1><p>{t["careers_p"]}</p>{btn(t["apply"], t["apply_msg"])}</div>')
 
