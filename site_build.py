@@ -15,6 +15,8 @@ EMAIL = "hello@example.com"
 DOMAIN = "https://[domain]"     # после покупки домена
 OUT = HERE/"site"
 CSS = (HERE/"src/style.css").read_text(encoding="utf-8")
+import hashlib
+CSS_V = hashlib.md5(CSS.encode()).hexdigest()[:8]
 WA_SVG = (HERE/"src/wa.svg").read_text(encoding="utf-8")
 
 SERVICES = ["hourly-babysitter","day-nanny","night-nanny","newborn-nanny","travel-nanny","hotel-villa-babysitting","event-babysitting","long-term-nanny"]
@@ -112,7 +114,7 @@ def build(lang):
         doc = f"""<!doctype html><html lang="{t['html_lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} | {BRAND}</title><meta name="description" content="{html.escape(desc)}"><link rel="canonical" href="{DOMAIN}/{full}">{alt}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{root}style.css">{schema}</head><body>{nav}<main>{body.replace("{ROOT}", root)}</main>{foot}</body></html>"""
+<link rel="stylesheet" href="{root}style.css?v={CSS_V}">{schema}</head><body>{nav}<main>{body.replace("{ROOT}", root)}</main>{foot}</body></html>"""
         f = OUT/full/"index.html"
         f.parent.mkdir(parents=True, exist_ok=True); f.write_text(doc, encoding="utf-8")
         return root, home
