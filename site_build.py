@@ -32,7 +32,7 @@ T = {
   title_home="Nanny & Babysitter in Sanur, Bali", desc_home="English-speaking, first-aid trained nannies and babysitters in Sanur. Hotel & villa visits, night nannies, day trips. Book in minutes on WhatsApp.",
   eyebrow="Sanur · Bali", h1="Trusted nannies for your family holiday in Sanur",
   lead="English-speaking, first-aid trained babysitters who come to your hotel or villa — so you can enjoy dinner, the spa or a quiet sunrise.",
-  trust=["Background-checked","First aid & CPR","Reply within 15 min"], chip="🟢 Nanny available tonight", photo="[Photo: nanny with a child on Sanur beach, morning light]",
+  trust=["Background-checked","First aid & CPR","Reply within 15 min"], chip="🟢 Nanny available tonight", photo="Nanny playing with a child in a swimming pool",
   svc_h="Care that fits your trip", svc_p="From a single evening to a full season in Bali.",
   steps_h="Booked in three messages", steps=[("Message us on WhatsApp","Tell us dates, hours, kids' ages and where you're staying."),("Meet your nanny","We send a profile and a short intro. Want a video call first? Just ask."),("Enjoy your time","She arrives at your hotel or villa. Photo updates on WhatsApp, pay after the session.")],
   safe_h="Safety isn't a feature. It's the job.", safe_p="Every nanny is interviewed in person, reference-checked and trained before her first family.", safe_btn="Our safety standards",
@@ -62,7 +62,7 @@ T = {
   title_home="Няня в Сануре, Бали — бебиситтеры для семей", desc_home="Проверенные няни с сертификатом первой помощи в Сануре. Приезд в отель и виллу, ночные няни, поездки. Бронь за пару минут в WhatsApp.",
   eyebrow="Санур · Бали", h1="Надёжные няни для семейного отдыха в Сануре",
   lead="Опытные няни с сертификатом первой помощи приедут в ваш отель или виллу — а вы спокойно поужинаете, сходите в спа или встретите рассвет вдвоём.",
-  trust=["Проверенные няни","Первая помощь и СЛР","Ответ за 15 минут"], chip="🟢 Няня свободна сегодня вечером", photo="[Фото: няня с ребёнком на пляже Санура, утренний свет]",
+  trust=["Проверенные няни","Первая помощь и СЛР","Ответ за 15 минут"], chip="🟢 Няня свободна сегодня вечером", photo="Няня играет с ребёнком в бассейне",
   svc_h="Помощь под ваш формат отдыха", svc_p="От одного вечера до целого сезона на Бали.",
   steps_h="Бронь в три сообщения", steps=[("Напишите в WhatsApp","Даты, часы, возраст детей и где вы живёте."),("Познакомьтесь с няней","Пришлём профиль и короткое знакомство. Нужен видеозвонок — устроим."),("Отдыхайте","Няня приезжает в отель или виллу. Фото в WhatsApp, оплата после смены.")],
   safe_h="Безопасность — это не опция. Это наша работа.", safe_p="Каждую няню мы лично собеседуем, проверяем рекомендации и обучаем до первой семьи.", safe_btn="Наши стандарты безопасности",
@@ -112,7 +112,7 @@ def build(lang):
         doc = f"""<!doctype html><html lang="{t['html_lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} | {BRAND}</title><meta name="description" content="{html.escape(desc)}"><link rel="canonical" href="{DOMAIN}/{full}">{alt}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{root}style.css">{schema}</head><body>{nav}<main>{body}</main>{foot}</body></html>"""
+<link rel="stylesheet" href="{root}style.css">{schema}</head><body>{nav}<main>{body.replace("{ROOT}", root)}</main>{foot}</body></html>"""
         f = OUT/full/"index.html"
         f.parent.mkdir(parents=True, exist_ok=True); f.write_text(doc, encoding="utf-8")
         return root, home
@@ -124,7 +124,7 @@ def build(lang):
     def home_rel(path): return "../" * path.count("/")   # от страницы до главной языка
 
     def services_grid(home):
-        return '<div class="grid">' + "".join(f'<a class="card" href="{home}services/{s}/index.html"><div class="ico">{i}</div><h3>{n}</h3><p>{d}</p></a>' for s,i,(n,d) in zip(SERVICES,ICONS,t["svc"])) + "</div>"
+        return '<div class="grid">' + "".join(f'<a class="card card-img" href="{home}services/{s}/index.html"><img class="thumb" src="{{ROOT}}img/{s}.jpg" alt="" loading="lazy" width="960" height="640"><div class="ico">{i}</div><h3>{n}</h3><p>{d}</p></a>' for s,i,(n,d) in zip(SERVICES,ICONS,t["svc"])) + "</div>"
     steps = '<div class="steps">' + "".join(f'<div class="step"><h3>{a}</h3><p>{b}</p></div>' for a,b in t["steps"]) + "</div>"
     faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in t["faq"])
     hub_cards = lambda home: '<div class="grid">' + "".join(f'<a class="card" href="{home}guides/{hub_slug(h)}/index.html"><h3>{t["hubs"][h]}</h3><p>{sum(1 for a in A if a["hub"]==h)} {t["n_guides"]}</p></a>' for h in HUBS) + "</div>"
@@ -135,7 +135,7 @@ def build(lang):
     page("", t["title_home"], t["desc_home"], f"""<div class="wrap hero"><div><span class="eyebrow">{t["eyebrow"]}</span><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>
 <div class="cta-row">{btn(t["book"])}<a class="btn btn-ghost" href="prices/index.html">{t["see_prices"]}</a></div>
 <ul class="trust">{''.join(f'<li>{x}</li>' for x in t["trust"])}</ul></div>
-<div class="photo" role="img" aria-label="{t['photo']}"><div class="chip">{t["chip"]}</div>{t["photo"]}</div></div>
+<div class="photo"><img src="{{ROOT}}img/hero.jpg" alt="{t['photo']}" width="960" height="640" fetchpriority="high"><div class="chip">{t["chip"]}</div></div></div>
 <section><div class="wrap"><div class="sec-head"><h2>{t["svc_h"]}</h2><p>{t["svc_p"]}</p></div>{services_grid("")}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["steps_h"]}</h2></div>{steps}</div></section>
 <section><div class="wrap"><div class="band"><div><h2>{t["safe_h"]}</h2><p>{t["safe_p"]}</p><a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="safety/index.html">{t["safe_btn"]}</a></div>
@@ -151,14 +151,14 @@ def build(lang):
         page(f"services/{s}/", t["svc_title"].format(s=n), f"{t['svc_h1'].format(s=n)}: {d}", f"""<div class="wrap">{crumbs(hm,(t["services_h"],"services/"),(n,None))}
 <div class="hero" style="padding-top:32px"><div><span class="eyebrow">{i} {n}</span><h1>{t["svc_h1"].format(s=n)}</h1><p class="lead">{d}</p>
 <div class="cta-row">{btn(t["check"], t["wa_service"].format(s=n))}<a class="btn btn-ghost" href="{hm}prices/index.html">{t["prices"]}</a></div></div>
-<div class="photo" role="img" aria-label="{n}">[{n}]</div></div>
+<div class="photo"><img src="{{ROOT}}img/{s}.jpg" alt="{n}" width="960" height="640"></div></div>
 <section><div class="sec-head"><h2>{t["how"]}</h2></div>{steps}</section><section><div class="sec-head"><h2>{t["faq_short"]}</h2></div>{faq}</section></div>""")
 
     rows = "".join(f"<tr><td>{n}</td><td>[IDR —]</td><td>[—]</td></tr>" for n,_ in t["svc"])
     page("prices/", t["prices_t"], t["prices_p"], f"""<div class="wrap">{crumbs("../",(t["prices"],None))}<section><div class="sec-head"><h1>{t["prices_h"]}</h1><p>{t["prices_p"]}</p></div>
 <table class="price-table"><tr>{''.join(f'<th>{x}</th>' for x in t["th"])}</tr>{rows}</table><p class="note" style="margin-top:14px">{t["price_note"]}</p><div class="cta-row">{btn(t["quote"])}</div></section></div>""")
     page("how-it-works/", t["hiw_t"], t["hiw_d"], f'<div class="wrap">{crumbs("../",(t["how"],None))}<section><div class="sec-head"><h1>{t["how"]}</h1></div>{steps}<div class="cta-row">{btn()}</div></section></div>')
-    page("safety/", t["safety_t"], t["safety_d"], f'<div class="wrap article">{crumbs("../",(t["nav"][3],None))}<h1>{t["safety_t"]}</h1>' + "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in t["safety_body"]) + f"{btn()}</div>")
+    page("safety/", t["safety_t"], t["safety_d"], f'<div class="wrap article">{crumbs("../",(t["nav"][3],None))}<h1>{t["safety_t"]}</h1><img class="art-img" src="{{ROOT}}img/safety.jpg" alt="{t["safety_t"]}" loading="lazy">' + "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in t["safety_body"]) + f"{btn()}</div>")
     page("faq/", t["faq_t"], t["faq_d"], f'<div class="wrap article">{crumbs("../",(t["faq_short"],None))}<h1>{t["faq_t"]}</h1>{faq}<div class="cta-row">{btn()}</div></div>')
     page("careers/", t["careers_t"], t["careers_p"], f'<div class="wrap article">{crumbs("../",(t["careers_h"],None))}<h1>{t["careers_h"]}</h1><p>{t["careers_p"]}</p>{btn(t["apply"], t["apply_msg"])}</div>')
 
@@ -179,7 +179,7 @@ def build(lang):
     body = "".join(f'<h2 id="s{i}">{h}</h2><p>{p}</p>' + (f'<div class="inline-cta"><div><b>{art["mid_h"]}</b><br><span class="note">{art["mid_p"]}</span></div>{btn(t["book"])}</div>' if i==3 else "") for i,(h,p) in enumerate(art["secs"],1))
     hm = "../../../"
     page(f"guides/{hub_slug(a['hub'])}/{a['slug']}/", art["title"], art["desc"], f"""<div class="wrap article">{crumbs(hm,(t["guides_f"],"guides/"),(t["hubs"][a["hub"]],f"guides/{hub_slug(a['hub'])}/"))}
-<h1>{art["h1"]}</h1><p class="note">{art["byline"]}</p><p class="lead">{art["lead"]}</p><div class="toc"><b>{art["toc"]}</b><ol>{toc}</ol></div>{body}
+<h1>{art["h1"]}</h1><p class="note">{art["byline"]}</p><p class="lead">{art["lead"]}</p><img class="art-img" src="{{ROOT}}img/article.jpg" alt="{art['h1']}" width="960" height="1440"><div class="toc"><b>{art["toc"]}</b><ol>{toc}</ol></div>{body}
 <div class="inline-cta"><div><b>{t["final_h"]}</b></div>{btn()}</div></div>""",
      f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Article","headline":"{art["h1"]}","inLanguage":"{lang}","dateModified":"2026-09-25"}}</script>')
 
@@ -210,6 +210,7 @@ if OUT.exists(): shutil.rmtree(OUT)
 OUT.mkdir()
 for lang in T: build(lang)
 (OUT/"style.css").write_text(CSS, encoding="utf-8")
+shutil.copytree(HERE/"src/img", OUT/"img")
 (OUT/".nojekyll").write_text("")
 (OUT/"robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n", encoding="utf-8")
 urls = sorted(p.relative_to(OUT).as_posix().replace("index.html","") for p in OUT.rglob("index.html"))
