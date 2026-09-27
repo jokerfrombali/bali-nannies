@@ -227,6 +227,33 @@ for _i,_a in enumerate(AREAS,1):
     _pid=f"G{_i:02d}"; AREA_PAGES[_a["slug"]]=_pid
     COMM.append((_pid,f"/areas/{_a['slug']}/",f"Nanny & Babysitter in {_a['en']}, Bali",f"nanny {_a['en'].split(' &')[0].lower()}",[]))
 
+
+# ---- прокат (R01…)
+RENT = [("R01","/rentals/","Baby Equipment Hire in Bali","baby equipment hire bali"),
+        ("R02","/rentals/pool-fence/","Pool Fence Hire in Bali","pool fence hire bali"),
+        ("R03","/rentals/sleep/","Cot Hire in Bali","cot hire bali"),
+        ("R04","/rentals/strollers/","Stroller Hire in Bali","stroller hire bali"),
+        ("R05","/rentals/car-seats/","Car Seat Hire in Bali","car seat hire bali"),
+        ("R06","/rentals/feeding-bath/","High Chair & Baby Bath Hire in Bali","high chair hire bali"),
+        ("R07","/rentals/play/","Toy & Baby-Proofing Hire in Bali","baby toys rental bali")]
+for _r in RENT: COMM.append((_r[0],_r[1],_r[2],_r[3],[]))
+RENT_Q = {
+ "R01":["baby equipment hire bali","baby equipment rental bali","baby hire bali","baby gear rental bali","bali baby hire","baby equipment hire sanur","baby equipment hire canggu","baby equipment hire seminyak","baby equipment hire ubud","baby equipment hire uluwatu","baby equipment hire nusa dua","rent baby stuff bali","baby equipment delivery bali villa"],
+ "R02":["pool fence hire bali","pool fence rental bali","bali pool fence","baby pool fence bali","removable pool fence bali","pool fence for villa bali","child safety pool fence bali","pool fence hire canggu","pool fence hire seminyak","pool fence hire ubud","pool fence hire uluwatu","pool fence hire sanur","villa pool safety bali","pool fence price bali"],
+ "R03":["cot hire bali","baby cot rental bali","crib rental bali","travel cot hire bali","bassinet hire bali","baby bed rental bali","blackout blinds hire bali","baby monitor rental bali"],
+ "R04":["stroller hire bali","pram hire bali","stroller rental bali","double stroller hire bali","baby carrier hire bali","pram rental sanur","stroller rental canggu"],
+ "R05":["car seat hire bali","car seat rental bali","baby car seat bali","booster seat hire bali","infant car seat rental bali","car seat bali airport"],
+ "R06":["high chair hire bali","high chair rental bali","bottle steriliser hire bali","baby bath rental bali","breast pump rental bali"],
+ "R07":["baby toys rental bali","toy hire bali","baby gate hire bali","baby proofing villa bali","playpen hire bali","bouncer hire bali"],
+}
+RENT_RU = {"R01":["аренда детских вещей бали","прокат детских вещей бали","детское оборудование в аренду бали","прокат детских вещей санур","прокат детских вещей чангу"],
+ "R02":["ограждение бассейна бали","ограждение для бассейна аренда бали","защита бассейна от детей бали","забор для бассейна вилла бали","безопасность бассейна дети бали"],
+ "R03":["аренда детской кроватки бали","прокат кроватки бали","манеж аренда бали"],
+ "R04":["аренда коляски бали","прокат коляски бали","коляска напрокат бали"],
+ "R05":["аренда автокресла бали","автокресло напрокат бали","детское кресло в такси бали"],
+ "R06":["аренда стульчика для кормления бали","прокат стерилизатора бали"],
+ "R07":["аренда игрушек бали","защита от детей на вилле бали"]}
+
 # ---------------------------------------------------------------- СЕМАНТИКА
 queries = []  # dict(q, lang, intent, page, cluster, source, status, reason)
 seen = set()
@@ -270,6 +297,12 @@ RU += [(f"няня {r}", AREA_PAGES[sl]) for r,sl in [("санур","sanur"),("�
 RU += [(f"бебиситтер {r}", AREA_PAGES[sl]) for r,sl in [("чангу","canggu"),("убуд","ubud"),("семиньяк","seminyak"),("нуса дуа","nusa-dua")]]
 RU = [(q, AREA_PAGES["sanur"] if (p=="C01" and "санур" in q) else p) for q,p in RU]
 for q,p in RU: addq(q,"ru","Коммерческий" if p.startswith("C") else "Информационный",p,"S02")
+
+# 3b) прокат
+for _pid,_qs in RENT_Q.items():
+    for _q in _qs: addq(_q,"en","Коммерческий",_pid,"S05","принято по смыслу","Прокат оборудования; маркер по сайтам конкурентов (Bali Bubs, Bali Baby Hire, Little Shell)")
+for _pid,_qs in RENT_RU.items():
+    for _q in _qs: addq(_q,"ru","Коммерческий",_pid,"S05","принято по смыслу","RU-версия страницы проката")
 
 # 4) информационные: из плана статей + производные
 for i,a in enumerate(A,1):

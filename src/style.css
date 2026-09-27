@@ -10,7 +10,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,248,243,.85);backdro
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
 .logo{font-family:Fraunces,serif;font-weight:600;font-size:1.3rem;color:var(--ink);text-decoration:none}
 .logo{display:inline-flex;align-items:center;gap:6px}.flower{width:26px;height:26px;color:#E8845B;flex:none;transform:rotate(-12deg)}
-.links{display:flex;gap:26px}.links a{color:var(--muted);text-decoration:none;font-size:.95rem}.links a:hover{color:var(--ink)}
+.links{display:flex;gap:22px}.links a{color:var(--muted);text-decoration:none;font-size:.95rem}.links a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:1rem;transition:transform .15s,box-shadow .15s}
 .btn:hover{transform:translateY(-1px)}
 .btn-wa{background:var(--wa);color:#fff;box-shadow:0 6px 20px rgba(37,211,102,.3)}
@@ -86,7 +86,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 .logo-light{color:#fff;font-size:1.5rem}.foot-brand p{margin:14px 0 20px;max-width:24em}
 .foot-wa{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid rgba(255,255,255,.22);border-radius:999px;font-size:.92rem}
 .foot-wa .wa-ico{width:18px;height:18px;color:#25D366}
-.foot-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.foot-cols b{display:block;color:#fff;margin-bottom:10px;font-size:.95rem}
+.foot-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}.foot-cols b{display:block;color:#fff;margin-bottom:10px;font-size:.95rem}
 .foot-cols a{display:block;padding:4px 0;font-size:.92rem}
 .foot-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;font-size:.85rem}
 .foot-bottom .lang{border-color:rgba(255,255,255,.25);color:#C9DBD4;padding:3px 10px}
@@ -98,3 +98,4 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 .sm-group li a:hover{color:var(--brand)}
 .pre{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.pre.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.pre{opacity:1;transform:none;transition:none}}
+@media(max-width:860px){.steps[style]{grid-template-columns:1fr!important}}

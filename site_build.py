@@ -7,6 +7,7 @@ ns = {"__file__": str(HERE/"build_seo.py")}
 import sys; sys.path.insert(0, str(HERE))
 from areas import AREAS
 import trust_blocks as TBm
+import rentals as RM
 import json as _json
 AREA_CREDITS = _json.loads((HERE/"src/img/areas/credits.json").read_text(encoding="utf-8"))
 exec((HERE/"build_seo.py").read_text(encoding="utf-8").split("# ---------------------------------------------------------------- СЕМАНТИКА")[0], ns)
@@ -19,7 +20,7 @@ WA = "62XXXXXXXXXX"            # номер WhatsApp: 62…, без +
 EMAIL = "hello@example.com"
 DOMAIN = "https://[domain]"     # после покупки домена
 OUT = HERE/"site"
-CSS = (HERE/"src/style.css").read_text(encoding="utf-8") + TBm.CSS
+CSS = (HERE/"src/style.css").read_text(encoding="utf-8") + TBm.CSS + RM.CSS
 import hashlib
 CSS_V = hashlib.md5(CSS.encode()).hexdigest()[:8]
 WA_SVG = (HERE/"src/wa.svg").read_text(encoding="utf-8")
@@ -33,7 +34,7 @@ T = {
   prefix="", html_lang="en", other="ru", other_label="RU", locale="en",
   wa_default="Hi! I'd like to book a nanny in Bali.",
   wa_service="Hi! I'm interested in: {s}. Dates: ",
-  nav=["Services","Areas","Prices","Safety","Guides"], safety_nav="Safety", home="Home",
+  nav=["Services","Rentals","Areas","Prices","Safety","Guides"], safety_nav="Safety", home="Home",
   svc=[("Hourly babysitter","Dinner out, spa, a surf lesson — from 3 hours."),("Full-day nanny","Beach, pool, naps and meals while you get a real holiday."),("Night nanny","Settling, feeds and night wakings so you can sleep."),("Newborn & baby care","Nannies experienced with babies under 12 months."),("Travel nanny","Joins your family on day trips and island hops."),("Hotel & villa babysitting","We come to your hotel or villa across Bali."),("Weddings & events","Kids' corner and sitters for celebrations."),("Long-term nanny","For expat families living in Bali.")],
   wa_btn="Chat on WhatsApp", wa_short="WhatsApp", book="Book on WhatsApp", see_prices="See prices", prices="Prices",
   title_home="Nanny & Babysitter in Bali — Sanur, Canggu, Ubud & more", desc_home="English-speaking, first-aid trained nannies and babysitters across Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. Hotel & villa visits, night nannies, day trips. Book in minutes on WhatsApp.",
@@ -63,7 +64,7 @@ T = {
   prefix="ru/", html_lang="ru", other="en", other_label="EN", locale="ru",
   wa_default="Здравствуйте! Хочу забронировать няню на Бали.",
   wa_service="Здравствуйте! Интересует: {s}. Даты: ",
-  nav=["Услуги","Районы","Цены","Безопасность","Гайды"], safety_nav="Безопасность", home="Главная",
+  nav=["Услуги","Прокат","Районы","Цены","Безопасность","Гайды"], safety_nav="Безопасность", home="Главная",
   svc=[("Няня на час","Ужин, спа, урок сёрфинга — от 3 часов."),("Няня на весь день","Пляж, бассейн, сон и еда, пока у вас настоящий отпуск."),("Ночная няня","Укладывание, кормления и ночные пробуждения — а вы высыпаетесь."),("Няня для малыша","Няни с опытом ухода за детьми до года."),("Няня в поездки","Едет с семьёй на экскурсии и острова."),("Няня в отель или виллу","Приедем в ваш отель или виллу по всему Бали."),("Свадьбы и мероприятия","Детская зона и няни на праздники."),("Няня на длительный срок","Для семей, которые живут на Бали.")],
   wa_btn="Написать в WhatsApp", wa_short="WhatsApp", book="Забронировать в WhatsApp", see_prices="Цены", prices="Цены",
   title_home="Няня на Бали — Санур, Чангу, Убуд и другие районы", desc_home="Проверенные няни с сертификатом первой помощи по всему Бали: Санур, Чангу, Семиньяк, Убуд, Улувату, Нуса Дуа. Приезд в отель и виллу, ночные няни, поездки. Бронь за пару минут в WhatsApp.",
@@ -117,6 +118,7 @@ AT = {
 def build(lang):
     t = T[lang]
     b = TBm.TB[lang]
+    r = RM.RT[lang]
     def btn(text=None, msg=None, cls=""):
         return f'<a class="btn btn-wa {cls}" href="{wa(msg or t["wa_default"])}" target="_blank" rel="noopener">{WA_SVG}{text or t["wa_btn"]}</a>'
 
@@ -128,7 +130,7 @@ def build(lang):
         other_path = T[t["other"]]["prefix"] + path
         alt = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMAIN}/{T[l]["prefix"]}{path}">' for l in T) + f'<link rel="alternate" hreflang="x-default" href="{DOMAIN}/{path}">' if other_exists else ""
         switch = f'<a class="lang" href="{root}{other_path}index.html">{t["other_label"]}</a>' if other_exists else f'<a class="lang" href="{root}{T[t["other"]]["prefix"]}index.html">{t["other_label"]}</a>'
-        links = ["services","areas","prices","safety","guides"]
+        links = ["services","rentals","areas","prices","safety","guides"]
         nav = f"""<header><div class="wrap nav"><a class="logo" href="{home}index.html" aria-label="{BRAND}">Bali{FLOWER}Nannies</a>
 <nav class="links">{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(links,t["nav"]))}</nav>
 <div class="right">{switch}{btn(t["wa_short"], cls="btn-sm hdr-wa")}</div></div></header>"""
@@ -137,6 +139,7 @@ def build(lang):
 <a class="foot-wa" href="{wa(t['wa_default'])}" target="_blank" rel="noopener">{WA_SVG}<span>WhatsApp · +{WA}</span></a></div>
 <nav class="foot-cols">
 <div><b>{t["services_f"]}</b>{''.join(f'<a href="{home}services/{s}/index.html">{n}</a>' for s,(n,_) in zip(SERVICES,t["svc"]))}</div>
+<div><b>{r["nav"]}</b>{''.join(f'<a href="{home}rentals/{c["slug"]}/index.html">{c[lang][0]}</a>' for c in RM.CATS)}</div>
 <div><b>{AT[lang]["nav"]}</b>{''.join(f'<a href="{home}areas/{a["slug"]}/index.html">{a[lang]}</a>' for a in AREAS)}</div>
 <div><b>{t["company"]}</b>{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(["how-it-works","safety","prices","faq","careers","guides"],[t["how"],t["safety_nav"],t["prices"],t["faq_short"],t["careers_nav"],t["guides_f"]]))}</div>
 </nav></div>
@@ -172,6 +175,8 @@ def build(lang):
 <ul class="trust">{''.join(f'<li>{x}</li>' for x in b["hero_trust"])}</ul></div>
 <div class="photo"><img src="{{ROOT}}img/hero.jpg" alt="{t['photo']}" width="960" height="640" fetchpriority="high"><div class="chip">{t["chip"]}</div></div></div>
 <section><div class="wrap"><div class="sec-head"><h2>{t["svc_h"]}</h2><p>{t["svc_p"]}</p></div>{services_grid("")}</div></section>
+<section><div class="wrap"><div class="sec-head"><h2>{r["home_h"]}</h2><p>{r["home_p"]}</p></div>{RM.fence_banner(lang, "", btn)}
+<div style="margin-top:18px">{RM.rent_grid(lang, "", RM.CATS[1:4])}</div><div class="cta-row"><a class="btn btn-ghost" href="rentals/index.html">{r["all"]} →</a></div></div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{t["steps_h"]}</h2></div>{steps}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{AT[lang]["h"]}</h2><p>{AT[lang]["p"]}</p></div>{area_grid("")}</div></section>
 <section><div class="wrap">{TBm.meet_html(b, "{ROOT}")}</div></section>
@@ -201,11 +206,43 @@ def build(lang):
 
     # SITEMAP (HTML)
     groups = [(t["services_f"], [(f"services/{s}/", n) for s,(n,_) in zip(SERVICES,t["svc"])]),
+              (r["nav"], [("rentals/", r["h1"])] + [(f"rentals/{c['slug']}/", c[lang][0]) for c in RM.CATS]),
               (AT[lang]["nav"], [(f"areas/{a['slug']}/", a[lang]) for a in AREAS]),
               (t["company"], [("how-it-works/",t["how"]),("safety/",t["safety_nav"]),("prices/",t["prices"]),("faq/",t["faq_short"]),("careers/",t["careers_nav"])]),
               (t["guides_f"], [(f"guides/{hub_slug(h)}/", t["hubs"][h]) for h in HUBS])]
     sm = "".join(f'<div class="sm-group"><h2>{g}</h2><ul>' + "".join(f'<li><a href="../{u}index.html">{n}</a></li>' for u,n in items) + "</ul></div>" for g,items in groups)
     page("sitemap/", SM[lang]["title"], SM[lang]["desc"], f'<div class="wrap">{crumbs("../",(SM[lang]["title"],None))}<section><div class="sec-head"><h1>{SM[lang]["title"]}</h1><p>{SM[lang]["desc"]}</p></div><div class="sm-grid">{sm}</div></section></div>')
+
+    # RENTALS
+    how_r = '<div class="steps">' + "".join(f'<div class="step"><h3>{a}</h3><p>{d}</p></div>' for a,d in r["how"]) + "</div>"
+    hyg = '<ul class="hyg">' + "".join(f"<li>{x}</li>" for x in r["hygiene"]) + "</ul>"
+    combo = f'<div class="combo"><div><h3>🧳 {r["pack_h"]}</h3><p>{r["pack_p"]}</p></div><div><h3>👩‍🍼 {r["combo_h"]}</h3><p>{r["combo_p"]}</p></div></div>'
+    page("rentals/", r["title"], r["lead"], f"""<div class="wrap">{crumbs("../",(r["nav"],None))}
+<section style="padding-bottom:24px"><div class="sec-head"><h1>{r["h1"]}</h1><p class="lead">{r["lead"]}</p></div><div class="cta-row">{btn(r["ask"], r["msg"])}</div>{hyg}</section>
+<section style="padding-top:24px">{RM.fence_banner(lang, "../", btn)}</section>
+<section><div class="sec-head"><h2>{r["sec_h"]}</h2></div>{RM.rent_grid(lang, "../", RM.CATS[1:])}</section>
+<section><div class="sec-head"><h2>{r["how_h"]}</h2></div>{how_r}</section><section>{combo}</section></div>""")
+    for c in RM.CATS[1:]:
+        name, desc = c[lang]
+        items = "".join(f"<li>{i}</li>" for i in c["items_"+lang])
+        rows = "".join(f"<tr><td>{i}</td><td>[IDR —]{r['per_day']}</td></tr>" for i in c["items_"+lang])
+        page(f"rentals/{c['slug']}/", f"{name} — {r['h1']}", desc, f"""<div class="wrap">{crumbs("../../",(r["nav"],"rentals/"),(name,None))}
+<div class="hero" style="padding-top:32px"><div><span class="eyebrow">{c["icon"]} {r["nav"]}</span><h1>{name}</h1><p class="lead">{desc} {r["lead"]}</p>
+<div class="cta-row">{btn(r["ask"], r["msg"])}</div>{hyg}</div><div class="photo"><img src="{{ROOT}}img/rent/{c["slug"]}.jpg" alt="{name}" width="1200" height="800"></div></div>
+<section><table class="price-table"><tr><th>{name}</th><th>{t["th"][1]}</th></tr>{rows}</table></section>
+<section><div class="sec-head"><h2>{r["how_h"]}</h2></div>{how_r}</section><section>{combo}</section>
+<section><div class="sec-head"><h2>{r["sec_h"]}</h2></div>{RM.rent_grid(lang, "../../", [x for x in RM.CATS if x is not c][:3])}</section></div>""")
+    pf = r["pf"]; c0 = RM.CATS[0]
+    pf_steps = '<div class="steps" style="grid-template-columns:repeat(4,1fr)">' + "".join(f'<div class="step"><h3>{a}</h3><p>{d}</p></div>' for a,d in pf["steps"]) + "</div>"
+    pf_faq = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q,a in pf["faq"])
+    page("rentals/pool-fence/", pf["title"], pf["lead"], f"""<div class="wrap">{crumbs("../../",(r["nav"],"rentals/"),(c0[lang][0],None))}
+<div class="hero" style="padding-top:32px"><div><span class="eyebrow">🛡️ {c0[lang][0]}</span><h1>{pf["h1"]}</h1><p class="lead">{pf["lead"]}</p>
+<div class="cta-row">{btn(pf["cta"], pf["msg"])}</div></div><div class="photo"><img src="{{ROOT}}img/rent/pool-fence.jpg" alt="{pf["h1"]}" width="1200" height="800"></div></div>
+<section><div class="sec-head"><h2>{pf["why_h"]}</h2></div><div class="why-list">{"".join(f"<div>{x}</div>" for x in pf["why"])}</div><p class="safety-note">⚠️ {pf["note"]}</p></section>
+<section><div class="sec-head"><h2>{pf["what_h"]}</h2></div><ul class="ticks">{"".join(f"<li>{x}</li>" for x in c0["items_"+lang])}</ul></section>
+<section><div class="sec-head"><h2>{pf["steps_h"]}</h2></div>{pf_steps}</section>
+<section><table class="price-table"><tr><th>{c0[lang][0]}</th><th>{t["th"][1]}</th></tr><tr><td>{c0["items_"+lang][0]}</td><td>{r["from_"]} [IDR —]{r["per_day"]}</td></tr></table></section>
+<section>{combo}</section><section><div class="sec-head"><h2>{t["faq_short"]}</h2></div>{pf_faq}</section></div>""")
 
     # SERVICES
     page("services/", t["services_t"], t["services_d"], f'<div class="wrap">{crumbs("../",(t["services_h"],None))}<section><div class="sec-head"><h1>{t["services_h"]}</h1></div>{services_grid("../")}</section></div>')
