@@ -95,6 +95,21 @@ T = {
 FLOWER = ('<svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor">'
   + "".join(f'<path transform="rotate({k*72} 20 20)" d="M20 20C13.5 16 12.5 5 19 2.2c5.2-1.6 8.3 4.4 5.6 10.6C23.6 15.3 22 18 20 20z"/>' for k in range(5))
   + '</g><circle cx="20" cy="20" r="3.6" fill="#F6C453"/></svg>')
+LANG_HINT = {"en":"View in English","ru":"Открыть на русском","zh":"切换到中文","hi":"हिन्दी में देखें","ko":"한국어로 보기","ja":"日本語で見る","fr":"Voir en français","de":"Auf Deutsch ansehen","es":"Ver en español","it":"Vedi in italiano","nl":"Bekijk in het Nederlands","id":"Lihat dalam Bahasa Indonesia"}
+import json as _jh
+HINT_JS = ("(()=>{const K='bn_lang_hint';const mark=()=>{try{localStorage.setItem(K,'1')}catch(e){}};"
+  "document.querySelectorAll('.lang-pop a[lang]').forEach(a=>a.addEventListener('click',mark));"
+  "try{if(localStorage.getItem(K))return}catch(e){}"
+  "const cur=document.documentElement.lang.slice(0,2).toLowerCase(),links={};"
+  "document.querySelectorAll('.lang-pop a[lang]').forEach(a=>links[a.getAttribute('lang')]=a.href);"
+  "const pref=(navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||'']).map(l=>l.toLowerCase().replace(/^in\b/,'id').slice(0,2)).find(l=>links[l]);"
+  "if(!pref||pref===cur)return;const T=" + _jh.dumps(LANG_HINT, ensure_ascii=False) + ";"
+  "const d=document.createElement('div');d.className='lang-hint';d.setAttribute('lang',pref);"
+  "d.innerHTML='<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9\"/></svg>';"
+  "const a=document.createElement('a');a.href=links[pref];a.textContent=T[pref];a.addEventListener('click',mark);"
+  "const x=document.createElement('button');x.type='button';x.setAttribute('aria-label','Close');x.textContent='✕';"
+  "x.addEventListener('click',()=>{mark();d.classList.remove('show');setTimeout(()=>d.remove(),300)});"
+  "d.append(a,x);document.body.appendChild(d);setTimeout(()=>d.classList.add('show'),900)})();")
 HDR_JS = ("(()=>{const bg=document.querySelector('.burger'),nv=document.getElementById('mainnav'),gl=document.querySelector('.globe'),lm=document.querySelector('.lang-menu');"
   "bg.addEventListener('click',e=>{e.stopPropagation();const o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o);document.body.classList.toggle('nav-open',o);lm.classList.remove('open')});"
   "gl.addEventListener('click',e=>{e.stopPropagation();const o=lm.classList.toggle('open');gl.setAttribute('aria-expanded',o);nv.classList.remove('open');document.body.classList.remove('nav-open')});"
@@ -160,8 +175,8 @@ def build(lang):
 </nav></div>
 <div class="foot-bottom"><span>© 2026 {BRAND} · Bali, Indonesia</span><span><a href="{home}sitemap/index.html">{SM[lang]["title"]}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a> · {switch}</span></div>
 </div></footer>
-<script>{HDR_JS}</script>"""
-        doc = f"""<!doctype html><html lang="{t['html_lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>{HDR_JS}{HINT_JS}</script>"""
+        doc = f"""<!doctype html><html lang="{t['html_lang']}" translate="no"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} | {BRAND}</title><meta name="description" content="{html.escape(desc)}"><link rel="canonical" href="{DOMAIN}/{full}">{alt}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="{root}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{root}style.css?v={CSS_V}">{schema}</head><body>{nav}<main>{body.replace("{ROOT}", root)}</main>{foot}</body></html>"""
