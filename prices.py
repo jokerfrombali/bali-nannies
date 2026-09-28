@@ -2,9 +2,14 @@
 """Цены (IDR) и конвертер валют. Заполненные тарифы — от заказчика 28.09.2026; остальные пока «по запросу»."""
 
 RATE_HOUR = 120_000
+EXTRA_CHILD = 25_000   # +IDR/час за второго ребёнка (частная разница няни 100k→125k)
 PRICES = {
-    "hourly-babysitter": dict(idr=RATE_HOUR, unit="hour", min_h=5),
-    "day-nanny": dict(idr=RATE_HOUR * 10, unit="day", hours=10),
+    "hourly-babysitter":       dict(idr=RATE_HOUR, unit="hour", min_h=5, extra_child=EXTRA_CHILD),
+    "day-nanny":               dict(idr=RATE_HOUR * 10, unit="day", hours=10),
+    "night-nanny":             dict(idr=1_700_000, unit="night"),
+    "hotel-villa-babysitting": dict(idr=RATE_HOUR, unit="hour", min_h=5, extra_child=EXTRA_CHILD),
+    "event-babysitting":       dict(idr=RATE_HOUR, unit="hour", min_h=5, meal=True),
+    "travel-nanny":            dict(idr=RATE_HOUR, unit="hour", min_h=5, travel=True),
 }
 
 # запасные курсы IDR→валюта (open.er-api.com, 28.09.2026); на странице подтягиваются свежие
@@ -28,6 +33,8 @@ P = {
  "id": dict(per_hour="/ jam", per_day="/ hari", min_h="minimal {n} jam", day_note="{n} jam, mis. 10.00–20.00", on_request="Sesuai permintaan", show_in="Tampilkan harga dalam", approx="Konversi hanya perkiraan. Pembayaran dalam Rupiah (IDR).", min_total="Pemesanan minimum"),
 }
 
+for _l,_d in {'en': {'per_night': '/ night', 'extra_child': '+{x} / hour for a 2nd child', 'meal': 'Over 5 hours: a meal for the nanny, please', 'travel': 'Transport, tickets and accommodation paid by the family'}, 'ru': {'per_night': '/ ночь', 'extra_child': '+{x} / час за второго ребёнка', 'meal': 'Больше 5 часов: питание для няни за счёт семьи', 'travel': 'Дорога, билеты и проживание — за счёт семьи'}, 'zh': {'per_night': '/ 晚', 'extra_child': '第二个孩子每小时加 {x}', 'meal': '超过 5 小时：请为保姆提供一餐', 'travel': '交通、门票及住宿由家庭承担'}, 'hi': {'per_night': '/ रात', 'extra_child': 'दूसरे बच्चे के लिए +{x} / घंटा', 'meal': '5 घंटे से ज़्यादा: नैनी के लिए भोजन परिवार की ओर से', 'travel': 'यात्रा, टिकट और ठहरने का ख़र्च परिवार का'}, 'ko': {'per_night': '/ 1박', 'extra_child': '둘째 아이 시간당 +{x}', 'meal': '5시간 초과 시: 시터 식사를 제공해 주세요', 'travel': '교통비·입장권·숙박비는 가족 부담'}, 'ja': {'per_night': '/ 泊', 'extra_child': 'お子さま2人目は1時間あたり +{x}', 'meal': '5時間を超える場合：シッターのお食事をご用意ください', 'travel': '交通費・チケット代・宿泊費はご家族のご負担'}, 'fr': {'per_night': '/ nuit', 'extra_child': '+{x} / heure pour un 2e enfant', 'meal': 'Au-delà de 5 heures : un repas pour la nounou', 'travel': 'Transport, billets et hébergement à la charge de la famille'}, 'de': {'per_night': '/ Nacht', 'extra_child': '+{x} / Stunde für ein 2. Kind', 'meal': 'Ab 5 Stunden: bitte eine Mahlzeit für die Nanny', 'travel': 'Fahrt, Tickets und Unterkunft zahlt die Familie'}, 'es': {'per_night': '/ noche', 'extra_child': '+{x} / hora por un 2.º niño', 'meal': 'Más de 5 horas: una comida para la niñera', 'travel': 'Transporte, entradas y alojamiento a cargo de la familia'}, 'it': {'per_night': '/ notte', 'extra_child': '+{x} / ora per un 2° bambino', 'meal': 'Oltre 5 ore: un pasto per la tata', 'travel': 'Trasporti, biglietti e alloggio a carico della famiglia'}, 'nl': {'per_night': '/ nacht', 'extra_child': '+{x} / uur voor een 2e kind', 'meal': 'Langer dan 5 uur: graag een maaltijd voor de nanny', 'travel': 'Vervoer, tickets en verblijf betaalt het gezin'}, 'id': {'per_night': '/ malam', 'extra_child': '+{x} / jam untuk anak ke-2', 'meal': 'Lebih dari 5 jam: mohon sediakan makan untuk pengasuh', 'travel': 'Transportasi, tiket, dan penginapan ditanggung keluarga'}}.items(): P[_l].update(_d)
+
 def idr(n): return f"IDR {n:,}".replace(",", " ") if False else f"IDR {n:,}"
 
 def money(n):
@@ -37,9 +44,18 @@ def money(n):
 def price_cells(slug, lang):
     p = P[lang]; x = PRICES.get(slug)
     if not x: return f'<span class="muted">{p["on_request"]}</span>', "—"
+    unit = {"hour": p["per_hour"], "day": p["per_day"], "night": p["per_night"]}[x["unit"]]
+    rate = f'{money(x["idr"])} {unit}'
+    extra = []
+    if x.get("extra_child"): extra.append(p["extra_child"].format(x=idr(x["extra_child"])))
+    if x.get("meal"): extra.append(p["meal"])
+    if x.get("travel"): extra.append(p["travel"])
+    if extra: rate += "".join(f'<br><span class="note">{e}</span>' for e in extra)
     if x["unit"] == "hour":
-        return f'{money(x["idr"])} {p["per_hour"]}', f'{p["min_h"].format(n=x["min_h"])}<br><span class="note">{p["min_total"]}: </span>{money(x["idr"]*x["min_h"])}'
-    return f'{money(x["idr"])} {p["per_day"]}', p["day_note"].format(n=x["hours"])
+        return rate, f'{p["min_h"].format(n=x["min_h"])}<br><span class="note">{p["min_total"]}: </span>{money(x["idr"]*x["min_h"])}'
+    if x["unit"] == "day":
+        return rate, p["day_note"].format(n=x["hours"])
+    return rate, "—"
 
 def price_line(slug, lang):
     """Строка цены для страницы услуги (или пусто)."""
