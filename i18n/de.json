@@ -1,0 +1,680 @@
+{
+ "T": {
+  "wa_default": "Hallo! Ich möchte gern eine Nanny auf Bali buchen.",
+  "wa_service": "Hallo! Ich interessiere mich für: {s}. Daten: ",
+  "nav": [
+   "Leistungen",
+   "Verleih",
+   "Regionen",
+   "Preise",
+   "Sicherheit",
+   "Ratgeber"
+  ],
+  "safety_nav": "Sicherheit",
+  "home": "Startseite",
+  "svc": [
+   [
+    "Babysitter stundenweise",
+    "Abendessen, Spa, Surfstunde – ab 3 Stunden."
+   ],
+   [
+    "Ganztags-Nanny",
+    "Strand, Pool, Mittagsschlaf und Essen – und Sie haben endlich richtig Urlaub."
+   ],
+   [
+    "Nacht-Nanny",
+    "Einschlafen, Fläschchen und nächtliches Aufwachen – damit Sie schlafen können."
+   ],
+   [
+    "Betreuung für Neugeborene & Babys",
+    "Nannys mit Erfahrung bei Babys unter 12 Monaten."
+   ],
+   [
+    "Reise-Nanny",
+    "Begleitet Ihre Familie bei Tagesausflügen und Inseltouren."
+   ],
+   [
+    "Babysitting in Hotel & Villa",
+    "Wir kommen zu Ihrem Hotel oder Ihrer Villa – überall auf Bali."
+   ],
+   [
+    "Hochzeiten & Events",
+    "Kinderecke und Betreuung für Ihre Feier."
+   ],
+   [
+    "Langzeit-Nanny",
+    "Für Expat-Familien, die auf Bali leben."
+   ]
+  ],
+  "wa_btn": "Per WhatsApp schreiben",
+  "wa_short": "WhatsApp",
+  "book": "Per WhatsApp buchen",
+  "see_prices": "Preise ansehen",
+  "prices": "Preise",
+  "title_home": "Nanny & Babysitter auf Bali – Sanur, Canggu, Ubud & mehr",
+  "desc_home": "Englischsprachige Nannys und Babysitter mit Erste-Hilfe-Ausbildung auf ganz Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. Im Hotel oder in der Villa, Nacht-Nannys, Tagesausflüge. In wenigen Minuten per WhatsApp gebucht.",
+  "eyebrow": "Bali · Indonesien",
+  "h1": "Nannys, denen Sie vertrauen können – für Ihren Familienurlaub auf Bali",
+  "lead": "Englischsprachige Babysitter mit Erste-Hilfe-Ausbildung kommen zu Ihrem Hotel oder Ihrer Villa – und Sie genießen ein Abendessen, das Spa oder einen ruhigen Sonnenaufgang.",
+  "trust": [
+   "Geprüfter Hintergrund",
+   "Erste Hilfe & Wiederbelebung",
+   "Antwort in 15 Min."
+  ],
+  "chip": "🟢 Heute Abend Nanny frei",
+  "photo": "Nanny spielt mit einem Kind im Pool",
+  "svc_h": "Betreuung, die zu Ihrer Reise passt",
+  "svc_p": "Vom einzelnen Abend bis zur ganzen Saison auf Bali.",
+  "steps_h": "Gebucht in drei Nachrichten",
+  "steps": [
+   [
+    "Schreiben Sie uns per WhatsApp",
+    "Nennen Sie uns Daten, Uhrzeiten, das Alter der Kinder und Ihre Unterkunft."
+   ],
+   [
+    "Lernen Sie Ihre Nanny kennen",
+    "Wir schicken Ihnen ein Profil und eine kurze Vorstellung. Lieber zuerst ein Videocall? Sagen Sie einfach Bescheid."
+   ],
+   [
+    "Genießen Sie Ihre Zeit",
+    "Sie kommt zu Ihrem Hotel oder Ihrer Villa. Foto-Updates per WhatsApp, Bezahlung nach der Betreuung."
+   ]
+  ],
+  "safe_h": "Sicherheit ist kein Extra. Sie ist unsere Aufgabe.",
+  "safe_p": "Jede Nanny wird persönlich interviewt, ihre Referenzen werden geprüft und sie wird geschult, bevor sie zur ersten Familie geht.",
+  "safe_btn": "Unsere Sicherheitsstandards",
+  "safe_list": [
+   "Ausweis- und Referenzprüfung",
+   "Erste Hilfe am Kind & Wiederbelebung",
+   "Aufsichtsregeln für Pool und Strand",
+   "Kennenlernen vor der ersten Buchung"
+  ],
+  "faq_h": "Was Eltern uns fragen",
+  "faq": [
+   [
+    "Wie schnell kann ich buchen?",
+    "Oft noch am selben Tag. Für Abende und die Hochsaison (Juli–August, Weihnachten) schreiben Sie uns am besten 2–3 Tage vorher."
+   ],
+   [
+    "Sprechen Ihre Nannys Englisch?",
+    "Ja – jede Nanny verständigt sich sicher auf Englisch. Wir sagen Ihnen ehrlich, wie gut das Englisch der jeweiligen Nanny ist."
+   ],
+   [
+    "Haben die Nannys eine Erste-Hilfe-Ausbildung?",
+    "Jede Nanny besitzt ein aktuelles Zertifikat für Erste Hilfe am Kind & Wiederbelebung. Wir zeigen es Ihnen gern vor der Buchung."
+   ],
+   [
+    "Wo sind Sie im Einsatz?",
+    "Im Süden Balis und in Ubud – Sanur, Canggu, Seminyak, Kuta, Jimbaran, Uluwatu, Nusa Dua, Denpasar und Ubud. In Hotels, Villen und Privathäusern."
+   ],
+   [
+    "Wie bezahle ich?",
+    "Bar (IDR) oder per Überweisung nach der Betreuung. Keine Anzahlung bei Einzelbuchungen."
+   ],
+   [
+    "Kann eine Nanny mein Neugeborenes betreuen?",
+    "Ja. Für Babys wählen wir Nannys mit gezielter Erfahrung bei Neugeborenen aus."
+   ]
+  ],
+  "guides_h": "Sanur mit Kindern",
+  "guides_p": "Tipps von Einheimischen, die jeden Tag an diesen Stränden sind.",
+  "n_guides": "Ratgeber",
+  "final_h": "Sie brauchen eine Nanny auf Bali?",
+  "final_p": "Nennen Sie uns Ihre Daten – wir melden uns mit einer verfügbaren Nanny.",
+  "final_btn": "Per WhatsApp schreiben",
+  "services_t": "Nanny-Service auf Bali",
+  "services_h": "Unsere Leistungen",
+  "services_d": "Stundenweise Babysitter, Ganztags- und Nacht-Nannys, Neugeborenenbetreuung und Reise-Nannys auf ganz Bali.",
+  "svc_title": "{s} auf Bali",
+  "svc_h1": "{s} auf Bali",
+  "check": "Verfügbarkeit prüfen",
+  "how": "So funktioniert’s",
+  "faq_short": "FAQ",
+  "prices_t": "Preise für Nanny & Babysitter auf Bali",
+  "prices_h": "Einfache, transparente Preise",
+  "prices_p": "Keine Anzahlung bei Einzelbuchungen. Bezahlung nach der Betreuung.",
+  "th": [
+   "Leistung",
+   "Preis",
+   "Minimum"
+  ],
+  "price_note": "Preise für bis zu 2 Kinder. Anfahrt im Einsatzgebiet der Nanny inklusive; weitere Strecken nach Absprache.",
+  "quote": "Angebot anfragen",
+  "hiw_t": "So funktioniert die Buchung",
+  "hiw_d": "Buchen Sie eine Nanny auf Bali mit drei WhatsApp-Nachrichten.",
+  "safety_t": "Unsere Sicherheitsstandards",
+  "safety_d": "Wie wir jede Nanny auf Bali auswählen, prüfen und schulen.",
+  "safety_body": [
+   [
+    "Auswahl",
+    "Persönliches Interview, Ausweisprüfung, mindestens zwei Referenzen früherer Familien."
+   ],
+   [
+    "Schulung",
+    "Aktuelles Zertifikat für Erste Hilfe am Kind & Wiederbelebung. Aufsichtsregeln für Pool und Strand."
+   ],
+   [
+    "Bei jeder Buchung",
+    "Übergabe-Checkliste, Notfallkontakte, Updates per WhatsApp."
+   ]
+  ],
+  "faq_t": "Häufige Fragen",
+  "faq_d": "Antworten rund um die Nanny-Buchung auf Bali.",
+  "careers_nav": "Nanny werden",
+  "careers_t": "Nanny-Jobs auf Bali",
+  "careers_h": "Nanny werden",
+  "careers_p": "Wir arbeiten mit erfahrenen, englischsprachigen Nannys auf ganz Bali. Erste-Hilfe-Schulung inklusive.",
+  "apply": "Per WhatsApp bewerben",
+  "apply_msg": "Hallo! Ich möchte mich gern als Nanny bewerben.",
+  "guides_t": "Familienratgeber Sanur",
+  "guides_hh": "Familienratgeber Sanur",
+  "soon": "demnächst",
+  "company": "Unternehmen",
+  "services_f": "Leistungen",
+  "guides_f": "Ratgeber",
+  "foot_p": "Vertrauenswürdige, englischsprachige Nannys und Babysitter für Familien auf ganz Bali.",
+  "hubs": {
+   "H01": "Kinderbetreuung in Sanur",
+   "H02": "Sanur mit Kindern: Unternehmungen",
+   "H03": "Familienunterkünfte in Sanur",
+   "H04": "Gesundheit & Sicherheit für Kinder auf Bali",
+   "H05": "Familienfreundlich essen in Sanur",
+   "H06": "Reiselogistik mit Kindern",
+   "H07": "Tagesausflüge ab Sanur mit Kindern",
+   "H08": "Expat-Familienleben in Sanur"
+  }
+ },
+ "TB": {
+  "hero_trust": [
+   "Persönlich geprüft",
+   "Nanny vorab kennenlernen",
+   "Ersatzgarantie",
+   "Zahlung nach der Betreuung"
+  ],
+  "vet_h": "So prüfen wir jede Nanny",
+  "vet_p": "Sechs Schritte, bevor eine Nanny ihre erste Familie trifft. Ohne Abkürzungen.",
+  "vet": [
+   [
+    "🪪",
+    "Ausweis- & Adressprüfung",
+    "Reisepass oder KTP geprüft, Wohnadresse bestätigt."
+   ],
+   [
+    "📞",
+    "Zwei Familienreferenzen",
+    "Wir rufen frühere Familien selbst an – statt nur Briefe zu lesen."
+   ],
+   [
+    "🤝",
+    "Persönliches Interview",
+    "Von Angesicht zu Angesicht, mit Betreuungsszenarien und Englischtest."
+   ],
+   [
+    "⛑️",
+    "Erste Hilfe am Kind & Wiederbelebung",
+    "Gültiges Zertifikat, regelmäßig erneuert. Wir zeigen es Ihnen gern."
+   ],
+   [
+    "🏊",
+    "Regeln für Wassersicherheit",
+    "Aufsichtsregeln für Pool und Strand, von jeder Nanny unterschrieben."
+   ],
+   [
+    "⭐",
+    "Probeeinsatz & Feedback",
+    "Erste Einsätze werden begleitet; Familien bewerten jede Buchung."
+   ]
+  ],
+  "meet_h": "Lernen Sie Ihre Nanny kennen, bevor sie kommt",
+  "meet_p": "Keine Fremden an Ihrer Tür. Bevor die Buchung bestätigt ist, erhalten Sie:",
+  "meet": [
+   "Ihr Foto, ihren Namen und ihre Berufserfahrung",
+   "Ihre Sprachen und die Altersgruppen, die ihr am besten liegen",
+   "Ein kurzes Video-Hallo per WhatsApp",
+   "Auf Wunsch einen kurzen Videocall"
+  ],
+  "card": {
+   "tag": "Beispielprofil",
+   "name": "Ihre Nanny",
+   "meta": "7 Jahre · Babys & Kleinkinder",
+   "langs": "Englisch · Bahasa",
+   "loves": "Liebt: Schwimmen, Malen, Lieder",
+   "vid": "▶ Video-Hallo · 0:30"
+  },
+  "guar_h": "Ersatzgarantie",
+  "guar_p": "Ist Ihre Nanny krank oder verhindert, schicken wir eine andere geprüfte Nanny – oder Sie zahlen nichts. Ihr Abend bleibt Ihr Abend.",
+  "bring_h": "Was Ihre Nanny mitbringt",
+  "bring_p": "Kinder werden nicht nur beaufsichtigt – sie haben Spaß.",
+  "bring": [
+   [
+    "🎨",
+    "Bastelset",
+    "Papier, Wachsmalstifte, Sticker, einfache Bastelideen"
+   ],
+   [
+    "📚",
+    "Bilderbücher",
+    "Altersgerechte Gutenachtgeschichten"
+   ],
+   [
+    "🫧",
+    "Pool- & Strandspiele",
+    "Seifenblasen, Sandspielzeug, Wasserspiele"
+   ],
+   [
+    "🧩",
+    "Ruhige Spiele",
+    "Puzzles und Karten fürs Hotelzimmer"
+   ],
+   [
+    "⛑️",
+    "Mini-Erste-Hilfe-Set",
+    "Pflaster, Desinfektion, Kühlpack"
+   ],
+   [
+    "📱",
+    "Foto-Updates",
+    "Ein paar Fotos per WhatsApp während der Betreuung"
+   ]
+  ],
+  "check_h": "Vor jedem Einsatz fragen wir",
+  "check_p": "Damit nichts Wichtiges vergessen wird. Dauert 2 Minuten per WhatsApp.",
+  "check": [
+   "Allergien, Medikamente und Gesundheitshinweise",
+   "Schlaf- und Essensroutine",
+   "Pool oder Strand erlaubt? Mit welchen Regeln?",
+   "Bildschirmzeit und Süßigkeiten",
+   "Ihre Telefonnummer und ein Ersatzkontakt",
+   "Hotel- oder Villenregeln und Zimmernummer"
+  ],
+  "faq_add": [
+   [
+    "Was passiert, wenn die Nanny absagt?",
+    "Wir schicken eine Ersatz-Nanny mit denselben Prüfungen. Klappt das nicht, zahlen Sie nichts."
+   ],
+   [
+    "Kann ich die Nanny vor der Buchung sehen?",
+    "Ja. Sie erhalten ihr Foto, ihre Erfahrung und ein kurzes Video-Hallo – und können gern um einen Videocall bitten."
+   ]
+  ]
+ },
+ "RT": {
+  "nav": "Verleih",
+  "h1": "Babyausstattung mieten auf Bali",
+  "title": "Babyausstattung mieten auf Bali – Babybetten, Kinderwagen, Kindersitze, Poolzäune",
+  "lead": "Reisen Sie mit leichtem Gepäck. Wir liefern saubere, geprüfte Babyausstattung zu Ihrem Hotel oder Ihrer Villa, bauen sie auf – und holen sie bei Ihrer Abreise wieder ab.",
+  "sec_h": "Alles für kleine Reisende",
+  "from_": "ab",
+  "per_day": "/ Tag",
+  "how_h": "So funktioniert der Verleih",
+  "how": [
+   [
+    "Liste schicken",
+    "Per WhatsApp: Daten, Adresse und was Sie brauchen."
+   ],
+   [
+    "Lieferung & Aufbau",
+    "Gereinigt, desinfiziert und geprüft – auf Wunsch schon vor Ihrer Ankunft aufgebaut."
+   ],
+   [
+    "Abholung",
+    "Am letzten Tag holen wir alles in Ihrer Villa oder Ihrem Hotel ab."
+   ]
+  ],
+  "pack_h": "Ankunftspaket",
+  "pack_p": "Babybett, Kinderwagen, Kindersitz und Hochstuhl – geliefert, bevor Sie landen. Der entspannteste Start in den Bali-Urlaub mit Baby.",
+  "combo_h": "Verleih + Nanny",
+  "combo_p": "Buchen Sie eine Nanny dazu – sie kennt jedes Teil, das schon in Ihrer Villa aufgebaut ist.",
+  "hygiene": [
+   "Nach jeder Vermietung gereinigt und desinfiziert",
+   "Auf Verschleiß und Rückrufe geprüft",
+   "Frische Bettwäsche für jedes Babybett"
+  ],
+  "ask": "Verfügbarkeit anfragen",
+  "msg": "Hallo! Ich möchte gern Babyausstattung mieten. Daten: , Adresse: , Artikel: ",
+  "home_h": "Babyausstattung & Poolzäune",
+  "home_p": "Fliegen Sie nicht mit Babybett und Kinderwagen. Wir liefern alles zu Ihrer Villa.",
+  "all": "Alle Mietartikel ansehen",
+  "pf": {
+   "title": "Poolzaun mieten auf Bali – abnehmbarer Kindersicherheitszaun für Villen",
+   "h1": "Poolzaun mieten für Ihre Villa auf Bali",
+   "lead": "Die meisten Villenpools auf Bali haben keinen Zaun. Wir installieren vor Ihrer Ankunft einen abnehmbaren Kindersicherheitszaun rund um Ihren Pool – und bauen ihn bei Ihrer Abreise wieder ab.",
+   "why_h": "Warum ein Poolzaun so wichtig ist",
+   "why": [
+    "Viele Villen auf Bali haben den Pool direkt vor den Schlafzimmertüren – oft ohne jede Absperrung.",
+    "Kleinkinder sind schnell, und Ertrinken ist leise: Es sieht nicht aus wie das Planschen im Film.",
+    "Ein Zaun gibt Ihnen zusätzliche Sicherheit für die Momente, in denen Sie kurz wegsehen – beim Auspacken, Kochen oder an der Tür."
+   ],
+   "what_h": "Das bekommen Sie",
+   "steps_h": "So läuft die Installation ab",
+   "steps": [
+    [
+     "Fotos vom Pool schicken",
+     "Ein kurzes Video oder ein paar Fotos per WhatsApp genügen zum Ausmessen."
+    ],
+    [
+     "Abstimmung mit der Villa",
+     "Falls nötig, stimmen wir die Installation mit dem Villenmanager ab."
+    ],
+    [
+     "Installation in 30–60 Min.",
+     "Rund um den gesamten Poolrand befestigt, mit selbstschließendem Tor."
+    ],
+    [
+     "Abbau beim Check-out",
+     "Keine Bohrlöcher, keine Spuren."
+    ]
+   ],
+   "note": "Ein Zaun ist ein zusätzlicher Schutz, kein Ersatz für Aufsicht. Behalten Sie Kinder am Wasser immer im Blick.",
+   "faq": [
+    [
+     "Wird die Villa beschädigt?",
+     "Der Zaun lässt sich spurlos wieder abbauen. Beschreiben Sie uns den Belag rund um den Pool, dann bestätigen wir die Befestigungsart."
+    ],
+    [
+     "Muss die Villa zustimmen?",
+     "Villenmanager begrüßen das meist; wir können uns direkt mit ihnen abstimmen."
+    ],
+    [
+     "Können wir den Pool trotzdem nutzen?",
+     "Ja – Erwachsene öffnen das Tor; es schließt und verriegelt sich von selbst."
+    ],
+    [
+     "Wie früh sollte ich buchen?",
+     "In der Hochsaison (Juli–August, Weihnachten) so früh wie möglich. Die Installation kann vor Ihrer Ankunft erfolgen."
+    ]
+   ],
+   "msg": "Hallo! Ich brauche einen Poolzaun. Villa-Gegend: , Daten: , Poolgröße/Fotos: ",
+   "cta": "Angebot für Poolzaun anfragen"
+  }
+ },
+ "CATS": {
+  "pool-fence": {
+   "name": "Poolzäune",
+   "desc": "Abnehmbarer Kindersicherheitszaun rund um Ihren Villenpool.",
+   "items": [
+    "Abnehmbarer Netzzaun, ca. 1,2 m hoch",
+    "Selbstschließendes, selbstverriegelndes Tor",
+    "Rund um den gesamten Poolrand installiert",
+    "Abbau beim Check-out, ohne Schäden"
+   ]
+  },
+  "sleep": {
+   "name": "Babybetten & Schlafen",
+   "desc": "Babybetten in voller Größe, Reisebetten und Stubenwagen mit frischer Bettwäsche.",
+   "items": [
+    "Babybett in voller Größe mit Matratze",
+    "Reisebett / Laufstall",
+    "Stubenwagen für Neugeborene",
+    "Mobile Verdunkelungsrollos",
+    "White-Noise-Gerät",
+    "Babyphone"
+   ]
+  },
+  "strollers": {
+   "name": "Kinderwagen & Tragen",
+   "desc": "Leichte Reisebuggys, Zwillingswagen und Babytragen.",
+   "items": [
+    "Kompakter Reisebuggy",
+    "Geländekinderwagen für Strandwege",
+    "Zwillings-/Geschwisterwagen",
+    "Ergonomische Babytrage",
+    "Kinderwagen-Ventilator & Regenschutz"
+   ]
+  },
+  "car-seats": {
+   "name": "Kindersitze",
+   "desc": "Babyschalen, mitwachsende Sitze und Sitzerhöhungen – für Sie eingebaut.",
+   "items": [
+    "Babyschale (0–13 kg)",
+    "Mitwachsender Sitz (0–18 kg)",
+    "Vorwärtsgerichteter Sitz (9–25 kg)",
+    "Sitzerhöhung (15–36 kg)",
+    "Auf Wunsch im Auto Ihres Fahrers eingebaut"
+   ]
+  },
+  "feeding-bath": {
+   "name": "Essen & Baden",
+   "desc": "Hochstühle, Sterilisatoren und Babybadewannen.",
+   "items": [
+    "Hochstuhl",
+    "Reise-Sitzerhöhung für den Tisch",
+    "Flaschensterilisator",
+    "Flaschenwärmer",
+    "Babybadewanne & Badesitz",
+    "Milchpumpe (versiegeltes Set)"
+   ]
+  },
+  "play": {
+   "name": "Spielen & Sicherheit",
+   "desc": "Spielzeugpakete, Spielmatten und Kindersicherungs-Sets.",
+   "items": [
+    "Altersgerechtes Spielzeugpaket",
+    "Spielmatte & Babywippe",
+    "Treppenschutzgitter",
+    "Steckdosen- & Kantenschutz",
+    "Pool- & Strandspielzeug-Set",
+    "Schwimmweste für Kinder"
+   ]
+  }
+ },
+ "AT": {
+  "nav": "Regionen",
+  "h": "Hier sind wir auf Bali im Einsatz",
+  "p": "Unsere Nannys kommen in Hotels, Villen und Privathäuser im Süden Balis und in Ubud.",
+  "title": "Einsatzgebiete unseres Nanny-Service auf Bali",
+  "title_one": "Nanny & Babysitter in {loc}, Bali",
+  "h1": "Nanny & Babysitter in {loc}",
+  "msg": "Hallo! Ich brauche eine Nanny in {loc}. Daten: ",
+  "other": "Weitere Regionen"
+ },
+ "SM": {
+  "title": "Sitemap",
+  "desc": "Alle Seiten von Bali Nannies auf einen Blick."
+ },
+ "VID": {
+  "alt": "Unsere Nanny mit einem lächelnden Baby in einer Villa auf Bali",
+  "play": "Video abspielen",
+  "label": "30 Sek. ansehen"
+ },
+ "ARTICLE": {
+  "title": "Sanur mit Kindern: Ausflugstipps (Familienratgeber 2026)",
+  "h1": "Sanur mit Kindern: Der große Familienratgeber",
+  "desc": "Strände, Spielplätze, Wasseraktivitäten und ein 3-Tage-Plan für Familien in Sanur, Bali – von einer lokalen Nanny-Agentur.",
+  "byline": "Von [Autor], geprüft von [Nanny-Koordinatorin] · Aktualisiert im September 2026",
+  "toc": "In diesem Ratgeber",
+  "lead": "Sanur ist die ruhigste und am besten zu Fuß erkundbare Ecke Balis für Familien: vom Riff geschütztes Wasser, eine flache Strandpromenade und kurze Wege. So verbringen Sie hier schöne Tage mit Kindern jeden Alters.",
+  "mid_h": "Lust auf einen Abend zu zweit?",
+  "mid_p": "Eine Nanny kann noch heute Abend in Ihr Hotel oder Ihre Villa kommen.",
+  "secs": [
+   [
+    "Strände",
+    "Das Riff von Sanur hält das Wasser ruhig – einer der einfachsten Orte auf Bali, an dem kleine Kinder baden können. Sindhu, Semawang und Mertasari sind die Lieblingsstrände von Familien. Baden Sie rund um die Flut; bei Ebbe zieht sich das Wasser weit über das Riff zurück."
+   ],
+   [
+    "Parks und Spielplätze",
+    "Mehrere Strandcafés entlang der Promenade von Sanur haben Spielplätze, und für die heißesten Stunden des Tages gibt es Indoor-Spielbereiche."
+   ],
+   [
+    "Wasseraktivitäten",
+    "Stand-up-Paddling, Schnorchelausflüge und Schwimmkurse klappen im ruhigen Wasser von Sanur prima. Kite- und Windsurfkurse eignen sich in der windigen Saison für ältere Kinder."
+   ],
+   [
+    "Ideen für Regentage",
+    "Bastel- und Kochkurse, Indoor-Spielhallen und Einkaufszentren im nahen Denpasar halten Kinder bei Regen bei Laune."
+   ],
+   [
+    "Abendprogramm",
+    "Der Nachtmarkt von Sindhu, der Sonnenuntergang an der Strandpromenade – oder ein Abendessen zu zweit, während eine Nanny die Kinder ins Bett bringt."
+   ],
+   [
+    "Beispielplan für 3 Tage",
+    "Tag 1: Vormittag am Strand, Pool und Mittagsschlaf, Spaziergang zum Sonnenuntergang. Tag 2: Schnorcheln oder SUP, danach ein Bastelkurs. Tag 3: Tagesausflug in den Bali Zoo oder einen Wasserpark – mit einem freien Abend für die Eltern."
+   ]
+  ]
+ },
+ "AREAS": {
+  "sanur": {
+   "name": "Sanur",
+   "lead": "Ruhiges, vom Riff geschütztes Wasser und eine flache Strandpromenade machen Sanur zur entspanntesten Gegend Balis für Babys und Kleinkinder.",
+   "txt": [
+    [
+     "Warum Familien Sanur wählen",
+     "Das Riff hält die Wellen klein, sodass die Kleinen rund um die Flut sicher planschen können. Die 5 km lange Strandpromenade ist kinderwagenfreundlich, und die meisten Hotels, Cafés und Spielplätze sind zu Fuß erreichbar."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Vormittage am Strand mit Sandburgen, Poolzeit in Ihrem Hotel, Mittagsschlaf, während Sie SUP fahren oder schnorcheln, und Abende im Hotel, damit Sie ein Dinner zum Sonnenuntergang genießen können."
+    ],
+    [
+     "Gut zu wissen",
+     "Bei Ebbe zieht sich das Wasser weit über das Riff zurück – planen Sie das Baden rund um die Flut. Schnellboote nach Nusa Lembongan und Nusa Penida legen direkt am Strand von Sanur ab."
+    ]
+   ]
+  },
+  "canggu": {
+   "name": "Canggu",
+   "lead": "Surfen, Cafés und Villen mit eigenem Pool – Canggu passt zu Familien, die einen aktiven, geselligen Bali-Aufenthalt suchen.",
+   "txt": [
+    [
+     "Familien in Canggu",
+     "Die meisten Familien wohnen in Villen in Berawa, Pererenan oder Batu Bolong. Die Tage drehen sich um den Villenpool, Strandcafés mit Spielecken und Surfstunden für ältere Kinder."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Aufsicht am Pool Ihrer Villa, Spieltreffen in Familiencafés, Mittagsschlaf-Routinen, während Sie surfen oder im Coworking arbeiten, und abendliches Babysitting für Ihr Dinner."
+    ],
+    [
+     "Gut zu wissen",
+     "Die Strände von Canggu haben schwarzen Sand, starke Wellen und Strömungen – Kinder sollten nur zwischen den Flaggen oder im Pool baden. Zu Stoßzeiten ist viel Verkehr, deshalb buchen wir Nannys, die in der Nähe wohnen."
+    ]
+   ]
+  },
+  "seminyak": {
+   "name": "Seminyak",
+   "lead": "Boutique-Villen, Beach Clubs und Restaurants – Seminyak ist Balis stilvolle Basis für Familien, die gern ausgehen.",
+   "txt": [
+    [
+     "Familien in Seminyak",
+     "Villen mit eigenem Pool und Resorts am Strand liegen nah an einigen der besten Restaurants Balis. Familien verbringen ihre Tage zwischen Villa, Strand und Einkaufsstraßen."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Abendliches Babysitting, während Sie essen gehen oder einen Beach Club besuchen, Pool- und Spielzeit in der Villa und Hilfe bei der Zubettgeh-Routine."
+    ],
+    [
+     "Gut zu wissen",
+     "Die Brandung am Strand von Seminyak ist stark – Aufsicht am Wasser ist unerlässlich. Viele Beach Clubs richten sich abends an Erwachsene, daher ist ein Babysitter in der Villa die einfache Lösung."
+    ]
+   ]
+  },
+  "kuta-legian": {
+   "name": "Kuta & Legian",
+   "lead": "Nah am Flughafen und am Waterbom – Kuta und Legian sind ein bequemer erster Halt für Familien, die auf Bali ankommen.",
+   "txt": [
+    [
+     "Familien in Kuta & Legian",
+     "Große Hotels mit Kinderbecken, Einkaufszentren und der Wasserpark Waterbom machen die Gegend praktisch – besonders nach einem langen Flug."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Jetlag-Nächte mit einer Nacht-Nanny, Nachmittage am Hotelpool und ein Tag im Waterbom mit einem zusätzlichen Paar Hände."
+    ],
+    [
+     "Gut zu wissen",
+     "Am Strand von Kuta gibt es Surfschulen für Anfänger, aber auch Strömungen – baden Sie zwischen den Flaggen. Die Straßen sind voll, daher planen wir Ausflüge mit kurzen Wegen und Taxi."
+    ]
+   ]
+  },
+  "ubud": {
+   "name": "Ubud",
+   "lead": "Reisterrassen, Dschungelvillen und kühlere Luft – Ubud ist Balis kulturelles Herz und ein sanfter Ort für Kinder.",
+   "txt": [
+    [
+     "Familien in Ubud",
+     "Dschungelvillen mit Pool, Handwerkskurse, Tanzvorführungen und Spaziergänge durch die Reisfelder. Einen Strand gibt es nicht, dafür ist das Klima milder als an der Küste."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Villentage mit Pool und Spielen in der Natur, Begleitung bei Reisfeld-Spaziergängen und Babysitting, während Sie eine Yoga- oder Kochstunde nehmen."
+    ],
+    [
+     "Gut zu wissen",
+     "Viele Villen haben steile Treppen und ungesicherte Pools – beschreiben Sie uns die Anlage, damit wir die Sicherheit planen können. Halten Sie Kinder im Monkey Forest und an Tempeln von den Affen fern."
+    ]
+   ]
+  },
+  "uluwatu": {
+   "name": "Uluwatu",
+   "lead": "Resorts auf den Klippen, legendäre Sonnenuntergänge und versteckte Strände – Uluwatu zeigt Bali von seiner spektakulärsten Seite.",
+   "txt": [
+    [
+     "Familien in Uluwatu",
+     "Familien wohnen meist in Klippenresorts oder Villen mit großen Pools. Strände wie Padang Padang und Melasti sind wunderschön, aber nur über Treppen oder steile Straßen erreichbar."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Aufsicht am Pool Ihrer Villa, Strandzeit an ruhigeren Stellen bei wenig Wellengang und abendliches Babysitting, damit Sie den Kecak-Tanz oder einen Sonnenuntergang auf den Klippen erleben können."
+    ],
+    [
+     "Gut zu wissen",
+     "Viele Strände sind etwas für erfahrene Surfer – wählen Sie ruhige Tage und bleiben Sie in der Nähe. Die Affen am Uluwatu-Tempel schnappen sich gern Gegenstände; kleine Kinder sind dort in einer Trage sicherer."
+    ]
+   ]
+  },
+  "jimbaran": {
+   "name": "Jimbaran",
+   "lead": "Eine weite, ruhige Bucht mit Seafood-Dinner im Sand – und nur 15 Minuten vom Flughafen entfernt.",
+   "txt": [
+    [
+     "Familien in Jimbaran",
+     "Die Bucht ist sanfter als die Westküste Balis, und große Resorts haben Kinderclubs und flache Pools. Seafood-Dinner am Strand zum Sonnenuntergang sind eine Familientradition."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Vormittage am Strand, Poolzeit im Resort und ein Babysitter am Abend, damit die Eltern ein ruhiges Dinner genießen können."
+    ],
+    [
+     "Gut zu wissen",
+     "Die Wellen sind meist moderat, ändern sich aber mit der Saison – prüfen Sie die Bedingungen vor dem Baden. Jimbaran ist eine praktische Basis für kurze Aufenthalte in Flughafennähe."
+    ]
+   ]
+  },
+  "nusa-dua": {
+   "name": "Nusa Dua",
+   "lead": "Gepflegte Resorts, ruhige, riffgeschützte Strände und Kinderclubs – Nusa Dua ist Balis klassische Familienresort-Gegend.",
+   "txt": [
+    [
+     "Familien in Nusa Dua",
+     "Ein bewachtes Resortgebiet mit breiten Stränden, ruhigem Wasser und großen, familienfreundlichen Hotels. Alles ist flach, sauber und bequem mit dem Kinderwagen."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Private Betreuung, wenn der Kinderclub voll ist oder Ihr Kind noch zu jung dafür ist, Pool- und Strandzeit sowie abendliches Babysitting in Ihrem Zimmer."
+    ],
+    [
+     "Gut zu wissen",
+     "Hotels haben eigene Regeln für externe Babysitter – wir stimmen uns vorab mit der Rezeption ab. Im Bereich Bali Collection liegen Geschäfte und Restaurants zu Fuß erreichbar."
+    ]
+   ]
+  },
+  "denpasar": {
+   "name": "Denpasar",
+   "lead": "Balis Hauptstadt, in der viele Expat- und einheimische Familien nahe internationaler Krankenhäuser und Schulen leben.",
+   "txt": [
+    [
+     "Familien in Denpasar",
+     "In Denpasar geht es weniger um Urlaub als um den Alltag: Wohnhäuser, Schulen, Einkaufszentren und die wichtigsten Krankenhäuser der Insel."
+    ],
+    [
+     "Was unsere Nannys hier machen",
+     "Langzeit- und Teilzeit-Nannys für ansässige Familien, Nachmittagsbetreuung nach der Schule und Hilfe im Haushalt."
+    ],
+    [
+     "Gut zu wissen",
+     "Der Verkehr kann dicht sein, daher vermitteln wir Familien Nannys aus demselben Stadtteil und vereinbaren feste Zeiten."
+    ]
+   ]
+  }
+ }
+}

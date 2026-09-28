@@ -214,3 +214,9 @@ header{-webkit-transform:translateZ(0)}
 .hv-play .heart .h{fill:#FF2D55}
 .hv-play .heart{width:40px;height:40px}
 @media(max-width:860px){.hero-home .hv-play .heart{width:40px;height:40px}.hero-home .hv-play,.hero-home .hv-play:hover{top:6px;right:6px}}
+
+/* мультиязычность */
+body{font-family:Inter,system-ui,-apple-system,"PingFang SC","Hiragino Sans","Apple SD Gothic Neo","Noto Sans CJK SC","Noto Sans Devanagari","Nirmala UI","Malgun Gothic","Yu Gothic",sans-serif}
+.lang-pop{max-height:min(70vh,520px);overflow:auto;min-width:200px}
+html[lang="zh-CN"] h1,html[lang="ja"] h1,html[lang="ko"] h1,html[lang="hi"] h1{letter-spacing:0;line-height:1.25}
+html[lang="zh-CN"] h2,html[lang="ja"] h2,html[lang="ko"] h2,html[lang="hi"] h2{line-height:1.3}

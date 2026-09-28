@@ -1,0 +1,680 @@
+{
+ "T": {
+  "wa_default": "¡Hola! Me gustaría reservar una niñera en Bali.",
+  "wa_service": "¡Hola! Me interesa: {s}. Fechas: ",
+  "nav": [
+   "Servicios",
+   "Alquiler",
+   "Zonas",
+   "Precios",
+   "Seguridad",
+   "Guías"
+  ],
+  "safety_nav": "Seguridad",
+  "home": "Inicio",
+  "svc": [
+   [
+    "Niñera por horas",
+    "Cena fuera, spa, una clase de surf: desde 3 horas."
+   ],
+   [
+    "Niñera de día completo",
+    "Playa, piscina, siestas y comidas mientras disfrutas de verdad."
+   ],
+   [
+    "Niñera de noche",
+    "Dormir, tomas y despertares nocturnos para que tú descanses."
+   ],
+   [
+    "Cuidado de recién nacidos",
+    "Niñeras con experiencia en bebés menores de 12 meses."
+   ],
+   [
+    "Niñera de viaje",
+    "Acompaña a tu familia en excursiones y escapadas a otras islas."
+   ],
+   [
+    "Niñera en hotel y villa",
+    "Vamos a tu hotel o villa en toda Bali."
+   ],
+   [
+    "Bodas y eventos",
+    "Rincón infantil y niñeras para celebraciones."
+   ],
+   [
+    "Niñera a largo plazo",
+    "Para familias expatriadas que viven en Bali."
+   ]
+  ],
+  "wa_btn": "Escríbenos por WhatsApp",
+  "wa_short": "WhatsApp",
+  "book": "Reservar por WhatsApp",
+  "see_prices": "Ver precios",
+  "prices": "Precios",
+  "title_home": "Niñera y niñera en Bali — Sanur, Canggu, Ubud y más",
+  "desc_home": "Niñeras y niñeras que hablan inglés y tienen formación en primeros auxilios en toda Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. Visitas a hoteles y villas, niñeras de noche, excursiones. Reserva en minutos por WhatsApp.",
+  "eyebrow": "Bali · Indonesia",
+  "h1": "Niñeras de confianza para tus vacaciones en familia en Bali",
+  "lead": "Niñeras que hablan inglés y saben primeros auxilios, y que van a tu hotel o villa, para que disfrutes de una cena, del spa o de un amanecer tranquilo.",
+  "trust": [
+   "Antecedentes verificados",
+   "Primeros auxilios y RCP",
+   "Respuesta en 15 min"
+  ],
+  "chip": "🟢 Niñera disponible esta noche",
+  "photo": "Niñera jugando con un niño en una piscina",
+  "svc_h": "Cuidado a la medida de tu viaje",
+  "svc_p": "Desde una sola noche hasta toda una temporada en Bali.",
+  "steps_h": "Reserva en tres mensajes",
+  "steps": [
+   [
+    "Escríbenos por WhatsApp",
+    "Cuéntanos fechas, horas, edades de los niños y dónde te alojas."
+   ],
+   [
+    "Conoce a tu niñera",
+    "Te enviamos su perfil y una breve presentación. ¿Prefieres una videollamada antes? Solo pídela."
+   ],
+   [
+    "Disfruta tu tiempo",
+    "Ella llega a tu hotel o villa. Fotos por WhatsApp y pagas después del servicio."
+   ]
+  ],
+  "safe_h": "La seguridad no es un extra. Es nuestro trabajo.",
+  "safe_p": "Cada niñera pasa una entrevista en persona, verificación de referencias y formación antes de su primera familia.",
+  "safe_btn": "Nuestros estándares de seguridad",
+  "safe_list": [
+   "Verificación de identidad y referencias",
+   "Primeros auxilios pediátricos y RCP",
+   "Normas de vigilancia en piscina y playa",
+   "Encuentro de prueba antes de la primera reserva"
+  ],
+  "faq_h": "Preguntas de los padres",
+  "faq": [
+   [
+    "¿Con cuánta antelación puedo reservar?",
+    "A menudo el mismo día. Para noches y temporada alta (julio–agosto, Navidad), escríbenos con 2–3 días de antelación."
+   ],
+   [
+    "¿Las niñeras hablan inglés?",
+    "Sí: todas se comunican con soltura en inglés. Te decimos con honestidad el nivel de cada una."
+   ],
+   [
+    "¿Las niñeras saben primeros auxilios?",
+    "Todas tienen un certificado vigente de primeros auxilios pediátricos y RCP. Podemos enseñártelo antes de reservar."
+   ],
+   [
+    "¿En qué zonas trabajan?",
+    "En el sur de Bali y Ubud: Sanur, Canggu, Seminyak, Kuta, Jimbaran, Uluwatu, Nusa Dua, Denpasar y Ubud. Hoteles, villas y casas."
+   ],
+   [
+    "¿Cómo se paga?",
+    "En efectivo (IDR) o por transferencia después del servicio. Sin depósito para reservas puntuales."
+   ],
+   [
+    "¿Puede una niñera cuidar a mi recién nacido?",
+    "Sí. Asignamos a los bebés niñeras con experiencia específica en recién nacidos."
+   ]
+  ],
+  "guides_h": "Sanur con niños",
+  "guides_p": "Guías locales de quienes pasan cada día en estas playas.",
+  "n_guides": "guías",
+  "final_h": "¿Necesitas una niñera en Bali?",
+  "final_p": "Dinos tus fechas y te responderemos con una niñera disponible.",
+  "final_btn": "Escríbenos por WhatsApp",
+  "services_t": "Servicios de niñera en Bali",
+  "services_h": "Nuestros servicios",
+  "services_d": "Niñeras por horas, niñeras de día completo y de noche, cuidado de recién nacidos y niñeras de viaje en toda Bali.",
+  "svc_title": "{s} en Bali",
+  "svc_h1": "{s} en Bali",
+  "check": "Consultar disponibilidad",
+  "how": "Cómo funciona",
+  "faq_short": "Preguntas",
+  "prices_t": "Precios de niñeras y niñeras en Bali",
+  "prices_h": "Precios claros y sencillos",
+  "prices_p": "Sin depósito para reservas puntuales. Pagas después del servicio.",
+  "th": [
+   "Servicio",
+   "Tarifa",
+   "Mínimo"
+  ],
+  "price_note": "Tarifas para hasta 2 niños. Transporte dentro de la zona de la niñera incluido; trayectos más largos, a convenir.",
+  "quote": "Pedir presupuesto",
+  "hiw_t": "Cómo se reserva",
+  "hiw_d": "Reserva una niñera en Bali en tres mensajes de WhatsApp.",
+  "safety_t": "Nuestros estándares de seguridad",
+  "safety_d": "Cómo seleccionamos, verificamos y formamos a cada niñera en Bali.",
+  "safety_body": [
+   [
+    "Selección",
+    "Entrevista en persona, verificación de identidad y al menos dos referencias de familias anteriores."
+   ],
+   [
+    "Formación",
+    "Certificado vigente de primeros auxilios pediátricos y RCP. Normas de vigilancia en piscina y playa."
+   ],
+   [
+    "En cada reserva",
+    "Lista de traspaso, contactos de emergencia y novedades por WhatsApp."
+   ]
+  ],
+  "faq_t": "Preguntas frecuentes",
+  "faq_d": "Respuestas sobre cómo reservar una niñera en Bali.",
+  "careers_nav": "Trabaja como niñera",
+  "careers_t": "Empleo de niñera en Bali",
+  "careers_h": "Trabaja como niñera",
+  "careers_p": "Trabajamos con niñeras con experiencia que hablan inglés en toda Bali. Ofrecemos formación en primeros auxilios.",
+  "apply": "Postúlate por WhatsApp",
+  "apply_msg": "¡Hola! Me gustaría postularme como niñera.",
+  "guides_t": "Guías familiares de Sanur",
+  "guides_hh": "Guías familiares de Sanur",
+  "soon": "próximamente",
+  "company": "Empresa",
+  "services_f": "Servicios",
+  "guides_f": "Guías",
+  "foot_p": "Niñeras y niñeras de confianza que hablan inglés, para familias en toda Bali.",
+  "hubs": {
+   "H01": "Cuidado infantil en Sanur",
+   "H02": "Sanur con niños: qué hacer",
+   "H03": "Alojamiento familiar en Sanur",
+   "H04": "Salud y seguridad infantil en Bali",
+   "H05": "Comer en familia en Sanur",
+   "H06": "Logística de viaje con niños",
+   "H07": "Excursiones desde Sanur con niños",
+   "H08": "Vida de familias expat en Sanur"
+  }
+ },
+ "TB": {
+  "hero_trust": [
+   "Verificadas en persona",
+   "Conoce a tu niñera antes",
+   "Garantía de sustitución",
+   "Pagas después del servicio"
+  ],
+  "vet_h": "Cómo verificamos a cada niñera",
+  "vet_p": "Seis pasos antes de que una niñera conozca a su primera familia. Sin atajos.",
+  "vet": [
+   [
+    "🪪",
+    "Identidad y domicilio",
+    "Pasaporte o KTP verificado y domicilio confirmado."
+   ],
+   [
+    "📞",
+    "Dos referencias familiares",
+    "Llamamos nosotros a las familias anteriores; no solo leemos cartas."
+   ],
+   [
+    "🤝",
+    "Entrevista en persona",
+    "Cara a cara, con casos prácticos de cuidado y prueba de inglés."
+   ],
+   [
+    "⛑️",
+    "Primeros auxilios pediátricos y RCP",
+    "Certificado vigente, renovado a tiempo. Podemos enseñártelo."
+   ],
+   [
+    "🏊",
+    "Normas de seguridad en el agua",
+    "Normas de vigilancia en piscina y playa firmadas por cada niñera."
+   ],
+   [
+    "⭐",
+    "Turno de prueba y valoraciones",
+    "Revisamos los primeros turnos; las familias valoran cada reserva."
+   ]
+  ],
+  "meet_h": "Conoce a tu niñera antes de que llegue",
+  "meet_p": "Nada de desconocidos en tu puerta. Antes de confirmar la reserva recibes:",
+  "meet": [
+   "Su foto, nombre y años de experiencia",
+   "Idiomas que habla y edades con las que mejor trabaja",
+   "Un breve vídeo de saludo por WhatsApp",
+   "Una videollamada rápida si la quieres"
+  ],
+  "card": {
+   "tag": "Perfil de ejemplo",
+   "name": "Tu niñera",
+   "meta": "7 años · bebés y peques",
+   "langs": "Inglés · Bahasa",
+   "loves": "Le encanta: nadar, dibujar, cantar",
+   "vid": "▶ Vídeo de saludo · 0:30"
+  },
+  "guar_h": "Garantía de sustitución",
+  "guar_p": "Si tu niñera se pone enferma o no puede ir, enviamos otra niñera verificada, o no pagas. Tu noche sigue siendo tuya.",
+  "bring_h": "Lo que trae tu niñera",
+  "bring_p": "Los niños no solo están vigilados: se lo pasan genial.",
+  "bring": [
+   [
+    "🎨",
+    "Kit de manualidades",
+    "Papel, ceras, pegatinas, manualidades sencillas"
+   ],
+   [
+    "📚",
+    "Cuentos ilustrados",
+    "Historias para dormir según la edad"
+   ],
+   [
+    "🫧",
+    "Juegos de piscina y playa",
+    "Pompas, juguetes de arena, juegos de agua"
+   ],
+   [
+    "🧩",
+    "Juegos tranquilos",
+    "Puzles y cartas para la habitación"
+   ],
+   [
+    "⛑️",
+    "Botiquín básico",
+    "Tiritas, antiséptico, bolsa de frío"
+   ],
+   [
+    "📱",
+    "Fotos del día",
+    "Algunas fotos por WhatsApp durante el turno"
+   ]
+  ],
+  "check_h": "Antes de cada turno preguntamos",
+  "check_p": "Para que no se olvide nada importante. Son 2 minutos por WhatsApp.",
+  "check": [
+   "Alergias, medicamentos y notas de salud",
+   "Rutina de sueño y comidas",
+   "¿Se permite piscina o playa? ¿Con qué normas?",
+   "Pantallas y dulces",
+   "Tu teléfono y un contacto de respaldo",
+   "Normas del hotel o villa y número de habitación"
+  ],
+  "faq_add": [
+   [
+    "¿Y si la niñera cancela?",
+    "Enviamos una niñera sustituta con las mismas verificaciones. Si no podemos, no pagas."
+   ],
+   [
+    "¿Puedo ver a la niñera antes de reservar?",
+    "Sí. Recibes su foto, experiencia y un breve vídeo de saludo, y puedes pedir una videollamada."
+   ]
+  ]
+ },
+ "RT": {
+  "nav": "Alquiler",
+  "h1": "Alquiler de equipo para bebés en Bali",
+  "title": "Alquiler de equipo para bebés en Bali — cunas, carritos, sillas de coche, vallas de piscina",
+  "lead": "Viaja ligero. Llevamos a tu hotel o villa equipo para bebés limpio y revisado, lo montamos y lo recogemos cuando te vas.",
+  "sec_h": "Todo para los pequeños viajeros",
+  "from_": "desde",
+  "per_day": "/ día",
+  "how_h": "Cómo funciona el alquiler",
+  "how": [
+   [
+    "Envía tu lista",
+    "Por WhatsApp: fechas, dirección y lo que necesitas."
+   ],
+   [
+    "Entregamos y montamos",
+    "Limpio, desinfectado y revisado; instalado antes de tu llegada si quieres."
+   ],
+   [
+    "Lo recogemos",
+    "Recogida en tu villa u hotel el último día."
+   ]
+  ],
+  "pack_h": "Pack de llegada",
+  "pack_p": "Cuna, carrito, silla de coche y trona, entregados antes de que aterrices. El comienzo más fácil para unas vacaciones en Bali con bebé.",
+  "combo_h": "Alquiler + niñera",
+  "combo_p": "Añade una niñera a tu reserva: conocerá todo el equipo ya instalado en tu villa.",
+  "hygiene": [
+   "Limpio y desinfectado tras cada alquiler",
+   "Revisado por desgaste y retiradas del mercado",
+   "Ropa de cama limpia en cada cuna"
+  ],
+  "ask": "Pregunta qué hay disponible",
+  "msg": "¡Hola! Me gustaría alquilar equipo para bebé. Fechas: , dirección: , artículos: ",
+  "home_h": "Equipo para bebés y vallas de piscina",
+  "home_p": "No viajes con cuna y carrito. Te lo llevamos todo a tu villa.",
+  "all": "Ver todo el alquiler",
+  "pf": {
+   "title": "Alquiler de valla de piscina en Bali — valla de seguridad infantil desmontable para villas",
+   "h1": "Alquiler de valla de piscina para tu villa en Bali",
+   "lead": "La mayoría de las piscinas de villas en Bali no tienen valla. Instalamos una valla de seguridad infantil desmontable antes de tu llegada y la retiramos cuando te vas.",
+   "why_h": "Por qué importa una valla de piscina",
+   "why": [
+    "Muchas villas en Bali tienen la piscina justo al salir del dormitorio, a menudo sin ninguna barrera.",
+    "Los peques son rápidos y ahogarse es silencioso: no se parece a los chapoteos de las películas.",
+    "Una valla te da una capa de seguridad para los momentos en que apartas la vista: deshacer maletas, cocinar, abrir la puerta."
+   ],
+   "what_h": "Qué incluye",
+   "steps_h": "Cómo es la instalación",
+   "steps": [
+    [
+     "Envía fotos de la piscina",
+     "Un vídeo corto o unas fotos por WhatsApp bastan para medir."
+    ],
+    [
+     "Lo confirmamos con la villa",
+     "Acordamos la instalación con el gerente de la villa si hace falta."
+    ],
+    [
+     "Instalación en 30–60 min",
+     "Fijada en todo el borde de la piscina, con puerta de cierre automático."
+    ],
+    [
+     "Retirada al salir",
+     "Sin marcas de taladro."
+    ]
+   ],
+   "note": "Una valla es una capa extra de protección, no sustituye la vigilancia. Vigila siempre a los niños cerca del agua.",
+   "faq": [
+    [
+     "¿Dañará la villa?",
+     "La valla está diseñada para retirarse sin dejar marcas. Cuéntanos cómo es el suelo alrededor de la piscina y te confirmamos el método de fijación."
+    ],
+    [
+     "¿Tiene que aceptarlo la villa?",
+     "Normalmente los gerentes de villas lo agradecen; podemos coordinarlo directamente con ellos."
+    ],
+    [
+     "¿Podemos seguir usando la piscina?",
+     "Sí: los adultos abren la puerta, que se cierra y se traba sola."
+    ],
+    [
+     "¿Con cuánta antelación debo reservar?",
+     "Lo antes posible en temporada alta (julio–agosto, Navidad). Podemos instalarla antes de tu llegada."
+    ]
+   ],
+   "msg": "¡Hola! Necesito una valla de piscina. Zona de la villa: , fechas: , tamaño/fotos de la piscina: ",
+   "cta": "Pedir presupuesto de valla"
+  }
+ },
+ "CATS": {
+  "pool-fence": {
+   "name": "Vallas de piscina",
+   "desc": "Valla de seguridad infantil desmontable alrededor de la piscina de tu villa.",
+   "items": [
+    "Valla de malla desmontable, ~1,2 m de alto",
+    "Puerta con cierre y traba automáticos",
+    "Instalada en todo el borde de la piscina",
+    "Se retira al salir, sin daños"
+   ]
+  },
+  "sleep": {
+   "name": "Cunas y descanso",
+   "desc": "Cunas grandes, cunas de viaje y moisés con ropa de cama limpia.",
+   "items": [
+    "Cuna grande con colchón",
+    "Cuna de viaje / parque",
+    "Moisés para recién nacidos",
+    "Cortinas opacas portátiles",
+    "Máquina de ruido blanco",
+    "Vigilabebés"
+   ]
+  },
+  "strollers": {
+   "name": "Carritos y portabebés",
+   "desc": "Carritos ligeros de viaje, dobles y portabebés.",
+   "items": [
+    "Carrito de viaje compacto",
+    "Carrito todoterreno para caminos de playa",
+    "Carrito doble",
+    "Portabebés ergonómico",
+    "Ventilador y burbuja de lluvia"
+   ]
+  },
+  "car-seats": {
+   "name": "Sillas de coche",
+   "desc": "Portabebés, sillas convertibles y elevadores, instalados por nosotros.",
+   "items": [
+    "Portabebés grupo 0+ (0–13 kg)",
+    "Silla convertible (0–18 kg)",
+    "Silla a favor de la marcha (9–25 kg)",
+    "Elevador (15–36 kg)",
+    "Instalada en el coche de tu conductor si lo pides"
+   ]
+  },
+  "feeding-bath": {
+   "name": "Comida y baño",
+   "desc": "Tronas, esterilizadores y bañeras para bebé.",
+   "items": [
+    "Trona",
+    "Elevador de viaje para silla",
+    "Esterilizador de biberones",
+    "Calientabiberones",
+    "Bañera y asiento de baño",
+    "Sacaleches (kit sellado)"
+   ]
+  },
+  "play": {
+   "name": "Juego y seguridad",
+   "desc": "Packs de juguetes, alfombras de juego y kits de seguridad infantil.",
+   "items": [
+    "Pack de juguetes según la edad",
+    "Alfombra de juego y hamaca",
+    "Barrera para escaleras",
+    "Protectores de enchufes y esquinas",
+    "Set de juguetes de piscina y playa",
+    "Chaleco salvavidas infantil"
+   ]
+  }
+ },
+ "AT": {
+  "nav": "Zonas",
+  "h": "Dónde trabajamos en Bali",
+  "p": "Nuestras niñeras van a hoteles, villas y casas en el sur de Bali y Ubud.",
+  "title": "Zonas de servicio de niñeras en Bali",
+  "title_one": "Niñera y niñera en {loc}, Bali",
+  "h1": "Niñera y niñera en {loc}",
+  "msg": "¡Hola! Necesito una niñera en {loc}. Fechas: ",
+  "other": "Otras zonas"
+ },
+ "SM": {
+  "title": "Mapa del sitio",
+  "desc": "Todas las páginas de Bali Nannies en un solo lugar."
+ },
+ "VID": {
+  "alt": "Nuestra niñera con un bebé sonriente en una villa de Bali",
+  "play": "Reproducir vídeo",
+  "label": "Ver 30 s"
+ },
+ "ARTICLE": {
+  "title": "Qué hacer en Sanur con niños (guía familiar 2026)",
+  "h1": "Qué hacer en Sanur con niños: la guía familiar completa",
+  "desc": "Playas, parques infantiles, actividades acuáticas y un plan de 3 días para familias en Sanur, Bali, de la mano de una agencia local de niñeras.",
+  "byline": "Por [Author], revisado por [Nanny coordinator] · Actualizado en septiembre de 2026",
+  "toc": "En esta guía",
+  "lead": "Sanur es el rincón más tranquilo y paseable de Bali para familias: agua protegida por el arrecife, un paseo marítimo llano y distancias cortas. Así puedes aprovechar los días allí con niños de cualquier edad.",
+  "mid_h": "¿Una noche solo para los dos?",
+  "mid_p": "Una niñera puede ir a tu hotel o villa esta misma noche.",
+  "secs": [
+   [
+    "Playas",
+    "El arrecife de Sanur mantiene el agua en calma, lo que la convierte en uno de los lugares más fáciles de Bali para que naden los más pequeños. Las playas de Sindhu, Semawang y Mertasari son las favoritas de las familias. Báñate con marea alta; con marea baja el agua se retira mucho sobre el arrecife."
+   ],
+   [
+    "Parques y zonas de juego",
+    "Varios cafés del paseo de Sanur tienen zona de juegos, y hay parques infantiles cubiertos para las horas de más calor."
+   ],
+   [
+    "Actividades acuáticas",
+    "El paddle surf, las salidas de snorkel y las clases de natación funcionan muy bien en el agua tranquila de Sanur. Las clases de kitesurf y windsurf son ideales para niños mayores en la temporada de viento."
+   ],
+   [
+    "Ideas para días de lluvia",
+    "Talleres de manualidades y cocina, centros de juego cubiertos y centros comerciales en la cercana Denpasar mantienen a los niños entretenidos cuando llueve."
+   ],
+   [
+    "Planes para la tarde-noche",
+    "El mercado nocturno de Sindhu, el atardecer por el paseo de la playa, o una cena para dos mientras una niñera acuesta a los niños."
+   ],
+   [
+    "Plan de 3 días de ejemplo",
+    "Día 1: mañana de playa, piscina y siesta, paseo al atardecer. Día 2: snorkel o paddle surf y luego un taller de manualidades. Día 3: excursión a Bali Zoo o a un parque acuático, con una noche libre para los padres."
+   ]
+  ]
+ },
+ "AREAS": {
+  "sanur": {
+   "name": "Sanur",
+   "lead": "Agua tranquila protegida por el arrecife y un paseo marítimo llano hacen de Sanur la zona más fácil de Bali para bebés y peques.",
+   "txt": [
+    [
+     "Por qué las familias eligen Sanur",
+     "El arrecife mantiene las olas pequeñas, así que los peques pueden chapotear con seguridad con marea alta. El paseo de 5 km es apto para carritos, y la mayoría de hoteles, cafés y zonas de juego están a poca distancia a pie."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Mañanas de playa y castillos de arena, ratos de piscina en tu hotel, siestas mientras haces paddle surf o snorkel, y noches en casa para que pruebes una cena al atardecer."
+    ],
+    [
+     "Conviene saber",
+     "Con marea baja el agua se retira mucho sobre el arrecife: planifica los baños con marea alta. Las lanchas rápidas a Nusa Lembongan y Nusa Penida salen de la playa de Sanur."
+    ]
+   ]
+  },
+  "canggu": {
+   "name": "Canggu",
+   "lead": "Surf, cafés y villas con piscina privada: Canggu es ideal para familias que buscan una estancia activa y social en Bali.",
+   "txt": [
+    [
+     "Familias en Canggu",
+     "La mayoría de familias se alojan en villas en Berawa, Pererenan o Batu Bolong. Los días giran en torno a la piscina de la villa, cafés de playa con zona de juegos y clases de surf para los mayores."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Vigilancia en la piscina de tu villa, quedadas en cafés familiares, rutinas de siesta mientras surfeas o trabajas en un coworking, y niñera por la noche para cenar fuera."
+    ],
+    [
+     "Conviene saber",
+     "Las playas de Canggu son de arena negra, con olas y corrientes fuertes: los niños deben bañarse solo entre banderas o en la piscina. El tráfico es intenso en horas punta, así que asignamos niñeras que viven cerca."
+    ]
+   ]
+  },
+  "seminyak": {
+   "name": "Seminyak",
+   "lead": "Villas boutique, beach clubs y restaurantes: Seminyak es la base con estilo de Bali para familias a las que les gusta salir.",
+   "txt": [
+    [
+     "Familias en Seminyak",
+     "Villas con piscina privada y resorts frente al mar están cerca de algunos de los mejores restaurantes de Bali. Las familias reparten el día entre la villa, la playa y las calles de tiendas."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Niñera por la noche mientras cenas o vas a un beach club, piscina y juegos en la villa, y ayuda con la rutina de irse a dormir."
+    ],
+    [
+     "Conviene saber",
+     "El oleaje es fuerte en la playa de Seminyak: vigilar cerca del agua es imprescindible. Muchos beach clubs son para adultos por la noche, así que una niñera en la villa es la opción fácil."
+    ]
+   ]
+  },
+  "kuta-legian": {
+   "name": "Kuta & Legian",
+   "lead": "Cerca del aeropuerto y de Waterbom, Kuta y Legian son una primera parada cómoda para familias que llegan a Bali.",
+   "txt": [
+    [
+     "Familias en Kuta & Legian",
+     "Grandes hoteles con piscinas infantiles, centros comerciales y el parque acuático Waterbom hacen práctica esta zona, sobre todo tras un vuelo largo."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Noches de jet lag con una niñera de noche, tardes en la piscina del hotel y un día en Waterbom con un par de manos extra."
+    ],
+    [
+     "Conviene saber",
+     "La playa de Kuta tiene escuelas de surf para principiantes, pero también corrientes: báñate entre banderas. Las calles tienen mucho tráfico, así que planificamos salidas con paseos cortos y taxis."
+    ]
+   ]
+  },
+  "ubud": {
+   "name": "Ubud",
+   "lead": "Terrazas de arroz, villas en la selva y un aire más fresco: Ubud es el corazón cultural de Bali y un lugar tranquilo para los niños.",
+   "txt": [
+    [
+     "Familias en Ubud",
+     "Villas en la selva con piscina, talleres artesanales, espectáculos de danza y paseos entre arrozales. No hay playa, pero el clima es más suave que en la costa."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Días en la villa con piscina y juego en la naturaleza, compañía en los paseos por los arrozales y niñera mientras vas a yoga o a una clase de cocina."
+    ],
+    [
+     "Conviene saber",
+     "Muchas villas tienen escaleras empinadas y piscinas sin valla: cuéntanos cómo es la distribución para planificar la seguridad. Mantén a los niños lejos de los monos en el Monkey Forest y en los templos."
+    ]
+   ]
+  },
+  "uluwatu": {
+   "name": "Uluwatu",
+   "lead": "Resorts sobre acantilados, atardeceres famosos y playas escondidas: Uluwatu es Bali en su versión más espectacular.",
+   "txt": [
+    [
+     "Familias en Uluwatu",
+     "Las familias suelen alojarse en resorts o villas sobre el acantilado con grandes piscinas. Playas como Padang Padang y Melasti son preciosas, pero se llega por escaleras o carreteras empinadas."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Vigilancia en la piscina de tu villa, ratos de playa en zonas tranquilas con poco oleaje y niñera por la noche para que veas la danza Kecak o un atardecer desde el acantilado."
+    ],
+    [
+     "Conviene saber",
+     "Muchas playas son para surfistas experimentados: elige días tranquilos y quédate cerca. Los monos del templo de Uluwatu roban objetos; allí los peques van más seguros en un portabebés."
+    ]
+   ]
+  },
+  "jimbaran": {
+   "name": "Jimbaran",
+   "lead": "Una bahía amplia y tranquila con cenas de marisco sobre la arena, a solo 15 minutos del aeropuerto.",
+   "txt": [
+    [
+     "Familias en Jimbaran",
+     "La bahía es más suave que la costa oeste de Bali, y los grandes resorts tienen kids' clubs y piscinas poco profundas. Las cenas de marisco en la playa al atardecer son una tradición familiar."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Mañanas de playa, ratos en la piscina del resort y una niñera por la noche para que los padres disfruten de una cena tranquila."
+    ],
+    [
+     "Conviene saber",
+     "Las olas suelen ser moderadas pero cambian según la temporada: revisa las condiciones antes de bañarte. Jimbaran es una base cómoda para estancias cortas cerca del aeropuerto."
+    ]
+   ]
+  },
+  "nusa-dua": {
+   "name": "Nusa Dua",
+   "lead": "Resorts impecables, playas tranquilas protegidas por el arrecife y kids' clubs: Nusa Dua es la zona clásica de resorts familiares de Bali.",
+   "txt": [
+    [
+     "Familias en Nusa Dua",
+     "Un enclave cerrado de resorts con playas amplias, agua tranquila y grandes hoteles pensados para familias. Todo es llano, limpio y cómodo con carrito."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Cuidado privado cuando el kids' club está lleno o tu hijo es demasiado pequeño, ratos de piscina y playa, y niñera por la noche en tu habitación."
+    ],
+    [
+     "Conviene saber",
+     "Los hoteles tienen sus propias normas sobre niñeras externas: coordinamos con recepción de antemano. La zona de Bali Collection tiene tiendas y restaurantes a poca distancia a pie."
+    ]
+   ]
+  },
+  "denpasar": {
+   "name": "Denpasar",
+   "lead": "La capital de Bali, donde viven muchas familias expatriadas y locales cerca de hospitales y colegios internacionales.",
+   "txt": [
+    [
+     "Familias en Denpasar",
+     "Denpasar va menos de vacaciones y más de vida diaria: casas, colegios, centros comerciales y los principales hospitales de la isla."
+    ],
+    [
+     "Qué hacen aquí nuestras niñeras",
+     "Niñeras a largo plazo y a media jornada para familias residentes, cuidado después del colegio y ayuda en casa."
+    ],
+    [
+     "Conviene saber",
+     "El tráfico puede ser intenso, así que asignamos a las familias niñeras de la misma zona de la ciudad y acordamos horarios fijos."
+    ]
+   ]
+  }
+ }
+}

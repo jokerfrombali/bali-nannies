@@ -1,0 +1,355 @@
+{
+ "T": {
+  "wa_default": "Hoi! Ik wil graag een nanny boeken op Bali.",
+  "wa_service": "Hoi! Ik heb interesse in: {s}. Data: ",
+  "nav": ["Diensten", "Verhuur", "Gebieden", "Prijzen", "Veiligheid", "Gidsen"],
+  "safety_nav": "Veiligheid",
+  "home": "Home",
+  "svc": [
+   ["Oppas per uur", "Uit eten, spa, een surfles — vanaf 3 uur."],
+   ["Nanny voor een hele dag", "Strand, zwembad, dutjes en eten, terwijl jij echt vakantie viert."],
+   ["Nachtnanny", "Inslapen, voedingen en nachtelijk wakker worden, zodat jij kunt slapen."],
+   ["Zorg voor pasgeborenen & baby's", "Nanny's met ervaring met baby's tot 12 maanden."],
+   ["Reisnanny", "Gaat mee op dagtrips en eilandhoppen."],
+   ["Oppas in hotel & villa", "We komen naar je hotel of villa, overal op Bali."],
+   ["Bruiloften & events", "Kinderhoek en oppassen voor feesten."],
+   ["Vaste nanny", "Voor expatgezinnen die op Bali wonen."]
+  ],
+  "wa_btn": "Chat via WhatsApp",
+  "wa_short": "WhatsApp",
+  "book": "Boek via WhatsApp",
+  "see_prices": "Bekijk prijzen",
+  "prices": "Prijzen",
+  "title_home": "Nanny & oppas op Bali — Sanur, Canggu, Ubud en meer",
+  "desc_home": "Engelstalige nanny's en oppassen met EHBO-training, overal op Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. Aan huis in hotel of villa, nachtnanny's, dagtrips. In een paar minuten geboekt via WhatsApp.",
+  "eyebrow": "Bali · Indonesië",
+  "h1": "Betrouwbare nanny's voor je gezinsvakantie op Bali",
+  "lead": "Engelstalige oppassen met EHBO-training die naar je hotel of villa komen — zodat jij kunt genieten van een diner, de spa of een rustige zonsopkomst.",
+  "trust": ["Gescreend", "EHBO & reanimatie", "Reactie binnen 15 min"],
+  "chip": "🟢 Vanavond een nanny beschikbaar",
+  "photo": "Nanny speelt met een kind in het zwembad",
+  "svc_h": "Zorg die past bij je reis",
+  "svc_p": "Van één avond tot een heel seizoen op Bali.",
+  "steps_h": "Geboekt in drie berichtjes",
+  "steps": [
+   ["Stuur ons een WhatsApp", "Laat ons weten: data, uren, leeftijden van de kinderen en waar je verblijft."],
+   ["Maak kennis met je nanny", "We sturen een profiel en een korte introductie. Liever eerst een videogesprek? Vraag het gerust."],
+   ["Geniet van je tijd", "Ze komt naar je hotel of villa. Fotoupdates via WhatsApp, betalen na afloop."]
+  ],
+  "safe_h": "Veiligheid is geen extraatje. Het is ons werk.",
+  "safe_p": "Elke nanny wordt persoonlijk gesproken, referenties worden nagebeld en ze wordt getraind vóór haar eerste gezin.",
+  "safe_btn": "Onze veiligheidsnormen",
+  "safe_list": ["ID- en referentiecheck", "Kinder-EHBO & reanimatie", "Regels voor toezicht bij zwembad en strand", "Kennismaking vóór de eerste boeking"],
+  "faq_h": "Vragen van ouders",
+  "faq": [
+   ["Hoe snel kan ik boeken?", "Vaak nog dezelfde dag. Voor avonden en het hoogseizoen (juli–augustus, kerst) stuur je ons het best 2–3 dagen van tevoren een bericht."],
+   ["Spreken jullie nanny's Engels?", "Ja — elke nanny spreekt vlot Engels. We zijn eerlijk over het niveau van elke nanny."],
+   ["Hebben de nanny's een EHBO-training?", "Elke nanny heeft een geldig certificaat kinder-EHBO & reanimatie. We laten het je graag zien vóór je boeking."],
+   ["Waar werken jullie?", "In heel Zuid-Bali en Ubud — Sanur, Canggu, Seminyak, Kuta, Jimbaran, Uluwatu, Nusa Dua, Denpasar en Ubud. Hotels, villa's en woningen."],
+   ["Hoe betaal ik?", "Contant (IDR) of per bankoverschrijving na afloop. Geen aanbetaling bij losse boekingen."],
+   ["Kan een nanny voor mijn pasgeboren baby zorgen?", "Ja. We koppelen baby's aan nanny's met specifieke ervaring met pasgeborenen."]
+  ],
+  "guides_h": "Sanur met kinderen",
+  "guides_p": "Lokale gidsen van mensen die elke dag op deze stranden zijn.",
+  "n_guides": "gidsen",
+  "final_h": "Een nanny nodig op Bali?",
+  "final_p": "Laat ons je data weten — we reageren met een beschikbare nanny.",
+  "final_btn": "Stuur ons een WhatsApp",
+  "services_t": "Nannydiensten op Bali",
+  "services_h": "Onze diensten",
+  "services_d": "Oppas per uur, dag- en nachtnanny's, zorg voor pasgeborenen en reisnanny's overal op Bali.",
+  "svc_title": "{s} op Bali",
+  "svc_h1": "{s} op Bali",
+  "check": "Check beschikbaarheid",
+  "how": "Zo werkt het",
+  "faq_short": "FAQ",
+  "prices_t": "Prijzen nanny & oppas op Bali",
+  "prices_h": "Eenvoudige, transparante prijzen",
+  "prices_p": "Geen aanbetaling bij losse boekingen. Betalen na afloop.",
+  "th": ["Dienst", "Tarief", "Minimum"],
+  "price_note": "Tarieven voor maximaal 2 kinderen. Vervoer binnen het gebied van de nanny inbegrepen; langere ritten in overleg.",
+  "quote": "Vraag een offerte",
+  "hiw_t": "Zo werkt boeken",
+  "hiw_d": "Boek een nanny op Bali in drie WhatsApp-berichtjes.",
+  "safety_t": "Onze veiligheidsnormen",
+  "safety_d": "Hoe we elke nanny op Bali selecteren, screenen en trainen.",
+  "safety_body": [
+   ["Selectie", "Persoonlijk gesprek, ID-check, minstens twee referenties van eerdere gezinnen."],
+   ["Training", "Geldig certificaat kinder-EHBO & reanimatie. Regels voor toezicht bij zwembad en strand."],
+   ["Bij elke boeking", "Overdrachtschecklist, noodcontacten, updates via WhatsApp."]
+  ],
+  "faq_t": "Veelgestelde vragen",
+  "faq_d": "Antwoorden over het boeken van een nanny op Bali.",
+  "careers_nav": "Word nanny",
+  "careers_t": "Nannyvacatures op Bali",
+  "careers_h": "Word nanny",
+  "careers_p": "We werken met ervaren, Engelstalige nanny's overal op Bali. EHBO-training wordt verzorgd.",
+  "apply": "Solliciteer via WhatsApp",
+  "apply_msg": "Hoi! Ik wil graag solliciteren als nanny.",
+  "guides_t": "Gezinsgidsen voor Sanur",
+  "guides_hh": "Gezinsgidsen voor Sanur",
+  "soon": "binnenkort",
+  "company": "Bedrijf",
+  "services_f": "Diensten",
+  "guides_f": "Gidsen",
+  "foot_p": "Betrouwbare Engelstalige nanny's en oppassen voor gezinnen overal op Bali.",
+  "hubs": {
+   "H01": "Kinderopvang in Sanur",
+   "H02": "Sanur met kinderen: wat te doen",
+   "H03": "Gezinsverblijven in Sanur",
+   "H04": "Gezondheid & veiligheid voor kinderen op Bali",
+   "H05": "Eten met het gezin in Sanur",
+   "H06": "Reislogistiek met kinderen",
+   "H07": "Dagtrips vanuit Sanur met kinderen",
+   "H08": "Expatgezinsleven in Sanur"
+  }
+ },
+ "TB": {
+  "hero_trust": ["Persoonlijk gescreend", "Leer je nanny eerst kennen", "Vervangingsgarantie", "Betalen na afloop"],
+  "vet_h": "Zo screenen we elke nanny",
+  "vet_p": "Zes stappen voordat een nanny haar eerste gezin ontmoet. Geen shortcuts.",
+  "vet": [
+   ["🪪", "ID- & adrescheck", "Paspoort of KTP gecontroleerd, woonadres bevestigd."],
+   ["📞", "Twee referenties van gezinnen", "We bellen eerdere gezinnen zelf — niet alleen brieven lezen."],
+   ["🤝", "Persoonlijk gesprek", "Face to face, met oppasscenario's en een Engelscheck."],
+   ["⛑️", "Kinder-EHBO & reanimatie", "Geldig certificaat, op tijd vernieuwd. We laten het je graag zien."],
+   ["🏊", "Regels voor waterveiligheid", "Regels voor toezicht bij zwembad en strand, ondertekend door elke nanny."],
+   ["⭐", "Proefdienst & feedback", "Eerste diensten worden geëvalueerd; gezinnen beoordelen elke boeking."]
+  ],
+  "meet_h": "Leer je nanny kennen vóór ze komt",
+  "meet_p": "Geen onbekende aan de deur. Voordat de boeking vaststaat, krijg je:",
+  "meet": ["Haar foto, naam en jaren ervaring", "Welke talen ze spreekt en met welke leeftijden ze het best is", "Een korte videogroet via WhatsApp", "Een kort videogesprek als je dat wilt"],
+  "card": {
+   "tag": "Voorbeeldprofiel",
+   "name": "Jouw nanny",
+   "meta": "7 jaar · baby's & peuters",
+   "langs": "Engels · Bahasa",
+   "loves": "Houdt van: zwemmen, tekenen, liedjes",
+   "vid": "▶ Videogroet · 0:30"
+  },
+  "guar_h": "Vervangingsgarantie",
+  "guar_p": "Is je nanny ziek of kan ze niet komen? Dan sturen we een andere gescreende nanny — of je betaalt niets. Je avond blijft van jou.",
+  "bring_h": "Wat je nanny meeneemt",
+  "bring_p": "Kinderen krijgen niet alleen toezicht — ze hebben plezier.",
+  "bring": [
+   ["🎨", "Knutselset", "Papier, krijtjes, stickers, simpel knutselwerk"],
+   ["📚", "Prentenboeken", "Verhaaltjes voor het slapengaan, passend bij de leeftijd"],
+   ["🫧", "Zwembad- & strandspelletjes", "Bellenblaas, zandspeelgoed, waterspelletjes"],
+   ["🧩", "Rustige spelletjes", "Puzzels en kaartspellen voor op de hotelkamer"],
+   ["⛑️", "Mini-EHBO-set", "Pleisters, ontsmettingsmiddel, coldpack"],
+   ["📱", "Fotoupdates", "Een paar foto's via WhatsApp tijdens de dienst"]
+  ],
+  "check_h": "Vóór elke dienst vragen we",
+  "check_p": "Zodat niets belangrijks vergeten wordt. Kost 2 minuten via WhatsApp.",
+  "check": ["Allergieën, medicijnen en gezondheidsinfo", "Slaap- en eetritme", "Mag het zwembad of strand? Met welke regels?", "Schermtijd en snoep", "Jouw telefoonnummer en een reservecontact", "Regels van hotel of villa en kamernummer"],
+  "faq_add": [
+   ["Wat als de nanny afzegt?", "We sturen een vervangende nanny met dezelfde screening. Lukt dat niet, dan betaal je niets."],
+   ["Kan ik de nanny zien vóór het boeken?", "Ja. Je krijgt haar foto, ervaring en een korte videogroet, en je kunt om een videogesprek vragen."]
+  ]
+ },
+ "RT": {
+  "nav": "Verhuur",
+  "h1": "Babyspullen huren op Bali",
+  "title": "Babyspullen huren op Bali — bedjes, buggy's, autostoeltjes, zwembadhekken",
+  "lead": "Reis licht. We bezorgen schone, gecontroleerde babyspullen bij je hotel of villa en zetten alles klaar — en halen het weer op als je vertrekt.",
+  "sec_h": "Alles voor kleine reizigers",
+  "from_": "vanaf",
+  "per_day": "/ dag",
+  "how_h": "Zo werkt huren",
+  "how": [
+   ["Stuur je lijstje", "Via WhatsApp: data, adres en wat je nodig hebt."],
+   ["Wij bezorgen & zetten klaar", "Schoongemaakt, gedesinfecteerd en gecontroleerd — desgewenst al geïnstalleerd vóór je aankomst."],
+   ["Wij halen op", "Ophalen bij je villa of hotel op de laatste dag."]
+  ],
+  "pack_h": "Aankomstpakket",
+  "pack_p": "Bedje, buggy, autostoeltje en kinderstoel — bezorgd nog vóór je landt. De makkelijkste start van een Bali-vakantie met een baby.",
+  "combo_h": "Verhuur + nanny",
+  "combo_p": "Voeg een nanny toe aan je boeking — ze kent alle spullen die al in je villa klaarstaan.",
+  "hygiene": ["Schoongemaakt en gedesinfecteerd na elke verhuur", "Gecontroleerd op slijtage en terugroepacties", "Schoon beddengoed voor elk bedje"],
+  "ask": "Vraag wat er beschikbaar is",
+  "msg": "Hoi! Ik wil graag babyspullen huren. Data: , adres: , spullen: ",
+  "home_h": "Babyspullen & zwembadhekken",
+  "home_p": "Vlieg niet met een bedje en een buggy. Wij bezorgen alles bij je villa.",
+  "all": "Bekijk alle verhuur",
+  "pf": {
+   "title": "Zwembadhek huren op Bali — afneembaar kinderveiligheidshek voor villa's",
+   "h1": "Zwembadhek huren voor je villa op Bali",
+   "lead": "De meeste villazwembaden op Bali hebben geen hek. Wij plaatsen een afneembaar kinderveiligheidshek rond je zwembad vóór je aankomst — en halen het weg als je vertrekt.",
+   "why_h": "Waarom een zwembadhek belangrijk is",
+   "why": [
+    "Veel villa's op Bali hebben een zwembad direct voor de slaapkamerdeur — vaak zonder enige afscheiding.",
+    "Peuters zijn snel, en verdrinking is stil: het lijkt niet op het gespetter uit films.",
+    "Een hek geeft je een extra veiligheidslaag voor de momenten dat je even niet kijkt — uitpakken, koken, de deur opendoen."
+   ],
+   "what_h": "Wat je krijgt",
+   "steps_h": "Zo werkt de installatie",
+   "steps": [
+    ["Stuur foto's van het zwembad", "Een korte video of een paar foto's via WhatsApp is genoeg om op te meten."],
+    ["We stemmen af met de villa", "Indien nodig overleggen we de installatie met de villamanager."],
+    ["Installatie in 30–60 min", "Rondom de hele zwembadrand geplaatst, met een zelfsluitend poortje."],
+    ["Weggehaald bij check-out", "Geen boorgaten achtergelaten."]
+   ],
+   "note": "Een hek is een extra beschermingslaag, geen vervanging van toezicht. Houd kinderen bij water altijd in het oog.",
+   "faq": [
+    ["Beschadigt het de villa?", "Het hek is ontworpen om zonder sporen te verwijderen. Vertel ons wat voor ondergrond het zwembadterras heeft, dan bevestigen we de bevestigingsmethode."],
+    ["Moet de villa toestemming geven?", "Meestal zijn villamanagers er blij mee; we kunnen rechtstreeks met ze afstemmen."],
+    ["Kunnen we het zwembad nog gebruiken?", "Ja — volwassenen openen het poortje; het sluit en vergrendelt vanzelf."],
+    ["Hoe ver van tevoren moet ik boeken?", "Zo vroeg mogelijk in het hoogseizoen (juli–augustus, kerst). Installatie kan vóór je aankomst."]
+   ],
+   "msg": "Hoi! Ik heb een zwembadhek nodig. Gebied villa: , data: , afmetingen/foto's zwembad: ",
+   "cta": "Vraag een offerte voor een zwembadhek"
+  }
+ },
+ "CATS": {
+  "pool-fence": {
+   "name": "Zwembadhekken",
+   "desc": "Afneembaar kinderveiligheidshek rond je villazwembad.",
+   "items": ["Afneembaar gaashek, ~1,2 m hoog", "Zelfsluitend, zelfvergrendelend poortje", "Rondom de hele zwembadrand geplaatst", "Weggehaald bij check-out, zonder schade"]
+  },
+  "sleep": {
+   "name": "Bedjes & slapen",
+   "desc": "Ledikanten, campingbedjes en wiegjes met schoon beddengoed.",
+   "items": ["Ledikant met matras", "Campingbedje / box", "Wieg voor pasgeborenen", "Draagbare verduisteringsgordijnen", "White-noise-apparaat", "Babyfoon"]
+  },
+  "strollers": {
+   "name": "Buggy's & draagzakken",
+   "desc": "Lichte reisbuggy's, duobuggy's en draagzakken.",
+   "items": ["Compacte reisbuggy", "All-terrain buggy voor strandpaden", "Duobuggy", "Ergonomische draagzak", "Buggyventilator & regenhoes"]
+  },
+  "car-seats": {
+   "name": "Autostoeltjes",
+   "desc": "Babyschalen, meegroeistoelen en zittingverhogers — voor je geïnstalleerd.",
+   "items": ["Babyschaal (0–13 kg)", "Meegroeistoel (0–18 kg)", "Voorwaarts gericht stoeltje (9–25 kg)", "Zittingverhoger (15–36 kg)", "Op verzoek geïnstalleerd in de auto van je chauffeur"]
+  },
+  "feeding-bath": {
+   "name": "Eten & badderen",
+   "desc": "Kinderstoelen, sterilisatoren en babybadjes.",
+   "items": ["Kinderstoel", "Reisstoelverhoger", "Flessensterilisator", "Flessenwarmer", "Babybadje & badzitje", "Borstkolf (verzegelde set)"]
+  },
+  "play": {
+   "name": "Spelen & veiligheid",
+   "desc": "Speelgoedpakketten, speelkleden en babyproof-sets.",
+   "items": ["Speelgoedpakket passend bij de leeftijd", "Speelkleed & wipstoeltje", "Traphekje", "Stopcontactbeveiligers & hoekbeschermers", "Zwembad- & strandspeelgoedset", "Zwemvest voor kinderen"]
+  }
+ },
+ "AT": {
+  "nav": "Gebieden",
+  "h": "Waar we werken op Bali",
+  "p": "Onze nanny's komen naar hotels, villa's en woningen in heel Zuid-Bali en Ubud.",
+  "title": "Werkgebieden nannyservice op Bali",
+  "title_one": "Nanny & oppas in {loc}, Bali",
+  "h1": "Nanny & oppas in {loc}",
+  "msg": "Hoi! Ik heb een nanny nodig in {loc}. Data: ",
+  "other": "Andere gebieden"
+ },
+ "SM": {
+  "title": "Sitemap",
+  "desc": "Alle pagina's van Bali Nannies op één plek."
+ },
+ "VID": {
+  "alt": "Onze nanny met een lachende baby in een villa op Bali",
+  "play": "Video afspelen",
+  "label": "Bekijk 30 sec"
+ },
+ "ARTICLE": {
+  "title": "Wat te doen in Sanur met kinderen (gezinsgids 2026)",
+  "h1": "Wat te doen in Sanur met kinderen: de complete gezinsgids",
+  "desc": "Stranden, speeltuinen, wateractiviteiten en een 3-daagse planning voor gezinnen in Sanur, Bali — van een lokaal nannybureau.",
+  "byline": "Door [Author], gecontroleerd door [Nanny coordinator] · Bijgewerkt september 2026",
+  "toc": "In deze gids",
+  "lead": "Sanur is het rustigste en best beloopbare stukje Bali voor gezinnen: water beschermd door het rif, een vlak strandpad en korte afstanden. Zo breng je er je dagen door met kinderen van elke leeftijd.",
+  "mid_h": "Zin in een avondje samen?",
+  "mid_p": "Een nanny kan vanavond nog naar je hotel of villa komen.",
+  "secs": [
+   ["Stranden", "Het rif van Sanur houdt het water rustig, waardoor het een van de makkelijkste plekken op Bali is voor kleine kinderen om te zwemmen. Sindhu, Semawang en Mertasari zijn favoriet bij gezinnen. Zwem rond vloed; bij eb trekt het water zich ver terug over het rif."],
+   ["Parken en speeltuinen", "Verschillende strandcafés langs het pad in Sanur hebben een speeltuin, en voor de heetste uren van de dag zijn er overdekte speelparadijzen."],
+   ["Wateractiviteiten", "Suppen, snorkeltrips en zwemlessen gaan prima in het rustige water van Sanur. Kitesurf- en windsurflessen zijn geschikt voor oudere kinderen in het winderige seizoen."],
+   ["Ideeën voor regendagen", "Knutsel- en kookworkshops, indoor speelcentra en winkelcentra in het nabijgelegen Denpasar houden kinderen bezig als het gaat regenen."],
+   ["Avondactiviteiten", "De avondmarkt van Sindhu, zonsondergang langs het strandpad — of een diner met z'n tweeën terwijl een nanny de kinderen naar bed brengt."],
+   ["Voorbeeldplanning voor 3 dagen", "Dag 1: ochtend op het strand, zwembad en dutje, zonsondergangwandeling. Dag 2: snorkelen of suppen, daarna een knutselworkshop. Dag 3: dagtrip naar Bali Zoo of een waterpark, met een vrije avond voor de ouders."]
+  ]
+ },
+ "AREAS": {
+  "sanur": {
+   "name": "Sanur",
+   "lead": "Rustig water achter het rif en een vlak strandpad maken Sanur het makkelijkste deel van Bali voor baby's en peuters.",
+   "txt": [
+    ["Waarom gezinnen voor Sanur kiezen", "Het rif houdt de golven klein, zodat de kleintjes rond vloed veilig kunnen pootjebaden. Het strandpad van 5 km is buggyvriendelijk, en de meeste hotels, cafés en speeltuinen liggen op loopafstand."],
+    ["Wat onze nanny's hier doen", "'s Ochtends strand en zandkastelen, zwemmen in het hotelzwembad, dutjes terwijl jij gaat suppen of snorkelen, en avonden thuis zodat jij kunt uit eten bij zonsondergang."],
+    ["Goed om te weten", "Bij eb trekt het water zich ver terug over het rif — plan het zwemmen rond vloed. Snelboten naar Nusa Lembongan en Nusa Penida vertrekken vanaf het strand van Sanur."]
+   ]
+  },
+  "canggu": {
+   "name": "Canggu",
+   "lead": "Surfen, cafés en villa's met privézwembad — Canggu past bij gezinnen die een actief, sociaal verblijf op Bali willen.",
+   "txt": [
+    ["Gezinnen in Canggu", "De meeste gezinnen verblijven in villa's in Berawa, Pererenan of Batu Bolong. De dagen draaien om het villazwembad, strandcafés met speelhoek en surflessen voor oudere kinderen."],
+    ["Wat onze nanny's hier doen", "Toezicht bij het zwembad van je villa, speelafspraakjes in gezinscafés, dutjesritme terwijl jij surft of in een coworkingspace werkt, en 's avonds oppassen als je uit eten gaat."],
+    ["Goed om te weten", "De stranden van Canggu hebben zwart zand, sterke golven en stromingen — kinderen zwemmen alleen tussen de vlaggen of in het zwembad. Het verkeer is druk in de spits, dus we boeken nanny's die in de buurt wonen."]
+   ]
+  },
+  "seminyak": {
+   "name": "Seminyak",
+   "lead": "Boetiekvilla's, beachclubs en restaurants — Seminyak is de stijlvolle uitvalsbasis op Bali voor gezinnen die graag uitgaan.",
+   "txt": [
+    ["Gezinnen in Seminyak", "Villa's met privézwembad en resorts aan het strand liggen vlak bij enkele van de beste restaurants van Bali. Gezinnen verdelen hun dagen tussen de villa, het strand en de winkelstraten."],
+    ["Wat onze nanny's hier doen", "'s Avonds oppassen terwijl jij uit eten gaat of een beachclub bezoekt, zwemmen en spelen in de villa, en hulp bij het slaapritueel."],
+    ["Goed om te weten", "De branding langs het strand van Seminyak is sterk — toezicht bij het water is essentieel. Veel beachclubs richten zich 's avonds op volwassenen, dus een oppas in de villa is de makkelijkste optie."]
+   ]
+  },
+  "kuta-legian": {
+   "name": "Kuta & Legian",
+   "lead": "Dicht bij het vliegveld en Waterbom: Kuta en Legian zijn een makkelijke eerste stop voor gezinnen die op Bali aankomen.",
+   "txt": [
+    ["Gezinnen in Kuta & Legian", "Grote hotels met kinderbaden, winkelcentra en waterpark Waterbom maken dit gebied praktisch, zeker na een lange vlucht."],
+    ["Wat onze nanny's hier doen", "Jetlagnachten met een nachtnanny, middagen bij het hotelzwembad, en een dag Waterbom met een extra paar handen."],
+    ["Goed om te weten", "Het strand van Kuta heeft surfscholen voor beginners, maar ook muistromen — zwem tussen de vlaggen. De straten zijn druk, dus we plannen uitstapjes met korte wandelingen en taxi's."]
+   ]
+  },
+  "ubud": {
+   "name": "Ubud",
+   "lead": "Rijstterrassen, junglevilla's en koelere lucht — Ubud is het culturele hart van Bali en een fijne plek voor kinderen.",
+   "txt": [
+    ["Gezinnen in Ubud", "Junglevilla's met zwembad, knutselworkshops, dansvoorstellingen en wandelingen door de rijstvelden. Er is geen strand, maar het klimaat is milder dan aan de kust."],
+    ["Wat onze nanny's hier doen", "Villadagen met zwembad en spelen in de natuur, gezelschap bij wandelingen door de rijstvelden, en oppassen terwijl jij een yoga- of kookles volgt."],
+    ["Goed om te weten", "Veel villa's hebben steile trappen en zwembaden zonder hek — vertel ons hoe het eruitziet, zodat we de veiligheid kunnen plannen. Houd kinderen uit de buurt van de apen in het Monkey Forest en bij tempels."]
+   ]
+  },
+  "uluwatu": {
+   "name": "Uluwatu",
+   "lead": "Resorts op de kliffen, beroemde zonsondergangen en verborgen stranden — Uluwatu is Bali op z'n spectaculairst.",
+   "txt": [
+    ["Gezinnen in Uluwatu", "Gezinnen verblijven meestal in resorts op de kliffen of villa's met grote zwembaden. Stranden als Padang Padang en Melasti zijn prachtig, maar bereik je via trappen of steile wegen."],
+    ["Wat onze nanny's hier doen", "Toezicht bij het zwembad van je villa, strandtijd op rustigere plekken bij weinig deining, en 's avonds oppassen zodat jij de Kecak-dans of een zonsondergang op de kliffen kunt zien."],
+    ["Goed om te weten", "Veel stranden zijn voor ervaren surfers — kies rustige dagen en blijf dichtbij. Apen bij de Uluwatu-tempel grissen spullen weg; kleine kinderen zitten daar veiliger in een draagzak."]
+   ]
+  },
+  "jimbaran": {
+   "name": "Jimbaran",
+   "lead": "Een brede, rustige baai met visdiners op het zand — en maar 15 minuten van het vliegveld.",
+   "txt": [
+    ["Gezinnen in Jimbaran", "De baai is rustiger dan de westkust van Bali, en grote resorts hebben kidsclubs en ondiepe zwembaden. Visdiners op het strand bij zonsondergang zijn een gezinstraditie."],
+    ["Wat onze nanny's hier doen", "Ochtenden op het strand, zwemmen in het resortzwembad, en een oppas 's avonds zodat ouders rustig kunnen dineren."],
+    ["Goed om te weten", "De golven zijn meestal gematigd maar veranderen per seizoen — check de omstandigheden voordat je gaat zwemmen. Jimbaran is een handige uitvalsbasis voor korte verblijven dicht bij het vliegveld."]
+   ]
+  },
+  "nusa-dua": {
+   "name": "Nusa Dua",
+   "lead": "Verzorgde resorts, rustige stranden achter het rif en kidsclubs — Nusa Dua is het klassieke gezinsresortgebied van Bali.",
+   "txt": [
+    ["Gezinnen in Nusa Dua", "Een afgesloten resortenclave met brede stranden, rustig water en grote hotels die op gezinnen zijn ingericht. Alles is vlak, schoon en makkelijk met een buggy."],
+    ["Wat onze nanny's hier doen", "Privéopvang als de kidsclub vol is of je kind er nog te jong voor is, zwembad- en strandtijd, en 's avonds oppassen op je kamer."],
+    ["Goed om te weten", "Hotels hebben hun eigen regels voor externe oppassen — we stemmen vooraf af met de receptie. In het Bali Collection-gebied vind je winkels en restaurants op loopafstand."]
+   ]
+  },
+  "denpasar": {
+   "name": "Denpasar",
+   "lead": "De hoofdstad van Bali, waar veel expat- en lokale gezinnen wonen, dicht bij internationale ziekenhuizen en scholen.",
+   "txt": [
+    ["Gezinnen in Denpasar", "Denpasar draait minder om vakantie en meer om het dagelijks leven: woningen, scholen, winkelcentra en de belangrijkste ziekenhuizen van het eiland."],
+    ["Wat onze nanny's hier doen", "Vaste en parttime nanny's voor gezinnen die hier wonen, naschoolse opvang en hulp in huis."],
+    ["Goed om te weten", "Het verkeer kan druk zijn, dus we koppelen gezinnen aan nanny's uit hetzelfde deel van de stad en spreken vaste uren af."]
+   ]
+  }
+ }
+}

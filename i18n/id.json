@@ -1,0 +1,680 @@
+{
+ "T": {
+  "wa_default": "Halo! Saya ingin memesan baby sitter di Bali.",
+  "wa_service": "Halo! Saya tertarik dengan: {s}. Tanggal: ",
+  "nav": [
+   "Layanan",
+   "Sewa",
+   "Area",
+   "Harga",
+   "Keamanan",
+   "Panduan"
+  ],
+  "safety_nav": "Keamanan",
+  "home": "Beranda",
+  "svc": [
+   [
+    "Baby sitter per jam",
+    "Makan malam, spa, les surfing — mulai 3 jam."
+   ],
+   [
+    "Pengasuh seharian",
+    "Pantai, kolam, tidur siang dan makan — Anda benar-benar berlibur."
+   ],
+   [
+    "Pengasuh malam",
+    "Menidurkan, menyusui botol, dan bangun malam — Anda bisa tidur nyenyak."
+   ],
+   [
+    "Pengasuh bayi & newborn",
+    "Pengasuh berpengalaman merawat bayi di bawah 12 bulan."
+   ],
+   [
+    "Pengasuh saat jalan-jalan",
+    "Ikut menemani keluarga Anda saat day trip dan ke pulau sekitar."
+   ],
+   [
+    "Baby sitter di hotel & vila",
+    "Kami datang ke hotel atau vila Anda di seluruh Bali."
+   ],
+   [
+    "Pernikahan & acara",
+    "Pojok anak dan baby sitter untuk perayaan Anda."
+   ],
+   [
+    "Pengasuh jangka panjang",
+    "Untuk keluarga yang tinggal di Bali."
+   ]
+  ],
+  "wa_btn": "Chat via WhatsApp",
+  "wa_short": "WhatsApp",
+  "book": "Pesan via WhatsApp",
+  "see_prices": "Lihat harga",
+  "prices": "Harga",
+  "title_home": "Baby Sitter & Pengasuh Anak di Bali — Sanur, Canggu, Ubud & lainnya",
+  "desc_home": "Pengasuh anak dan baby sitter berbahasa Inggris dan terlatih P3K di seluruh Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. Datang ke hotel & vila, pengasuh malam, day trip. Pesan dalam hitungan menit via WhatsApp.",
+  "eyebrow": "Bali · Indonesia",
+  "h1": "Pengasuh terpercaya untuk liburan keluarga Anda di Bali",
+  "lead": "Baby sitter terlatih P3K yang datang ke hotel atau vila Anda — supaya Anda bisa menikmati makan malam, spa, atau sunrise dengan tenang.",
+  "trust": [
+   "Latar belakang dicek",
+   "P3K & CPR",
+   "Balas dalam 15 menit"
+  ],
+  "chip": "🟢 Pengasuh tersedia malam ini",
+  "photo": "Pengasuh bermain dengan anak di kolam renang",
+  "svc_h": "Pengasuhan yang pas untuk liburan Anda",
+  "svc_p": "Dari satu malam hingga satu musim penuh di Bali.",
+  "steps_h": "Pesan cukup dengan tiga pesan",
+  "steps": [
+   [
+    "Kirim pesan via WhatsApp",
+    "Beri tahu tanggal, jam, usia anak, dan tempat Anda menginap."
+   ],
+   [
+    "Kenali pengasuh Anda",
+    "Kami kirim profil dan perkenalan singkat. Ingin video call dulu? Tinggal minta."
+   ],
+   [
+    "Nikmati waktu Anda",
+    "Pengasuh datang ke hotel atau vila. Update foto via WhatsApp, bayar setelah sesi."
+   ]
+  ],
+  "safe_h": "Keamanan bukan sekadar fitur. Itu tugas utama kami.",
+  "safe_p": "Setiap pengasuh diwawancarai langsung, dicek referensinya, dan dilatih sebelum bertemu keluarga pertamanya.",
+  "safe_btn": "Standar keamanan kami",
+  "safe_list": [
+   "Cek identitas dan referensi",
+   "P3K & CPR khusus anak",
+   "Aturan pengawasan di kolam dan pantai",
+   "Pertemuan perkenalan sebelum pesanan pertama"
+  ],
+  "faq_h": "Pertanyaan dari para orang tua",
+  "faq": [
+   [
+    "Seberapa cepat saya bisa memesan?",
+    "Sering kali di hari yang sama. Untuk malam hari dan musim ramai (Juli–Agustus, Natal) hubungi kami 2–3 hari sebelumnya."
+   ],
+   [
+    "Apakah pengasuh bisa berbahasa Inggris?",
+    "Ya — semua pengasuh lancar berkomunikasi dalam bahasa Inggris, dan tentu bahasa Indonesia. Kami jujur soal tingkat kemampuan tiap pengasuh."
+   ],
+   [
+    "Apakah pengasuh terlatih P3K?",
+    "Setiap pengasuh memiliki sertifikat P3K & CPR anak yang masih berlaku. Bisa kami tunjukkan sebelum Anda memesan."
+   ],
+   [
+    "Di mana saja area layanannya?",
+    "Seluruh Bali Selatan dan Ubud — Sanur, Canggu, Seminyak, Kuta, Jimbaran, Uluwatu, Nusa Dua, Denpasar, dan Ubud. Hotel, vila, dan rumah."
+   ],
+   [
+    "Bagaimana cara membayar?",
+    "Tunai (IDR) atau transfer bank setelah sesi. Tanpa DP untuk pesanan satu kali."
+   ],
+   [
+    "Bisakah pengasuh merawat bayi baru lahir?",
+    "Bisa. Kami pilihkan pengasuh yang memang berpengalaman merawat newborn."
+   ]
+  ],
+  "guides_h": "Sanur bersama anak",
+  "guides_p": "Panduan lokal dari orang-orang yang setiap hari berada di pantai ini.",
+  "n_guides": "panduan",
+  "final_h": "Butuh pengasuh di Bali?",
+  "final_p": "Kirim tanggal Anda — kami balas dengan pengasuh yang tersedia.",
+  "final_btn": "Kirim pesan via WhatsApp",
+  "services_t": "Layanan Pengasuh Anak di Bali",
+  "services_h": "Layanan kami",
+  "services_d": "Baby sitter per jam, pengasuh seharian dan malam, perawatan newborn, dan pengasuh saat jalan-jalan di seluruh Bali.",
+  "svc_title": "{s} di Bali",
+  "svc_h1": "{s} di Bali",
+  "check": "Cek ketersediaan",
+  "how": "Cara kerja",
+  "faq_short": "FAQ",
+  "prices_t": "Harga Baby Sitter & Pengasuh Anak di Bali",
+  "prices_h": "Harga sederhana dan transparan",
+  "prices_p": "Tanpa DP untuk pesanan satu kali. Bayar setelah sesi.",
+  "th": [
+   "Layanan",
+   "Tarif",
+   "Minimum"
+  ],
+  "price_note": "Tarif untuk maksimal 2 anak. Transportasi di area pengasuh sudah termasuk; perjalanan lebih jauh sesuai kesepakatan.",
+  "quote": "Minta penawaran",
+  "hiw_t": "Cara Memesan",
+  "hiw_d": "Pesan pengasuh di Bali cukup dengan tiga pesan WhatsApp.",
+  "safety_t": "Standar Keamanan Kami",
+  "safety_d": "Cara kami memilih, mengecek, dan melatih setiap pengasuh di Bali.",
+  "safety_body": [
+   [
+    "Seleksi",
+    "Wawancara langsung, cek identitas, minimal dua referensi dari keluarga sebelumnya."
+   ],
+   [
+    "Pelatihan",
+    "Sertifikat P3K & CPR anak yang masih berlaku. Aturan pengawasan di kolam dan pantai."
+   ],
+   [
+    "Di setiap pesanan",
+    "Checklist serah terima, kontak darurat, update via WhatsApp."
+   ]
+  ],
+  "faq_t": "Pertanyaan yang sering diajukan",
+  "faq_d": "Jawaban seputar memesan pengasuh di Bali.",
+  "careers_nav": "Jadi pengasuh",
+  "careers_t": "Lowongan Pengasuh Anak di Bali",
+  "careers_h": "Jadi pengasuh",
+  "careers_p": "Kami bekerja sama dengan pengasuh berpengalaman yang bisa berbahasa Inggris di seluruh Bali. Pelatihan P3K disediakan.",
+  "apply": "Melamar via WhatsApp",
+  "apply_msg": "Halo! Saya ingin melamar sebagai pengasuh.",
+  "guides_t": "Panduan Keluarga di Sanur",
+  "guides_hh": "Panduan keluarga di Sanur",
+  "soon": "segera hadir",
+  "company": "Perusahaan",
+  "services_f": "Layanan",
+  "guides_f": "Panduan",
+  "foot_p": "Pengasuh anak dan baby sitter terpercaya untuk keluarga di seluruh Bali.",
+  "hubs": {
+   "H01": "Pengasuhan Anak di Sanur",
+   "H02": "Sanur bersama Anak: Aktivitas Seru",
+   "H03": "Menginap bersama Keluarga di Sanur",
+   "H04": "Kesehatan & Keamanan Anak di Bali",
+   "H05": "Kuliner Keluarga di Sanur",
+   "H06": "Logistik Perjalanan bersama Anak",
+   "H07": "Day Trip dari Sanur bersama Anak",
+   "H08": "Kehidupan Keluarga Ekspat di Sanur"
+  }
+ },
+ "TB": {
+  "hero_trust": [
+   "Diseleksi langsung",
+   "Kenali pengasuh dulu",
+   "Garansi pengganti",
+   "Bayar setelah sesi"
+  ],
+  "vet_h": "Cara kami menyeleksi setiap pengasuh",
+  "vet_p": "Enam tahap sebelum pengasuh bertemu keluarga pertamanya. Tanpa jalan pintas.",
+  "vet": [
+   [
+    "🪪",
+    "Cek identitas & alamat",
+    "Paspor atau KTP diverifikasi, alamat rumah dikonfirmasi."
+   ],
+   [
+    "📞",
+    "Dua referensi keluarga",
+    "Kami sendiri yang menelepon keluarga sebelumnya — bukan sekadar membaca surat."
+   ],
+   [
+    "🤝",
+    "Wawancara langsung",
+    "Tatap muka, dengan simulasi situasi pengasuhan dan tes bahasa Inggris."
+   ],
+   [
+    "⛑️",
+    "P3K & CPR anak",
+    "Sertifikat berlaku, diperbarui sesuai jadwal. Bisa kami tunjukkan."
+   ],
+   [
+    "🏊",
+    "Aturan keamanan air",
+    "Aturan pengawasan di kolam dan pantai ditandatangani setiap pengasuh."
+   ],
+   [
+    "⭐",
+    "Shift percobaan & evaluasi",
+    "Shift pertama ditinjau; keluarga menilai setiap pesanan."
+   ]
+  ],
+  "meet_h": "Kenali pengasuh Anda sebelum ia datang",
+  "meet_p": "Tidak ada orang asing di depan pintu Anda. Sebelum pesanan dikonfirmasi, Anda menerima:",
+  "meet": [
+   "Foto, nama, dan lama pengalamannya",
+   "Bahasa yang dikuasai dan usia anak yang paling cocok",
+   "Video sapaan singkat via WhatsApp",
+   "Video call singkat jika Anda mau"
+  ],
+  "card": {
+   "tag": "Contoh profil",
+   "name": "Pengasuh Anda",
+   "meta": "7 tahun · bayi & balita",
+   "langs": "English · Bahasa",
+   "loves": "Suka: berenang, menggambar, bernyanyi",
+   "vid": "▶ Video sapaan · 0:30"
+  },
+  "guar_h": "Garansi pengganti",
+  "guar_p": "Jika pengasuh Anda sakit atau berhalangan, kami kirim pengasuh lain yang sudah diseleksi — atau Anda tidak perlu membayar. Malam Anda tetap aman.",
+  "bring_h": "Yang dibawa pengasuh",
+  "bring_p": "Anak-anak tidak sekadar diawasi — mereka juga bersenang-senang.",
+  "bring": [
+   [
+    "🎨",
+    "Perlengkapan prakarya",
+    "Kertas, krayon, stiker, prakarya sederhana"
+   ],
+   [
+    "📚",
+    "Buku bergambar",
+    "Cerita sesuai usia untuk pengantar tidur"
+   ],
+   [
+    "🫧",
+    "Mainan kolam & pantai",
+    "Gelembung sabun, mainan pasir, permainan air"
+   ],
+   [
+    "🧩",
+    "Permainan tenang",
+    "Puzzle dan kartu untuk di kamar hotel"
+   ],
+   [
+    "⛑️",
+    "Kotak P3K mini",
+    "Plester, antiseptik, kompres dingin"
+   ],
+   [
+    "📱",
+    "Update foto",
+    "Beberapa foto via WhatsApp selama shift"
+   ]
+  ],
+  "check_h": "Sebelum setiap shift kami menanyakan",
+  "check_p": "Supaya tidak ada hal penting yang terlewat. Hanya 2 menit via WhatsApp.",
+  "check": [
+   "Alergi, obat-obatan, dan catatan kesehatan",
+   "Rutinitas tidur dan makan",
+   "Boleh ke kolam atau pantai? Dengan aturan apa?",
+   "Screen time dan makanan manis",
+   "Nomor Anda dan kontak cadangan",
+   "Aturan hotel atau vila dan nomor kamar"
+  ],
+  "faq_add": [
+   [
+    "Bagaimana jika pengasuh membatalkan?",
+    "Kami kirim pengasuh pengganti dengan pengecekan yang sama. Jika tidak bisa, Anda tidak perlu membayar."
+   ],
+   [
+    "Bisakah saya melihat pengasuh sebelum memesan?",
+    "Bisa. Anda menerima foto, pengalaman, dan video sapaan singkatnya, dan bisa meminta video call."
+   ]
+  ]
+ },
+ "RT": {
+  "nav": "Sewa",
+  "h1": "Sewa perlengkapan bayi di Bali",
+  "title": "Sewa Perlengkapan Bayi di Bali — Box Bayi, Stroller, Car Seat, Pagar Kolam Renang",
+  "lead": "Liburan tanpa repot bawa barang. Kami antar perlengkapan bayi yang bersih dan sudah dicek ke hotel atau vila Anda, lalu memasangnya — dan mengambilnya kembali saat Anda pulang.",
+  "sec_h": "Semua untuk si kecil yang berlibur",
+  "from_": "mulai",
+  "per_day": "/ hari",
+  "how_h": "Cara sewa",
+  "how": [
+   [
+    "Kirim daftar Anda",
+    "Via WhatsApp: tanggal, alamat, dan barang yang dibutuhkan."
+   ],
+   [
+    "Kami antar & pasang",
+    "Dibersihkan, disterilkan, dan dicek — bisa dipasang sebelum Anda tiba."
+   ],
+   [
+    "Kami ambil kembali",
+    "Dijemput dari vila atau hotel Anda di hari terakhir."
+   ]
+  ],
+  "pack_h": "Paket kedatangan",
+  "pack_p": "Box bayi, stroller, car seat, dan kursi makan — siap sebelum Anda mendarat. Awal paling mudah untuk liburan di Bali bersama bayi.",
+  "combo_h": "Sewa + pengasuh",
+  "combo_p": "Tambahkan pengasuh ke pesanan Anda — ia sudah mengenal semua perlengkapan yang terpasang di vila Anda.",
+  "hygiene": [
+   "Dibersihkan dan disterilkan setelah setiap penyewaan",
+   "Dicek dari kerusakan dan recall",
+   "Seprai baru untuk setiap box bayi"
+  ],
+  "ask": "Tanya ketersediaan",
+  "msg": "Halo! Saya ingin sewa perlengkapan bayi. Tanggal: , alamat: , barang: ",
+  "home_h": "Perlengkapan bayi & pagar kolam",
+  "home_p": "Tidak perlu bawa box bayi dan stroller di pesawat. Kami antar semuanya ke vila Anda.",
+  "all": "Lihat semua sewa",
+  "pf": {
+   "title": "Sewa Pagar Kolam Renang di Bali — Pagar Pengaman Anak Lepas-Pasang untuk Vila",
+   "h1": "Sewa pagar kolam renang untuk vila Anda di Bali",
+   "lead": "Kebanyakan kolam vila di Bali tidak berpagar. Kami pasang pagar pengaman anak yang bisa dilepas di sekeliling kolam sebelum Anda tiba — dan membongkarnya saat Anda pulang.",
+   "why_h": "Mengapa pagar kolam itu penting",
+   "why": [
+    "Banyak vila di Bali punya kolam tepat di depan pintu kamar — sering tanpa pembatas.",
+    "Balita bergerak cepat, dan tenggelam terjadi tanpa suara: tidak seperti adegan berteriak dan meronta di film.",
+    "Pagar memberi lapisan pengaman di saat Anda lengah sebentar — membongkar koper, memasak, membuka pintu."
+   ],
+   "what_h": "Yang Anda dapatkan",
+   "steps_h": "Cara pemasangan",
+   "steps": [
+    [
+     "Kirim foto kolam",
+     "Video singkat atau beberapa foto via WhatsApp sudah cukup untuk mengukur."
+    ],
+    [
+     "Kami konfirmasi ke vila",
+     "Jika perlu, kami atur pemasangan dengan pengelola vila."
+    ],
+    [
+     "Pemasangan 30–60 menit",
+     "Dipasang di sepanjang tepi kolam dengan pintu yang terkunci otomatis."
+    ],
+    [
+     "Dibongkar saat check-out",
+     "Tanpa bekas lubang bor."
+    ]
+   ],
+   "note": "Pagar adalah lapisan perlindungan tambahan, bukan pengganti pengawasan. Selalu awasi anak di dekat air.",
+   "faq": [
+    [
+     "Apakah akan merusak vila?",
+     "Pagar dirancang agar bisa dilepas tanpa meninggalkan bekas. Ceritakan jenis lantai di sekitar kolam dan kami konfirmasi cara pemasangannya."
+    ],
+    [
+     "Apakah pihak vila harus setuju?",
+     "Biasanya pengelola vila menyambut baik; kami bisa berkoordinasi langsung dengan mereka."
+    ],
+    [
+     "Apakah kolam masih bisa dipakai?",
+     "Tentu — orang dewasa membuka pintunya; pintu menutup dan terkunci sendiri."
+    ],
+    [
+     "Berapa lama sebelumnya saya harus memesan?",
+     "Sesegera mungkin di musim ramai (Juli–Agustus, Natal). Pemasangan bisa dilakukan sebelum Anda tiba."
+    ]
+   ],
+   "msg": "Halo! Saya butuh pagar kolam renang. Area vila: , tanggal: , ukuran/foto kolam: ",
+   "cta": "Minta penawaran pagar kolam"
+  }
+ },
+ "CATS": {
+  "pool-fence": {
+   "name": "Pagar kolam renang",
+   "desc": "Pagar pengaman anak lepas-pasang di sekeliling kolam vila Anda.",
+   "items": [
+    "Pagar jaring lepas-pasang, tinggi ~1,2 m",
+    "Pintu menutup dan terkunci otomatis",
+    "Dipasang di sepanjang tepi kolam",
+    "Dibongkar saat check-out, tanpa kerusakan"
+   ]
+  },
+  "sleep": {
+   "name": "Box bayi & tidur",
+   "desc": "Box bayi ukuran penuh, travel cot, dan bassinet dengan seprai bersih.",
+   "items": [
+    "Box bayi ukuran penuh dengan kasur",
+    "Travel cot / playpen",
+    "Bassinet untuk newborn",
+    "Tirai blackout portabel",
+    "Mesin white noise",
+    "Baby monitor"
+   ]
+  },
+  "strollers": {
+   "name": "Stroller & gendongan",
+   "desc": "Stroller travel ringan, stroller kembar, dan gendongan bayi.",
+   "items": [
+    "Stroller travel ringkas",
+    "Stroller all-terrain untuk jalan pantai",
+    "Stroller kembar",
+    "Gendongan bayi ergonomis",
+    "Kipas stroller & pelindung hujan"
+   ]
+  },
+  "car-seats": {
+   "name": "Car seat",
+   "desc": "Car seat bayi, convertible, dan booster — kami pasangkan untuk Anda.",
+   "items": [
+    "Infant capsule (0–13 kg)",
+    "Car seat convertible (0–18 kg)",
+    "Car seat menghadap depan (9–25 kg)",
+    "Booster (15–36 kg)",
+    "Bisa dipasang di mobil sopir Anda"
+   ]
+  },
+  "feeding-bath": {
+   "name": "Makan & mandi",
+   "desc": "Kursi makan bayi, sterilisator, dan bak mandi bayi.",
+   "items": [
+    "Kursi makan bayi",
+    "Booster seat travel",
+    "Sterilisator botol",
+    "Penghangat botol",
+    "Bak mandi & kursi mandi bayi",
+    "Pompa ASI (kit tersegel)"
+   ]
+  },
+  "play": {
+   "name": "Bermain & keamanan",
+   "desc": "Paket mainan, matras bermain, dan perlengkapan baby-proofing.",
+   "items": [
+    "Paket mainan sesuai usia",
+    "Matras bermain & bouncer",
+    "Pagar pengaman tangga",
+    "Penutup stopkontak & pelindung sudut",
+    "Set mainan kolam & pantai",
+    "Pelampung rompi anak"
+   ]
+  }
+ },
+ "AT": {
+  "nav": "Area",
+  "h": "Area layanan kami di Bali",
+  "p": "Pengasuh kami datang ke hotel, vila, dan rumah di seluruh Bali Selatan dan Ubud.",
+  "title": "Area Layanan Pengasuh Anak di Bali",
+  "title_one": "Baby Sitter & Pengasuh Anak di {loc}, Bali",
+  "h1": "Baby sitter & pengasuh anak di {loc}",
+  "msg": "Halo! Saya butuh pengasuh di {loc}. Tanggal: ",
+  "other": "Area lainnya"
+ },
+ "SM": {
+  "title": "Peta situs",
+  "desc": "Semua halaman Bali Nannies di satu tempat."
+ },
+ "VID": {
+  "alt": "Pengasuh kami bersama bayi yang tersenyum di sebuah vila di Bali",
+  "play": "Putar video",
+  "label": "Tonton 30 detik"
+ },
+ "ARTICLE": {
+  "title": "Aktivitas di Sanur bersama Anak (Panduan Keluarga 2026)",
+  "h1": "Aktivitas di Sanur bersama Anak: Panduan Lengkap untuk Keluarga",
+  "desc": "Pantai, taman bermain, aktivitas air, dan rencana 3 hari untuk keluarga di Sanur, Bali — dari agensi pengasuh lokal.",
+  "byline": "Oleh [Penulis], ditinjau oleh [Koordinator pengasuh] · Diperbarui September 2026",
+  "toc": "Dalam panduan ini",
+  "lead": "Sanur adalah sudut Bali yang paling tenang dan nyaman dijelajahi jalan kaki untuk keluarga: air terlindung karang, jalur pantai yang datar, dan jarak yang dekat. Begini cara menikmati hari-hari di sana bersama anak segala usia.",
+  "mid_h": "Ingin malam berdua saja?",
+  "mid_p": "Pengasuh bisa datang ke hotel atau vila Anda malam ini.",
+  "secs": [
+   [
+    "Pantai",
+    "Karang di Sanur membuat airnya tenang, sehingga menjadi salah satu tempat termudah di Bali bagi anak kecil untuk berenang. Pantai Sindhu, Semawang, dan Mertasari jadi favorit keluarga. Berenanglah saat air pasang; saat surut, air mundur jauh melewati karang."
+   ],
+   [
+    "Taman dan tempat bermain",
+    "Beberapa kafe tepi pantai di sepanjang jalur Sanur punya area bermain, dan ada juga soft play indoor untuk jam-jam paling panas."
+   ],
+   [
+    "Aktivitas air",
+    "Stand-up paddle, snorkeling, dan les renang sangat cocok di air Sanur yang tenang. Les kitesurfing dan windsurfing pas untuk anak yang lebih besar di musim berangin."
+   ],
+   [
+    "Ide saat hujan",
+    "Kelas prakarya dan memasak, playground indoor, serta mal di Denpasar yang dekat membuat anak tetap sibuk saat hujan turun."
+   ],
+   [
+    "Aktivitas malam",
+    "Pasar malam Sindhu, sunset di jalur pantai — atau makan malam berdua sementara pengasuh menidurkan anak-anak."
+   ],
+   [
+    "Contoh rencana 3 hari",
+    "Hari 1: pagi di pantai, kolam dan tidur siang, jalan sore menikmati sunset. Hari 2: snorkeling atau SUP, lalu kelas prakarya. Hari 3: day trip ke Bali Zoo atau waterpark, dengan malam bebas untuk orang tua."
+   ]
+  ]
+ },
+ "AREAS": {
+  "sanur": {
+   "name": "Sanur",
+   "lead": "Air tenang yang terlindung karang dan jalur pantai yang datar menjadikan Sanur bagian Bali paling mudah untuk bayi dan balita.",
+   "txt": [
+    [
+     "Mengapa keluarga memilih Sanur",
+     "Karang membuat ombak tetap kecil, jadi si kecil bisa bermain air dengan aman saat pasang. Jalur pantai 5 km ramah stroller, dan kebanyakan hotel, kafe, serta taman bermain bisa dijangkau jalan kaki."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Pagi di pantai dan membuat istana pasir, berenang di kolam hotel, menemani tidur siang saat Anda SUP atau snorkeling, dan menjaga di malam hari agar Anda bisa makan malam sambil menikmati sunset."
+    ],
+    [
+     "Perlu diketahui",
+     "Saat surut, air mundur jauh melewati karang — rencanakan berenang saat pasang. Fast boat ke Nusa Lembongan dan Nusa Penida berangkat dari pantai Sanur."
+    ]
+   ]
+  },
+  "canggu": {
+   "name": "Canggu",
+   "lead": "Surfing, kafe, dan vila dengan kolam pribadi — Canggu cocok untuk keluarga yang ingin liburan aktif dan ramai di Bali.",
+   "txt": [
+    [
+     "Keluarga di Canggu",
+     "Kebanyakan keluarga menginap di vila di Berawa, Pererenan, atau Batu Bolong. Hari-hari diisi dengan kolam vila, kafe pantai dengan area bermain, dan les surfing untuk anak yang lebih besar."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Mengawasi di kolam vila, playdate di kafe keluarga, rutinitas tidur siang saat Anda surfing atau bekerja di coworking, dan baby sitting malam saat Anda makan di luar."
+    ],
+    [
+     "Perlu diketahui",
+     "Pantai Canggu berpasir hitam dengan ombak dan arus kuat — anak hanya boleh berenang di antara bendera atau di kolam. Lalu lintas padat di jam sibuk, jadi kami pilihkan pengasuh yang tinggal di dekat Anda."
+    ]
+   ]
+  },
+  "seminyak": {
+   "name": "Seminyak",
+   "lead": "Vila butik, beach club, dan restoran — Seminyak adalah basis stylish di Bali untuk keluarga yang suka keluar.",
+   "txt": [
+    [
+     "Keluarga di Seminyak",
+     "Vila dengan kolam pribadi dan resort tepi pantai dekat dengan beberapa restoran terbaik di Bali. Keluarga membagi hari antara vila, pantai, dan jalan-jalan belanja."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Baby sitting malam saat Anda makan malam atau ke beach club, waktu bermain dan berenang di vila, serta membantu rutinitas tidur."
+    ],
+    [
+     "Perlu diketahui",
+     "Ombak di pantai Seminyak kuat — pengawasan di dekat air wajib. Banyak beach club di malam hari lebih untuk orang dewasa, jadi baby sitter di vila adalah pilihan praktis."
+    ]
+   ]
+  },
+  "kuta-legian": {
+   "name": "Kuta & Legian",
+   "lead": "Dekat bandara dan Waterbom, Kuta dan Legian jadi persinggahan pertama yang mudah bagi keluarga yang baru tiba di Bali.",
+   "txt": [
+    [
+     "Keluarga di Kuta & Legian",
+     "Hotel besar dengan kolam anak, mal, dan waterpark Waterbom membuat area ini praktis, terutama setelah penerbangan panjang."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Malam jet lag bersama pengasuh malam, sore di kolam hotel, dan sehari di Waterbom dengan bantuan tangan ekstra."
+    ],
+    [
+     "Perlu diketahui",
+     "Pantai Kuta punya sekolah surfing untuk pemula tapi juga arus balik — berenanglah di antara bendera. Jalanan ramai, jadi kami rencanakan jalan-jalan singkat dan naik taksi."
+    ]
+   ]
+  },
+  "ubud": {
+   "name": "Ubud",
+   "lead": "Sawah terasering, vila di tengah hutan, dan udara lebih sejuk — Ubud adalah jantung budaya Bali dan tempat yang ramah untuk anak.",
+   "txt": [
+    [
+     "Keluarga di Ubud",
+     "Vila hutan dengan kolam, workshop kerajinan, pertunjukan tari, dan jalan-jalan di sawah. Tidak ada pantai, tapi udaranya lebih sejuk daripada di pesisir."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Hari di vila dengan berenang dan bermain di alam, menemani jalan-jalan di sawah, dan baby sitting saat Anda ikut kelas yoga atau kelas memasak."
+    ],
+    [
+     "Perlu diketahui",
+     "Banyak vila punya tangga curam dan kolam tanpa pagar — ceritakan tata letaknya agar kami bisa merencanakan keamanan. Jauhkan anak dari monyet di Monkey Forest dan pura."
+    ]
+   ]
+  },
+  "uluwatu": {
+   "name": "Uluwatu",
+   "lead": "Resort di atas tebing, sunset terkenal, dan pantai tersembunyi — Uluwatu adalah sisi Bali yang paling dramatis.",
+   "txt": [
+    [
+     "Keluarga di Uluwatu",
+     "Keluarga biasanya menginap di resort tebing atau vila dengan kolam besar. Pantai seperti Padang Padang dan Melasti sangat indah, tapi dicapai lewat tangga atau jalan curam."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Mengawasi di kolam vila, main di pantai yang lebih tenang saat ombak kecil, dan baby sitting malam agar Anda bisa menonton tari Kecak atau sunset dari tebing."
+    ],
+    [
+     "Perlu diketahui",
+     "Banyak pantai hanya untuk peselancar berpengalaman — pilih hari yang tenang dan tetap dekat. Monyet di Pura Uluwatu suka merebut barang; anak kecil lebih aman digendong di sana."
+    ]
+   ]
+  },
+  "jimbaran": {
+   "name": "Jimbaran",
+   "lead": "Teluk luas yang tenang dengan makan malam seafood di atas pasir — dan hanya 15 menit dari bandara.",
+   "txt": [
+    [
+     "Keluarga di Jimbaran",
+     "Teluknya lebih tenang dibanding pantai barat Bali, dan resort besar punya kids' club serta kolam dangkal. Makan malam seafood saat sunset di pantai adalah tradisi keluarga."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Pagi di pantai, berenang di kolam resort, dan baby sitter malam agar orang tua bisa menikmati makan malam yang tenang."
+    ],
+    [
+     "Perlu diketahui",
+     "Ombak biasanya sedang tapi berubah sesuai musim — cek kondisi sebelum berenang. Jimbaran adalah basis praktis untuk menginap singkat dekat bandara."
+    ]
+   ]
+  },
+  "nusa-dua": {
+   "name": "Nusa Dua",
+   "lead": "Resort tertata rapi, pantai tenang terlindung karang, dan kids' club — Nusa Dua adalah kawasan resort keluarga klasik di Bali.",
+   "txt": [
+    [
+     "Keluarga di Nusa Dua",
+     "Kawasan resort berpenjagaan dengan pantai luas, air tenang, dan hotel besar yang dibangun untuk keluarga. Semuanya datar, bersih, dan mudah dengan stroller."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Pengasuhan pribadi saat kids' club penuh atau anak Anda masih terlalu kecil, waktu di kolam dan pantai, serta baby sitting malam di kamar Anda."
+    ],
+    [
+     "Perlu diketahui",
+     "Hotel punya kebijakan sendiri untuk baby sitter dari luar — kami berkoordinasi dengan resepsionis sebelumnya. Area Bali Collection punya toko dan restoran yang bisa dijangkau jalan kaki."
+    ]
+   ]
+  },
+  "denpasar": {
+   "name": "Denpasar",
+   "lead": "Ibu kota Bali, tempat banyak keluarga ekspat dan lokal tinggal dekat rumah sakit dan sekolah internasional.",
+   "txt": [
+    [
+     "Keluarga di Denpasar",
+     "Denpasar bukan soal liburan, melainkan kehidupan sehari-hari: rumah, sekolah, mal, dan rumah sakit utama di pulau ini."
+    ],
+    [
+     "Yang dilakukan pengasuh kami di sini",
+     "Pengasuh jangka panjang dan paruh waktu untuk keluarga yang tinggal di sini, pengasuhan sepulang sekolah, dan bantuan di rumah."
+    ],
+    [
+     "Perlu diketahui",
+     "Lalu lintas bisa padat, jadi kami pilihkan pengasuh dari bagian kota yang sama dan menyepakati jam kerja tetap."
+    ]
+   ]
+  }
+ }
+}

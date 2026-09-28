@@ -1,0 +1,680 @@
+{
+ "T": {
+  "wa_default": "Ciao! Vorrei prenotare una tata a Bali.",
+  "wa_service": "Ciao! Mi interessa: {s}. Date: ",
+  "nav": [
+   "Servizi",
+   "Noleggio",
+   "Zone",
+   "Prezzi",
+   "Sicurezza",
+   "Guide"
+  ],
+  "safety_nav": "Sicurezza",
+  "home": "Home",
+  "svc": [
+   [
+    "Babysitter a ore",
+    "Una cena fuori, la spa, una lezione di surf — da 3 ore."
+   ],
+   [
+    "Tata a giornata intera",
+    "Spiaggia, piscina, pisolini e pasti, mentre vi godete una vera vacanza."
+   ],
+   [
+    "Tata notturna",
+    "Addormentamento, poppate e risvegli notturni, così potete dormire."
+   ],
+   [
+    "Neonati e bebè",
+    "Tate con esperienza con bambini sotto i 12 mesi."
+   ],
+   [
+    "Tata in viaggio",
+    "Vi accompagna nelle gite di un giorno e tra le isole."
+   ],
+   [
+    "Babysitting in hotel e villa",
+    "Veniamo nel vostro hotel o nella vostra villa, in tutta Bali."
+   ],
+   [
+    "Matrimoni ed eventi",
+    "Angolo bimbi e babysitter per le vostre feste."
+   ],
+   [
+    "Tata a lungo termine",
+    "Per le famiglie expat che vivono a Bali."
+   ]
+  ],
+  "wa_btn": "Scriveteci su WhatsApp",
+  "wa_short": "WhatsApp",
+  "book": "Prenota su WhatsApp",
+  "see_prices": "Vedi i prezzi",
+  "prices": "Prezzi",
+  "title_home": "Tata e babysitter a Bali — Sanur, Canggu, Ubud e non solo",
+  "desc_home": "Tate e babysitter che parlano inglese e formate nel primo soccorso in tutta Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. In hotel e in villa, tate notturne, gite. Prenotate in pochi minuti su WhatsApp.",
+  "eyebrow": "Bali · Indonesia",
+  "h1": "Tate di fiducia per la vostra vacanza in famiglia a Bali",
+  "lead": "Babysitter che parlano inglese e formate nel primo soccorso vengono nel vostro hotel o nella vostra villa — così potete godervi una cena, la spa o un'alba in tranquillità.",
+  "trust": [
+   "Referenze verificate",
+   "Primo soccorso e RCP",
+   "Risposta entro 15 min"
+  ],
+  "chip": "🟢 Tata disponibile stasera",
+  "photo": "Tata che gioca con un bambino in piscina",
+  "svc_h": "Assistenza su misura per il vostro viaggio",
+  "svc_p": "Da una sola serata a un'intera stagione a Bali.",
+  "steps_h": "Prenotate in tre messaggi",
+  "steps": [
+   [
+    "Scriveteci su WhatsApp",
+    "Indicateci date, orari, età dei bambini e dove alloggiate."
+   ],
+   [
+    "Conoscete la vostra tata",
+    "Vi inviamo il suo profilo e una breve presentazione. Preferite prima una videochiamata? Basta chiedere."
+   ],
+   [
+    "Godetevi il vostro tempo",
+    "Arriva nel vostro hotel o villa. Foto su WhatsApp, pagate dopo il servizio."
+   ]
+  ],
+  "safe_h": "La sicurezza non è un extra. È il nostro lavoro.",
+  "safe_p": "Ogni tata viene incontrata di persona, verificata tramite referenze e formata prima della sua prima famiglia.",
+  "safe_btn": "I nostri standard di sicurezza",
+  "safe_list": [
+   "Verifica documenti e referenze",
+   "Primo soccorso pediatrico e RCP",
+   "Regole di sorveglianza in piscina e in spiaggia",
+   "Incontro di prova prima della prima prenotazione"
+  ],
+  "faq_h": "Le domande dei genitori",
+  "faq": [
+   [
+    "Quanto tempo serve per prenotare?",
+    "Spesso basta lo stesso giorno. Per le serate e l'alta stagione (luglio–agosto, Natale) scriveteci 2–3 giorni prima."
+   ],
+   [
+    "Le vostre tate parlano inglese?",
+    "Sì — ogni tata comunica in inglese senza difficoltà. Vi diciamo con onestà il livello di ciascuna."
+   ],
+   [
+    "Le tate sono formate nel primo soccorso?",
+    "Ogni tata ha un certificato valido di primo soccorso pediatrico e RCP. Possiamo mostrarvelo prima della prenotazione."
+   ],
+   [
+    "Dove lavorate?",
+    "In tutto il sud di Bali e a Ubud — Sanur, Canggu, Seminyak, Kuta, Jimbaran, Uluwatu, Nusa Dua, Denpasar e Ubud. Hotel, ville e case."
+   ],
+   [
+    "Come si paga?",
+    "In contanti (IDR) o con bonifico dopo il servizio. Nessun anticipo per le prenotazioni singole."
+   ],
+   [
+    "Una tata può occuparsi del mio neonato?",
+    "Sì. Affidiamo i neonati a tate con esperienza specifica con i più piccoli."
+   ]
+  ],
+  "guides_h": "Sanur con i bambini",
+  "guides_p": "Guide locali scritte da chi vive queste spiagge ogni giorno.",
+  "n_guides": "guide",
+  "final_h": "Cercate una tata a Bali?",
+  "final_p": "Diteci le vostre date — vi risponderemo con una tata disponibile.",
+  "final_btn": "Scriveteci su WhatsApp",
+  "services_t": "Servizi di tata a Bali",
+  "services_h": "I nostri servizi",
+  "services_d": "Babysitter a ore, tate a giornata intera e notturne, assistenza neonati e tate in viaggio in tutta Bali.",
+  "svc_title": "{s} a Bali",
+  "svc_h1": "{s} a Bali",
+  "check": "Verifica disponibilità",
+  "how": "Come funziona",
+  "faq_short": "FAQ",
+  "prices_t": "Prezzi di tate e babysitter a Bali",
+  "prices_h": "Prezzi semplici e trasparenti",
+  "prices_p": "Nessun anticipo per le prenotazioni singole. Pagate dopo il servizio.",
+  "th": [
+   "Servizio",
+   "Tariffa",
+   "Minimo"
+  ],
+  "price_note": "Tariffe fino a 2 bambini. Spostamenti nella zona della tata inclusi; tragitti più lunghi da concordare.",
+  "quote": "Richiedi un preventivo",
+  "hiw_t": "Come funziona la prenotazione",
+  "hiw_d": "Prenotate una tata a Bali in tre messaggi WhatsApp.",
+  "safety_t": "I nostri standard di sicurezza",
+  "safety_d": "Come selezioniamo, verifichiamo e formiamo ogni tata a Bali.",
+  "safety_body": [
+   [
+    "Selezione",
+    "Colloquio di persona, verifica dei documenti, almeno due referenze di famiglie precedenti."
+   ],
+   [
+    "Formazione",
+    "Certificato valido di primo soccorso pediatrico e RCP. Regole di sorveglianza in piscina e in spiaggia."
+   ],
+   [
+    "A ogni prenotazione",
+    "Checklist di consegna, contatti di emergenza, aggiornamenti su WhatsApp."
+   ]
+  ],
+  "faq_t": "Domande frequenti",
+  "faq_d": "Risposte su come prenotare una tata a Bali.",
+  "careers_nav": "Diventa tata",
+  "careers_t": "Lavoro come tata a Bali",
+  "careers_h": "Diventa tata",
+  "careers_p": "Collaboriamo con tate esperte che parlano inglese in tutta Bali. Formazione di primo soccorso inclusa.",
+  "apply": "Candidati su WhatsApp",
+  "apply_msg": "Ciao! Vorrei candidarmi come tata.",
+  "guides_t": "Guide per famiglie a Sanur",
+  "guides_hh": "Guide per famiglie a Sanur",
+  "soon": "in arrivo",
+  "company": "Azienda",
+  "services_f": "Servizi",
+  "guides_f": "Guide",
+  "foot_p": "Tate e babysitter di fiducia che parlano inglese, per le famiglie in tutta Bali.",
+  "hubs": {
+   "H01": "Assistenza bambini a Sanur",
+   "H02": "Sanur con i bambini: cosa fare",
+   "H03": "Dove alloggiare a Sanur in famiglia",
+   "H04": "Salute e sicurezza dei bambini a Bali",
+   "H05": "Mangiare in famiglia a Sanur",
+   "H06": "Viaggiare con i bambini: logistica",
+   "H07": "Gite da Sanur con i bambini",
+   "H08": "Vita da famiglia expat a Sanur"
+  }
+ },
+ "TB": {
+  "hero_trust": [
+   "Selezionate di persona",
+   "Conoscete prima la tata",
+   "Garanzia di sostituzione",
+   "Pagate dopo il servizio"
+  ],
+  "vet_h": "Come selezioniamo ogni tata",
+  "vet_p": "Sei passaggi prima che una tata incontri la sua prima famiglia. Nessuna scorciatoia.",
+  "vet": [
+   [
+    "🪪",
+    "Verifica documento e indirizzo",
+    "Passaporto o KTP verificato, indirizzo di casa confermato."
+   ],
+   [
+    "📞",
+    "Due referenze di famiglie",
+    "Chiamiamo noi le famiglie precedenti — non ci limitiamo a leggere lettere."
+   ],
+   [
+    "🤝",
+    "Colloquio di persona",
+    "Faccia a faccia, con situazioni pratiche e verifica dell'inglese."
+   ],
+   [
+    "⛑️",
+    "Primo soccorso pediatrico e RCP",
+    "Certificato valido, rinnovato regolarmente. Possiamo mostrarvelo."
+   ],
+   [
+    "🏊",
+    "Regole di sicurezza in acqua",
+    "Regole di sorveglianza in piscina e in spiaggia firmate da ogni tata."
+   ],
+   [
+    "⭐",
+    "Turno di prova e feedback",
+    "Primi turni monitorati; le famiglie valutano ogni prenotazione."
+   ]
+  ],
+  "meet_h": "Conoscete la vostra tata prima che arrivi",
+  "meet_p": "Nessuno sconosciuto alla vostra porta. Prima della conferma ricevete:",
+  "meet": [
+   "Foto, nome e anni di esperienza",
+   "Lingue parlate e fasce d'età preferite",
+   "Un breve video di saluto su WhatsApp",
+   "Una rapida videochiamata, se lo desiderate"
+  ],
+  "card": {
+   "tag": "Profilo di esempio",
+   "name": "La vostra tata",
+   "meta": "7 anni · neonati e piccoli",
+   "langs": "Inglese · Bahasa",
+   "loves": "Adora: nuoto, disegno, canzoni",
+   "vid": "▶ Video di saluto · 0:30"
+  },
+  "guar_h": "Garanzia di sostituzione",
+  "guar_p": "Se la vostra tata sta male o non può venire, vi mandiamo un'altra tata selezionata — oppure non pagate. La vostra serata resta vostra.",
+  "bring_h": "Cosa porta la vostra tata",
+  "bring_p": "I bambini non vengono solo sorvegliati — si divertono.",
+  "bring": [
+   [
+    "🎨",
+    "Kit creativo",
+    "Carta, pastelli, adesivi, lavoretti semplici"
+   ],
+   [
+    "📚",
+    "Libri illustrati",
+    "Storie adatte all'età per la nanna"
+   ],
+   [
+    "🫧",
+    "Giochi per piscina e spiaggia",
+    "Bolle di sapone, giochi da sabbia, giochi d'acqua"
+   ],
+   [
+    "🧩",
+    "Giochi tranquilli",
+    "Puzzle e carte per la camera d'hotel"
+   ],
+   [
+    "⛑️",
+    "Mini kit di primo soccorso",
+    "Cerotti, disinfettante, ghiaccio istantaneo"
+   ],
+   [
+    "📱",
+    "Aggiornamenti con foto",
+    "Qualche foto su WhatsApp durante il turno"
+   ]
+  ],
+  "check_h": "Prima di ogni turno vi chiediamo",
+  "check_p": "Così non si dimentica nulla di importante. Bastano 2 minuti su WhatsApp.",
+  "check": [
+   "Allergie, farmaci e note sulla salute",
+   "Abitudini di sonno e pasti",
+   "Piscina o spiaggia sono permesse? Con quali regole?",
+   "Schermi e dolci",
+   "Il vostro telefono e un contatto di riserva",
+   "Regole dell'hotel o della villa e numero di camera"
+  ],
+  "faq_add": [
+   [
+    "E se la tata disdice?",
+    "Vi mandiamo una tata sostitutiva con gli stessi controlli. Se non ci riusciamo, non pagate."
+   ],
+   [
+    "Posso vedere la tata prima di prenotare?",
+    "Sì. Ricevete la sua foto, la sua esperienza e un breve video di saluto, e potete chiedere una videochiamata."
+   ]
+  ]
+ },
+ "RT": {
+  "nav": "Noleggio",
+  "h1": "Noleggio attrezzatura per bambini a Bali",
+  "title": "Noleggio attrezzatura per bambini a Bali — Lettini, passeggini, seggiolini auto, recinzioni per piscina",
+  "lead": "Viaggiate leggeri. Consegniamo attrezzatura pulita e controllata nel vostro hotel o villa e la montiamo — poi la ritiriamo alla partenza.",
+  "sec_h": "Tutto per i piccoli viaggiatori",
+  "from_": "da",
+  "per_day": "/ giorno",
+  "how_h": "Come funziona il noleggio",
+  "how": [
+   [
+    "Inviate la vostra lista",
+    "Su WhatsApp: date, indirizzo e cosa vi serve."
+   ],
+   [
+    "Consegniamo e montiamo",
+    "Pulito, igienizzato e controllato — installato prima del vostro arrivo, se volete."
+   ],
+   [
+    "Ritiriamo noi",
+    "Ritiro dalla vostra villa o hotel l'ultimo giorno."
+   ]
+  ],
+  "pack_h": "Pacchetto arrivo",
+  "pack_p": "Lettino, passeggino, seggiolino auto e seggiolone — consegnati prima che atterriate. Il modo più semplice per iniziare una vacanza a Bali con un bebè.",
+  "combo_h": "Noleggio + tata",
+  "combo_p": "Aggiungete una tata alla prenotazione — conoscerà già tutta l'attrezzatura montata nella vostra villa.",
+  "hygiene": [
+   "Pulito e igienizzato dopo ogni noleggio",
+   "Controllato per usura e richiami",
+   "Biancheria fresca per ogni lettino"
+  ],
+  "ask": "Chiedi la disponibilità",
+  "msg": "Ciao! Vorrei noleggiare attrezzatura per bambini. Date: , indirizzo: , articoli: ",
+  "home_h": "Attrezzatura bimbi e recinzioni piscina",
+  "home_p": "Non volate con lettino e passeggino. Consegniamo tutto nella vostra villa.",
+  "all": "Vedi tutto il noleggio",
+  "pf": {
+   "title": "Noleggio recinzione piscina a Bali — Recinzione di sicurezza removibile per ville",
+   "h1": "Recinzione per la piscina della vostra villa a Bali",
+   "lead": "La maggior parte delle piscine delle ville a Bali non ha recinzione. Installiamo una recinzione di sicurezza removibile intorno alla piscina prima del vostro arrivo — e la togliamo quando partite.",
+   "why_h": "Perché una recinzione è importante",
+   "why": [
+    "Molte ville a Bali hanno la piscina proprio davanti alle camere — spesso senza alcuna barriera.",
+    "I bambini piccoli sono velocissimi, e l'annegamento è silenzioso: non somiglia agli schizzi dei film.",
+    "La recinzione vi dà un livello di sicurezza in più nei momenti in cui distogliete lo sguardo — disfare le valigie, cucinare, aprire la porta."
+   ],
+   "what_h": "Cosa ricevete",
+   "steps_h": "Come funziona l'installazione",
+   "steps": [
+    [
+     "Inviate foto della piscina",
+     "Un breve video o qualche foto su WhatsApp bastano per prendere le misure."
+    ],
+    [
+     "Confermiamo con la villa",
+     "Se serve, concordiamo l'installazione con il gestore della villa."
+    ],
+    [
+     "Installazione in 30–60 min",
+     "Fissata lungo tutto il bordo della piscina, con cancelletto a chiusura automatica."
+    ],
+    [
+     "Rimossa al check-out",
+     "Nessun segno di foratura."
+    ]
+   ],
+   "note": "La recinzione è una protezione in più, non sostituisce la sorveglianza. Controllate sempre i bambini vicino all'acqua.",
+   "faq": [
+    [
+     "Danneggerà la villa?",
+     "La recinzione si rimuove senza lasciare segni. Descriveteci la pavimentazione intorno alla piscina e vi confermeremo il metodo di fissaggio."
+    ],
+    [
+     "Serve il consenso della villa?",
+     "Di solito i gestori la accolgono volentieri; possiamo coordinarci direttamente con loro."
+    ],
+    [
+     "Possiamo comunque usare la piscina?",
+     "Sì — gli adulti aprono il cancelletto, che si richiude e si blocca da solo."
+    ],
+    [
+     "Con quanto anticipo devo prenotare?",
+     "Il prima possibile in alta stagione (luglio–agosto, Natale). L'installazione può avvenire prima del vostro arrivo."
+    ]
+   ],
+   "msg": "Ciao! Mi serve una recinzione per la piscina. Zona della villa: , date: , dimensioni/foto della piscina: ",
+   "cta": "Preventivo recinzione piscina"
+  }
+ },
+ "CATS": {
+  "pool-fence": {
+   "name": "Recinzioni piscina",
+   "desc": "Recinzione di sicurezza removibile installata intorno alla piscina della villa.",
+   "items": [
+    "Recinzione in rete removibile, alta ~1,2 m",
+    "Cancelletto a chiusura e blocco automatici",
+    "Installata lungo tutto il bordo della piscina",
+    "Rimossa al check-out, senza danni"
+   ]
+  },
+  "sleep": {
+   "name": "Lettini e nanna",
+   "desc": "Lettini standard, lettini da viaggio e culle con biancheria fresca.",
+   "items": [
+    "Lettino standard con materasso",
+    "Lettino da viaggio / box",
+    "Culla per neonati",
+    "Tende oscuranti portatili",
+    "Macchina del rumore bianco",
+    "Baby monitor"
+   ]
+  },
+  "strollers": {
+   "name": "Passeggini e marsupi",
+   "desc": "Passeggini leggeri da viaggio, gemellari e marsupi.",
+   "items": [
+    "Passeggino compatto da viaggio",
+    "Passeggino fuoristrada per i sentieri in spiaggia",
+    "Passeggino gemellare",
+    "Marsupio ergonomico",
+    "Ventilatore e parapioggia per passeggino"
+   ]
+  },
+  "car-seats": {
+   "name": "Seggiolini auto",
+   "desc": "Ovetti, seggiolini evolutivi e rialzi — installati per voi.",
+   "items": [
+    "Ovetto (0–13 kg)",
+    "Seggiolino evolutivo (0–18 kg)",
+    "Seggiolino fronte strada (9–25 kg)",
+    "Rialzo (15–36 kg)",
+    "Installazione nell'auto del vostro autista su richiesta"
+   ]
+  },
+  "feeding-bath": {
+   "name": "Pappa e bagnetto",
+   "desc": "Seggioloni, sterilizzatori e vaschette per il bagnetto.",
+   "items": [
+    "Seggiolone",
+    "Rialzo da viaggio per sedia",
+    "Sterilizzatore per biberon",
+    "Scaldabiberon",
+    "Vaschetta e seggiolino da bagno",
+    "Tiralatte (kit sigillato)"
+   ]
+  },
+  "play": {
+   "name": "Gioco e sicurezza",
+   "desc": "Kit di giochi, tappetini e kit di sicurezza per la casa.",
+   "items": [
+    "Kit di giochi adatti all'età",
+    "Tappetino gioco e sdraietta",
+    "Cancelletto per scale",
+    "Copriprese e paraspigoli",
+    "Set di giochi per piscina e spiaggia",
+    "Giubbotto salvagente per bambini"
+   ]
+  }
+ },
+ "AT": {
+  "nav": "Zone",
+  "h": "Dove lavoriamo a Bali",
+  "p": "Le nostre tate vengono in hotel, ville e case in tutto il sud di Bali e a Ubud.",
+  "title": "Zone servite dalle tate a Bali",
+  "title_one": "Tata e babysitter a {loc}, Bali",
+  "h1": "Tata e babysitter a {loc}",
+  "msg": "Ciao! Mi serve una tata a {loc}. Date: ",
+  "other": "Altre zone"
+ },
+ "SM": {
+  "title": "Mappa del sito",
+  "desc": "Tutte le pagine di Bali Nannies in un unico posto."
+ },
+ "VID": {
+  "alt": "La nostra tata con un bebè sorridente in una villa a Bali",
+  "play": "Riproduci video",
+  "label": "Guarda 30 sec"
+ },
+ "ARTICLE": {
+  "title": "Cosa fare a Sanur con i bambini (Guida per famiglie 2026)",
+  "h1": "Cosa fare a Sanur con i bambini: la guida completa per famiglie",
+  "desc": "Spiagge, parchi giochi, attività in acqua e un itinerario di 3 giorni per famiglie a Sanur, Bali — da un'agenzia di tate locale.",
+  "byline": "Di [Author], revisionato da [Nanny coordinator] · Aggiornato a settembre 2026",
+  "toc": "In questa guida",
+  "lead": "Sanur è l'angolo di Bali più tranquillo e facile da girare a piedi per le famiglie: acqua protetta dalla barriera corallina, un lungomare pianeggiante e distanze brevi. Ecco come trascorrere le giornate con bambini di ogni età.",
+  "mid_h": "Volete una serata tutta per voi?",
+  "mid_p": "Una tata può venire stasera nel vostro hotel o villa.",
+  "secs": [
+   [
+    "Spiagge",
+    "La barriera corallina di Sanur mantiene l'acqua calma: è uno dei posti più semplici di Bali per far nuotare i più piccoli. Le spiagge di Sindhu, Semawang e Mertasari sono le preferite dalle famiglie. Fate il bagno con l'alta marea; con la bassa marea l'acqua si ritira molto oltre la barriera."
+   ],
+   [
+    "Parchi e aree giochi",
+    "Diversi caffè lungo il lungomare di Sanur hanno un'area giochi, e ci sono spazi gioco al coperto per le ore più calde della giornata."
+   ],
+   [
+    "Attività in acqua",
+    "Stand-up paddle, uscite di snorkeling e lezioni di nuoto sono perfetti nell'acqua calma di Sanur. Kitesurf e windsurf sono adatti ai ragazzi più grandi nella stagione ventosa."
+   ],
+   [
+    "Idee per i giorni di pioggia",
+    "Laboratori creativi e di cucina, centri gioco al coperto e i centri commerciali della vicina Denpasar tengono impegnati i bambini quando arriva la pioggia."
+   ],
+   [
+    "Attività serali",
+    "Il mercato notturno di Sindhu, il tramonto sul lungomare — oppure una cena a due mentre una tata mette a letto i bambini."
+   ],
+   [
+    "Esempio di itinerario di 3 giorni",
+    "Giorno 1: mattina in spiaggia, piscina e pisolino, passeggiata al tramonto. Giorno 2: snorkeling o SUP, poi un laboratorio creativo. Giorno 3: gita al Bali Zoo o a un parco acquatico, con una serata libera per i genitori."
+   ]
+  ]
+ },
+ "AREAS": {
+  "sanur": {
+   "name": "Sanur",
+   "lead": "Acqua calma protetta dalla barriera e un lungomare pianeggiante rendono Sanur la zona di Bali più semplice per neonati e bambini piccoli.",
+   "txt": [
+    [
+     "Perché le famiglie scelgono Sanur",
+     "La barriera corallina tiene basse le onde, così i più piccoli possono sguazzare in sicurezza con l'alta marea. Il lungomare di 5 km è comodo con il passeggino, e la maggior parte di hotel, caffè e aree giochi si raggiunge a piedi."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Mattine in spiaggia e castelli di sabbia, piscina in hotel, pisolini mentre voi fate SUP o snorkeling, e serate in camera così potete concedervi una cena al tramonto."
+    ],
+    [
+     "Buono a sapersi",
+     "Con la bassa marea l'acqua si ritira molto oltre la barriera — programmate il bagno con l'alta marea. I fast boat per Nusa Lembongan e Nusa Penida partono dalla spiaggia di Sanur."
+    ]
+   ]
+  },
+  "canggu": {
+   "name": "Canggu",
+   "lead": "Surf, caffè e ville con piscina privata — Canggu è ideale per le famiglie che cercano una vacanza a Bali attiva e sociale.",
+   "txt": [
+    [
+     "Famiglie a Canggu",
+     "La maggior parte delle famiglie alloggia in ville a Berawa, Pererenan o Batu Bolong. Le giornate ruotano intorno alla piscina della villa, ai beach café con area giochi e alle lezioni di surf per i più grandi."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Sorveglianza in piscina nella vostra villa, incontri di gioco nei caffè per famiglie, pisolini mentre voi fate surf o lavorate in coworking, e babysitting serale per le cene fuori."
+    ],
+    [
+     "Buono a sapersi",
+     "Le spiagge di Canggu sono di sabbia nera, con onde e correnti forti — i bambini dovrebbero nuotare solo tra le bandiere o in piscina. Il traffico è intenso nelle ore di punta, quindi scegliamo tate che vivono in zona."
+    ]
+   ]
+  },
+  "seminyak": {
+   "name": "Seminyak",
+   "lead": "Ville boutique, beach club e ristoranti — Seminyak è la base più chic di Bali per le famiglie che amano uscire.",
+   "txt": [
+    [
+     "Famiglie a Seminyak",
+     "Ville con piscina privata e resort sul mare si trovano vicino ad alcuni dei migliori ristoranti di Bali. Le famiglie dividono le giornate tra villa, spiaggia e vie dello shopping."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Babysitting serale mentre cenate o andate in un beach club, piscina e gioco in villa, e aiuto con la routine della nanna."
+    ],
+    [
+     "Buono a sapersi",
+     "Il mare è mosso lungo la spiaggia di Seminyak — la sorveglianza vicino all'acqua è indispensabile. Di sera molti beach club sono pensati per adulti, quindi una babysitter in villa è la soluzione più semplice."
+    ]
+   ]
+  },
+  "kuta-legian": {
+   "name": "Kuta & Legian",
+   "lead": "Vicine all'aeroporto e al Waterbom, Kuta e Legian sono una prima tappa comoda per le famiglie appena arrivate a Bali.",
+   "txt": [
+    [
+     "Famiglie a Kuta & Legian",
+     "Grandi hotel con piscine per bambini, centri commerciali e il parco acquatico Waterbom rendono la zona pratica, soprattutto dopo un volo lungo."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Notti di jet lag con una tata notturna, pomeriggi in piscina in hotel e una giornata al Waterbom con un paio di mani in più."
+    ],
+    [
+     "Buono a sapersi",
+     "La spiaggia di Kuta ha scuole di surf per principianti ma anche correnti di risacca — nuotate tra le bandiere. Le strade sono trafficate, quindi organizziamo le uscite con brevi passeggiate e taxi."
+    ]
+   ]
+  },
+  "ubud": {
+   "name": "Ubud",
+   "lead": "Risaie a terrazza, ville nella giungla e aria più fresca — Ubud è il cuore culturale di Bali e un posto dolce per i bambini.",
+   "txt": [
+    [
+     "Famiglie a Ubud",
+     "Ville nella giungla con piscina, laboratori artigianali, spettacoli di danza e passeggiate tra le risaie. Non c'è il mare, ma il clima è più mite che sulla costa."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Giornate in villa tra piscina e giochi nella natura, compagnia nelle passeggiate tra le risaie e babysitting mentre fate yoga o un corso di cucina."
+    ],
+    [
+     "Buono a sapersi",
+     "Molte ville hanno scale ripide e piscine senza recinzione — descriveteci la struttura così pianifichiamo la sicurezza. Tenete i bambini lontani dalle scimmie alla Monkey Forest e nei templi."
+    ]
+   ]
+  },
+  "uluwatu": {
+   "name": "Uluwatu",
+   "lead": "Resort a strapiombo sul mare, tramonti famosi e spiagge nascoste — Uluwatu è Bali nella sua versione più spettacolare.",
+   "txt": [
+    [
+     "Famiglie a Uluwatu",
+     "Le famiglie di solito alloggiano in resort sulla scogliera o in ville con grandi piscine. Spiagge come Padang Padang e Melasti sono bellissime, ma si raggiungono con scalinate o strade ripide."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Sorveglianza in piscina nella vostra villa, spiaggia nei punti più calmi con mare piatto, e babysitting serale per vedere la danza Kecak o un tramonto dalla scogliera."
+    ],
+    [
+     "Buono a sapersi",
+     "Molte spiagge sono per surfisti esperti — scegliete le giornate calme e restate vicini. Le scimmie al tempio di Uluwatu afferrano gli oggetti; lì i bambini piccoli sono più al sicuro nel marsupio."
+    ]
+   ]
+  },
+  "jimbaran": {
+   "name": "Jimbaran",
+   "lead": "Un'ampia baia tranquilla con cene di pesce sulla sabbia — e a soli 15 minuti dall'aeroporto.",
+   "txt": [
+    [
+     "Famiglie a Jimbaran",
+     "La baia è più tranquilla della costa ovest di Bali, e i grandi resort hanno kids club e piscine basse. Le cene di pesce al tramonto sulla spiaggia sono una tradizione di famiglia."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Mattine in spiaggia, piscina del resort e una babysitter serale perché i genitori si godano una cena tranquilla."
+    ],
+    [
+     "Buono a sapersi",
+     "Le onde di solito sono moderate ma cambiano con la stagione — controllate le condizioni prima del bagno. Jimbaran è una base comoda per soggiorni brevi vicino all'aeroporto."
+    ]
+   ]
+  },
+  "nusa-dua": {
+   "name": "Nusa Dua",
+   "lead": "Resort curati, spiagge calme protette dalla barriera e kids club — Nusa Dua è la classica zona resort per famiglie a Bali.",
+   "txt": [
+    [
+     "Famiglie a Nusa Dua",
+     "Un'enclave di resort sorvegliata, con spiagge ampie, acqua calma e grandi hotel pensati per le famiglie. Tutto è pianeggiante, pulito e comodo con il passeggino."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Assistenza privata quando il kids club è pieno o il bambino è troppo piccolo, piscina e spiaggia, e babysitting serale in camera."
+    ],
+    [
+     "Buono a sapersi",
+     "Gli hotel hanno regole proprie per le babysitter esterne — ci coordiniamo in anticipo con la reception. La zona di Bali Collection offre negozi e ristoranti raggiungibili a piedi."
+    ]
+   ]
+  },
+  "denpasar": {
+   "name": "Denpasar",
+   "lead": "La capitale di Bali, dove vivono molte famiglie expat e locali, vicino a ospedali e scuole internazionali.",
+   "txt": [
+    [
+     "Famiglie a Denpasar",
+     "Denpasar non è tanto vacanza quanto vita quotidiana: case, scuole, centri commerciali e i principali ospedali dell'isola."
+    ],
+    [
+     "Cosa fanno qui le nostre tate",
+     "Tate a lungo termine e part-time per le famiglie residenti, assistenza dopo la scuola e aiuto in casa."
+    ],
+    [
+     "Buono a sapersi",
+     "Il traffico può essere intenso, quindi abbiniamo le famiglie a tate della stessa zona della città e concordiamo orari fissi."
+    ]
+   ]
+  }
+ }
+}

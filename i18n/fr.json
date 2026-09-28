@@ -1,0 +1,680 @@
+{
+ "T": {
+  "wa_default": "Bonjour ! Je souhaiterais réserver une nounou à Bali.",
+  "wa_service": "Bonjour ! Je suis intéressé(e) par : {s}. Dates : ",
+  "nav": [
+   "Services",
+   "Location",
+   "Zones",
+   "Tarifs",
+   "Sécurité",
+   "Guides"
+  ],
+  "safety_nav": "Sécurité",
+  "home": "Accueil",
+  "svc": [
+   [
+    "Baby-sitting à l'heure",
+    "Dîner, spa, cours de surf — dès 3 heures."
+   ],
+   [
+    "Nounou à la journée",
+    "Plage, piscine, siestes et repas : profitez enfin de vos vacances."
+   ],
+   [
+    "Nounou de nuit",
+    "Endormissement, biberons et réveils nocturnes : vous dormez."
+   ],
+   [
+    "Soins nouveau-nés & bébés",
+    "Des nounous expérimentées avec les bébés de moins de 12 mois."
+   ],
+   [
+    "Nounou de voyage",
+    "Elle accompagne votre famille en excursion et d'île en île."
+   ],
+   [
+    "Baby-sitting à l'hôtel ou en villa",
+    "Nous venons à votre hôtel ou villa partout à Bali."
+   ],
+   [
+    "Mariages & événements",
+    "Coin enfants et baby-sitters pour vos fêtes."
+   ],
+   [
+    "Nounou longue durée",
+    "Pour les familles expatriées installées à Bali."
+   ]
+  ],
+  "wa_btn": "Écrire sur WhatsApp",
+  "wa_short": "WhatsApp",
+  "book": "Réserver sur WhatsApp",
+  "see_prices": "Voir les tarifs",
+  "prices": "Tarifs",
+  "title_home": "Nounou & baby-sitter à Bali — Sanur, Canggu, Ubud et plus",
+  "desc_home": "Nounous et baby-sitters anglophones, formées aux premiers secours, partout à Bali : Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. À l'hôtel ou en villa, nounous de nuit, excursions. Réservation en quelques minutes sur WhatsApp.",
+  "eyebrow": "Bali · Indonésie",
+  "h1": "Des nounous de confiance pour vos vacances en famille à Bali",
+  "lead": "Des baby-sitters anglophones, formées aux premiers secours, qui viennent à votre hôtel ou villa — pour un dîner, un spa ou un lever de soleil en toute tranquillité.",
+  "trust": [
+   "Antécédents vérifiés",
+   "Premiers secours & RCP",
+   "Réponse en 15 min"
+  ],
+  "chip": "🟢 Nounou disponible ce soir",
+  "photo": "Nounou jouant avec un enfant dans une piscine",
+  "svc_h": "Une garde adaptée à votre séjour",
+  "svc_p": "D'une soirée à toute une saison à Bali.",
+  "steps_h": "Réservé en trois messages",
+  "steps": [
+   [
+    "Écrivez-nous sur WhatsApp",
+    "Indiquez les dates, les horaires, l'âge des enfants et votre lieu de séjour."
+   ],
+   [
+    "Rencontrez votre nounou",
+    "Nous vous envoyons son profil et une courte présentation. Un appel vidéo d'abord ? Demandez-le."
+   ],
+   [
+    "Profitez de votre temps",
+    "Elle arrive à votre hôtel ou villa. Photos sur WhatsApp, paiement après la garde."
+   ]
+  ],
+  "safe_h": "La sécurité n'est pas une option. C'est notre métier.",
+  "safe_p": "Chaque nounou est reçue en entretien, ses références sont vérifiées et elle est formée avant sa première famille.",
+  "safe_btn": "Nos normes de sécurité",
+  "safe_list": [
+   "Vérification d'identité et des références",
+   "Premiers secours pédiatriques & RCP",
+   "Règles de surveillance piscine et plage",
+   "Rencontre d'essai avant la première réservation"
+  ],
+  "faq_h": "Les questions des parents",
+  "faq": [
+   [
+    "En combien de temps puis-je réserver ?",
+    "Souvent le jour même. Pour les soirées et la haute saison (juillet–août, Noël), écrivez-nous 2 à 3 jours à l'avance."
+   ],
+   [
+    "Vos nounous parlent-elles anglais ?",
+    "Oui — chaque nounou communique aisément en anglais. Nous vous indiquons honnêtement le niveau de chacune."
+   ],
+   [
+    "Les nounous sont-elles formées aux premiers secours ?",
+    "Chaque nounou détient un certificat à jour de premiers secours pédiatriques & RCP. Nous pouvons vous le montrer avant la réservation."
+   ],
+   [
+    "Où intervenez-vous ?",
+    "Dans tout le sud de Bali et à Ubud — Sanur, Canggu, Seminyak, Kuta, Jimbaran, Uluwatu, Nusa Dua, Denpasar et Ubud. Hôtels, villas et domiciles."
+   ],
+   [
+    "Comment payer ?",
+    "En espèces (IDR) ou par virement après la garde. Pas d'acompte pour une réservation ponctuelle."
+   ],
+   [
+    "Une nounou peut-elle s'occuper de mon nouveau-né ?",
+    "Oui. Nous confions les bébés à des nounous ayant une vraie expérience des nouveau-nés."
+   ]
+  ],
+  "guides_h": "Sanur avec des enfants",
+  "guides_p": "Des guides locaux, écrits par ceux qui fréquentent ces plages chaque jour.",
+  "n_guides": "guides",
+  "final_h": "Besoin d'une nounou à Bali ?",
+  "final_p": "Donnez-nous vos dates — nous vous proposons une nounou disponible.",
+  "final_btn": "Écrivez-nous sur WhatsApp",
+  "services_t": "Services de nounou à Bali",
+  "services_h": "Nos services",
+  "services_d": "Baby-sitting à l'heure, nounous à la journée et de nuit, soins des nouveau-nés et nounous de voyage partout à Bali.",
+  "svc_title": "{s} à Bali",
+  "svc_h1": "{s} à Bali",
+  "check": "Vérifier les disponibilités",
+  "how": "Comment ça marche",
+  "faq_short": "FAQ",
+  "prices_t": "Tarifs nounou & baby-sitter à Bali",
+  "prices_h": "Des tarifs simples et transparents",
+  "prices_p": "Pas d'acompte pour une réservation ponctuelle. Paiement après la garde.",
+  "th": [
+   "Service",
+   "Tarif",
+   "Minimum"
+  ],
+  "price_note": "Tarifs jusqu'à 2 enfants. Déplacement inclus dans la zone de la nounou ; trajets plus longs sur accord.",
+  "quote": "Demander un devis",
+  "hiw_t": "Comment réserver",
+  "hiw_d": "Réservez une nounou à Bali en trois messages WhatsApp.",
+  "safety_t": "Nos normes de sécurité",
+  "safety_d": "Comment nous sélectionnons, vérifions et formons chaque nounou à Bali.",
+  "safety_body": [
+   [
+    "Sélection",
+    "Entretien en personne, vérification d'identité, au moins deux références de familles précédentes."
+   ],
+   [
+    "Formation",
+    "Certificat à jour de premiers secours pédiatriques & RCP. Règles de surveillance piscine et plage."
+   ],
+   [
+    "À chaque réservation",
+    "Check-list de passation, contacts d'urgence, nouvelles sur WhatsApp."
+   ]
+  ],
+  "faq_t": "Questions fréquentes",
+  "faq_d": "Tout savoir pour réserver une nounou à Bali.",
+  "careers_nav": "Devenir nounou",
+  "careers_t": "Emplois de nounou à Bali",
+  "careers_h": "Devenir nounou",
+  "careers_p": "Nous travaillons avec des nounous expérimentées et anglophones partout à Bali. Formation aux premiers secours offerte.",
+  "apply": "Postuler sur WhatsApp",
+  "apply_msg": "Bonjour ! Je souhaiterais postuler comme nounou.",
+  "guides_t": "Guides famille à Sanur",
+  "guides_hh": "Guides famille à Sanur",
+  "soon": "bientôt",
+  "company": "Agence",
+  "services_f": "Services",
+  "guides_f": "Guides",
+  "foot_p": "Des nounous et baby-sitters anglophones de confiance pour les familles partout à Bali.",
+  "hubs": {
+   "H01": "Garde d'enfants à Sanur",
+   "H02": "Sanur avec des enfants : que faire",
+   "H03": "Où loger en famille à Sanur",
+   "H04": "Santé & sécurité des enfants à Bali",
+   "H05": "Manger en famille à Sanur",
+   "H06": "Voyager avec des enfants : logistique",
+   "H07": "Excursions depuis Sanur avec des enfants",
+   "H08": "Vie de famille expatriée à Sanur"
+  }
+ },
+ "TB": {
+  "hero_trust": [
+   "Vérifiées en personne",
+   "Rencontrez d'abord votre nounou",
+   "Remplacement garanti",
+   "Paiement après la garde"
+  ],
+  "vet_h": "Comment nous sélectionnons chaque nounou",
+  "vet_p": "Six étapes avant qu'une nounou rencontre sa première famille. Sans raccourci.",
+  "vet": [
+   [
+    "🪪",
+    "Identité & adresse",
+    "Passeport ou KTP vérifié, adresse du domicile confirmée."
+   ],
+   [
+    "📞",
+    "Deux références familles",
+    "Nous appelons nous-mêmes les familles — pas seulement des lettres."
+   ],
+   [
+    "🤝",
+    "Entretien en personne",
+    "En face à face, avec mises en situation et test d'anglais."
+   ],
+   [
+    "⛑️",
+    "Premiers secours pédiatriques & RCP",
+    "Certificat valide, renouvelé à temps. Nous pouvons vous le montrer."
+   ],
+   [
+    "🏊",
+    "Règles de sécurité aquatique",
+    "Règles de surveillance piscine et plage signées par chaque nounou."
+   ],
+   [
+    "⭐",
+    "Garde d'essai & avis",
+    "Premières gardes suivies ; les familles notent chaque réservation."
+   ]
+  ],
+  "meet_h": "Rencontrez votre nounou avant son arrivée",
+  "meet_p": "Pas d'inconnue à votre porte. Avant de confirmer, vous recevez :",
+  "meet": [
+   "Sa photo, son prénom et ses années d'expérience",
+   "Les langues qu'elle parle et les âges qu'elle préfère",
+   "Une courte vidéo de présentation sur WhatsApp",
+   "Un rapide appel vidéo si vous le souhaitez"
+  ],
+  "card": {
+   "tag": "Exemple de profil",
+   "name": "Votre nounou",
+   "meta": "7 ans · bébés & tout-petits",
+   "langs": "Anglais · Bahasa",
+   "loves": "Aime : nager, dessiner, chanter",
+   "vid": "▶ Vidéo de présentation · 0:30"
+  },
+  "guar_h": "Remplacement garanti",
+  "guar_p": "Si votre nounou est malade ou empêchée, nous envoyons une autre nounou vérifiée — sinon, vous ne payez pas. Votre soirée reste la vôtre.",
+  "bring_h": "Ce qu'apporte votre nounou",
+  "bring_p": "Vos enfants ne sont pas seulement surveillés — ils s'amusent.",
+  "bring": [
+   [
+    "🎨",
+    "Kit créatif",
+    "Papier, crayons, gommettes, bricolages simples"
+   ],
+   [
+    "📚",
+    "Livres illustrés",
+    "Histoires du soir adaptées à l'âge"
+   ],
+   [
+    "🫧",
+    "Jeux piscine & plage",
+    "Bulles, jouets de sable, jeux d'eau"
+   ],
+   [
+    "🧩",
+    "Jeux calmes",
+    "Puzzles et cartes pour la chambre d'hôtel"
+   ],
+   [
+    "⛑️",
+    "Mini-trousse de secours",
+    "Pansements, antiseptique, poche de froid"
+   ],
+   [
+    "📱",
+    "Photos en direct",
+    "Quelques photos sur WhatsApp pendant la garde"
+   ]
+  ],
+  "check_h": "Avant chaque garde, nous vous demandons",
+  "check_p": "Pour ne rien oublier d'important. 2 minutes sur WhatsApp.",
+  "check": [
+   "Allergies, médicaments et points de santé",
+   "Rythme de sommeil et des repas",
+   "Piscine ou plage autorisée ? Avec quelles règles ?",
+   "Écrans et sucreries",
+   "Votre téléphone et un contact de secours",
+   "Règles de l'hôtel ou de la villa et numéro de chambre"
+  ],
+  "faq_add": [
+   [
+    "Et si la nounou annule ?",
+    "Nous envoyons une nounou de remplacement avec les mêmes vérifications. Sinon, vous ne payez pas."
+   ],
+   [
+    "Puis-je voir la nounou avant de réserver ?",
+    "Oui. Vous recevez sa photo, son expérience et une courte vidéo, et pouvez demander un appel vidéo."
+   ]
+  ]
+ },
+ "RT": {
+  "nav": "Location",
+  "h1": "Location de matériel bébé à Bali",
+  "title": "Location de matériel bébé à Bali — lits, poussettes, sièges auto, barrières de piscine",
+  "lead": "Voyagez léger. Nous livrons du matériel bébé propre et contrôlé à votre hôtel ou villa, l'installons — puis le récupérons à votre départ.",
+  "sec_h": "Tout pour les petits voyageurs",
+  "from_": "à partir de",
+  "per_day": "/ jour",
+  "how_h": "Comment fonctionne la location",
+  "how": [
+   [
+    "Envoyez votre liste",
+    "Sur WhatsApp : dates, adresse et besoins."
+   ],
+   [
+    "Livraison & installation",
+    "Nettoyé, désinfecté et contrôlé — installé avant votre arrivée si vous le souhaitez."
+   ],
+   [
+    "Nous récupérons",
+    "Reprise à votre villa ou hôtel le dernier jour."
+   ]
+  ],
+  "pack_h": "Pack arrivée",
+  "pack_p": "Lit, poussette, siège auto et chaise haute — livrés avant votre atterrissage. Le début le plus simple pour des vacances à Bali avec bébé.",
+  "combo_h": "Location + nounou",
+  "combo_p": "Ajoutez une nounou à votre réservation — elle connaîtra déjà tout le matériel installé dans votre villa.",
+  "hygiene": [
+   "Nettoyé et désinfecté après chaque location",
+   "Contrôlé (usure et rappels produits)",
+   "Linge propre pour chaque lit"
+  ],
+  "ask": "Demander les disponibilités",
+  "msg": "Bonjour ! Je souhaiterais louer du matériel bébé. Dates : , adresse : , articles : ",
+  "home_h": "Matériel bébé & barrières de piscine",
+  "home_p": "Ne prenez pas l'avion avec lit et poussette. Nous livrons tout à votre villa.",
+  "all": "Voir toute la location",
+  "pf": {
+   "title": "Location de barrière de piscine à Bali — clôture amovible pour villas",
+   "h1": "Barrière de piscine pour votre villa à Bali",
+   "lead": "La plupart des piscines de villas à Bali n'ont pas de barrière. Nous installons une clôture de sécurité amovible autour de votre piscine avant votre arrivée — et la retirons à votre départ.",
+   "why_h": "Pourquoi une barrière de piscine est essentielle",
+   "why": [
+    "Beaucoup de villas à Bali ont une piscine juste devant les chambres — souvent sans aucune barrière.",
+    "Les tout-petits sont rapides, et la noyade est silencieuse : rien à voir avec les éclaboussures des films.",
+    "Une barrière ajoute une protection pour les instants d'inattention — défaire les valises, cuisiner, ouvrir la porte."
+   ],
+   "what_h": "Ce qui est inclus",
+   "steps_h": "Comment se passe l'installation",
+   "steps": [
+    [
+     "Envoyez des photos de la piscine",
+     "Une courte vidéo ou quelques photos sur WhatsApp suffisent pour les mesures."
+    ],
+    [
+     "Accord avec la villa",
+     "Si besoin, nous convenons de l'installation avec le gérant de la villa."
+    ],
+    [
+     "Installation en 30–60 min",
+     "Posée sur tout le tour de la piscine, avec portillon à fermeture automatique."
+    ],
+    [
+     "Retirée au départ",
+     "Aucune trace de perçage."
+    ]
+   ],
+   "note": "Une barrière est une protection supplémentaire, pas un substitut à la surveillance. Surveillez toujours les enfants près de l'eau.",
+   "faq": [
+    [
+     "Cela risque-t-il d'abîmer la villa ?",
+     "La barrière se retire sans laisser de traces. Décrivez-nous le revêtement autour de la piscine et nous confirmerons le mode de fixation."
+    ],
+    [
+     "La villa doit-elle donner son accord ?",
+     "Les gérants de villa l'accueillent généralement bien ; nous pouvons nous coordonner directement avec eux."
+    ],
+    [
+     "Peut-on toujours utiliser la piscine ?",
+     "Oui — les adultes ouvrent le portillon ; il se referme et se verrouille tout seul."
+    ],
+    [
+     "Combien de temps à l'avance réserver ?",
+     "Le plus tôt possible en haute saison (juillet–août, Noël). L'installation peut se faire avant votre arrivée."
+    ]
+   ],
+   "msg": "Bonjour ! J'ai besoin d'une barrière de piscine. Zone de la villa : , dates : , taille/photos de la piscine : ",
+   "cta": "Devis barrière de piscine"
+  }
+ },
+ "CATS": {
+  "pool-fence": {
+   "name": "Barrières de piscine",
+   "desc": "Clôture de sécurité amovible installée autour de la piscine de votre villa.",
+   "items": [
+    "Barrière en filet amovible, ~1,2 m de haut",
+    "Portillon à fermeture et verrouillage automatiques",
+    "Posée sur tout le tour de la piscine",
+    "Retirée au départ, sans dégât"
+   ]
+  },
+  "sleep": {
+   "name": "Lits & sommeil",
+   "desc": "Lits bébé, lits parapluie et berceaux avec linge propre.",
+   "items": [
+    "Lit bébé grande taille avec matelas",
+    "Lit parapluie / parc",
+    "Berceau pour nouveau-né",
+    "Rideaux occultants portables",
+    "Machine à bruit blanc",
+    "Babyphone"
+   ]
+  },
+  "strollers": {
+   "name": "Poussettes & porte-bébés",
+   "desc": "Poussettes de voyage légères, doubles et porte-bébés.",
+   "items": [
+    "Poussette de voyage compacte",
+    "Poussette tout-terrain pour chemins de plage",
+    "Poussette double",
+    "Porte-bébé ergonomique",
+    "Ventilateur & habillage pluie"
+   ]
+  },
+  "car-seats": {
+   "name": "Sièges auto",
+   "desc": "Coques, sièges évolutifs et rehausseurs — installés pour vous.",
+   "items": [
+    "Coque bébé (0–13 kg)",
+    "Siège évolutif (0–18 kg)",
+    "Siège face à la route (9–25 kg)",
+    "Rehausseur (15–36 kg)",
+    "Installé dans la voiture de votre chauffeur sur demande"
+   ]
+  },
+  "feeding-bath": {
+   "name": "Repas & bain",
+   "desc": "Chaises hautes, stérilisateurs et baignoires bébé.",
+   "items": [
+    "Chaise haute",
+    "Rehausseur de chaise nomade",
+    "Stérilisateur de biberons",
+    "Chauffe-biberon",
+    "Baignoire & transat de bain",
+    "Tire-lait (kit scellé)"
+   ]
+  },
+  "play": {
+   "name": "Jeux & sécurité",
+   "desc": "Packs de jouets, tapis d'éveil et kits de sécurité bébé.",
+   "items": [
+    "Pack de jouets adapté à l'âge",
+    "Tapis d'éveil & transat",
+    "Barrière d'escalier",
+    "Cache-prises & protège-coins",
+    "Jouets piscine & plage",
+    "Gilet de sauvetage enfant"
+   ]
+  }
+ },
+ "AT": {
+  "nav": "Zones",
+  "h": "Où nous intervenons à Bali",
+  "p": "Nos nounous se déplacent dans les hôtels, villas et domiciles du sud de Bali et d'Ubud.",
+  "title": "Zones d'intervention des nounous à Bali",
+  "title_one": "Nounou & baby-sitter à {loc}, Bali",
+  "h1": "Nounou & baby-sitter à {loc}",
+  "msg": "Bonjour ! J'ai besoin d'une nounou à {loc}. Dates : ",
+  "other": "Autres zones"
+ },
+ "SM": {
+  "title": "Plan du site",
+  "desc": "Toutes les pages de Bali Nannies au même endroit."
+ },
+ "VID": {
+  "alt": "Notre nounou avec un bébé souriant dans une villa à Bali",
+  "play": "Lire la vidéo",
+  "label": "Voir 30 s"
+ },
+ "ARTICLE": {
+  "title": "Que faire à Sanur avec des enfants (guide famille 2026)",
+  "h1": "Que faire à Sanur avec des enfants : le guide complet pour les familles",
+  "desc": "Plages, aires de jeux, activités nautiques et un programme de 3 jours pour les familles à Sanur, Bali — par une agence de nounous locale.",
+  "byline": "Par [Author], relu par [Nanny coordinator] · Mis à jour en septembre 2026",
+  "toc": "Dans ce guide",
+  "lead": "Sanur est le coin de Bali le plus calme et le plus agréable à pied pour les familles : eau protégée par le récif, promenade plate en bord de mer et courtes distances. Voici comment y passer vos journées avec des enfants de tout âge.",
+  "mid_h": "Envie d'une soirée à deux ?",
+  "mid_p": "Une nounou peut venir à votre hôtel ou villa dès ce soir.",
+  "secs": [
+   [
+    "Plages",
+    "Le récif de Sanur garde l'eau calme : c'est l'un des endroits de Bali où les petits se baignent le plus facilement. Les plages de Sindhu, Semawang et Mertasari sont les préférées des familles. Baignez-vous autour de la marée haute ; à marée basse, l'eau se retire loin sur le récif."
+   ],
+   [
+    "Parcs et aires de jeux",
+    "Plusieurs cafés en bord de mer, le long de la promenade de Sanur, ont une aire de jeux, et il existe des espaces de jeux couverts pour les heures les plus chaudes."
+   ],
+   [
+    "Activités nautiques",
+    "Paddle, sorties snorkeling et cours de natation se prêtent parfaitement aux eaux calmes de Sanur. Les cours de kitesurf et de planche à voile conviennent aux plus grands pendant la saison des vents."
+   ],
+   [
+    "Idées pour les jours de pluie",
+    "Ateliers créatifs et de cuisine, aires de jeux couvertes et centres commerciaux de Denpasar tout proche occupent les enfants quand la pluie arrive."
+   ],
+   [
+    "Activités du soir",
+    "Le marché de nuit de Sindhu, le coucher de soleil sur la promenade — ou un dîner à deux pendant qu'une nounou couche les enfants."
+   ],
+   [
+    "Exemple de programme sur 3 jours",
+    "Jour 1 : matinée plage, piscine et sieste, balade au coucher du soleil. Jour 2 : snorkeling ou paddle, puis atelier créatif. Jour 3 : excursion au Bali Zoo ou dans un parc aquatique, avec une soirée libre pour les parents."
+   ]
+  ]
+ },
+ "AREAS": {
+  "sanur": {
+   "name": "Sanur",
+   "lead": "Eau calme protégée par le récif et promenade plate en bord de mer : Sanur est le coin de Bali le plus facile avec bébés et tout-petits.",
+   "txt": [
+    [
+     "Pourquoi les familles choisissent Sanur",
+     "Le récif garde les vagues petites : les enfants barbotent en sécurité autour de la marée haute. La promenade de 5 km se fait en poussette, et la plupart des hôtels, cafés et aires de jeux sont accessibles à pied."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Plage et châteaux de sable le matin, piscine à votre hôtel, siestes pendant votre sortie paddle ou snorkeling, et soirées à la maison pour que vous profitiez d'un dîner au coucher du soleil."
+    ],
+    [
+     "Bon à savoir",
+     "À marée basse, l'eau se retire loin sur le récif — prévoyez la baignade autour de la marée haute. Les bateaux rapides pour Nusa Lembongan et Nusa Penida partent de la plage de Sanur."
+    ]
+   ]
+  },
+  "canggu": {
+   "name": "Canggu",
+   "lead": "Surf, cafés et villas avec piscine privée — Canggu plaît aux familles qui veulent un séjour actif et convivial.",
+   "txt": [
+    [
+     "Les familles à Canggu",
+     "La plupart des familles logent en villa à Berawa, Pererenan ou Batu Bolong. Les journées s'organisent autour de la piscine, des cafés de plage avec espace enfants et des cours de surf pour les plus grands."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Surveillance de la piscine à votre villa, jeux avec d'autres enfants dans les cafés familiaux, siestes pendant que vous surfez ou travaillez en coworking, et baby-sitting le soir pour vos dîners."
+    ],
+    [
+     "Bon à savoir",
+     "Les plages de Canggu sont de sable noir, avec des vagues et des courants forts — les enfants ne se baignent qu'entre les drapeaux ou à la piscine. La circulation est dense aux heures de pointe : nous choisissons des nounous qui habitent à proximité."
+    ]
+   ]
+  },
+  "seminyak": {
+   "name": "Seminyak",
+   "lead": "Villas de charme, beach clubs et restaurants — Seminyak est la base chic de Bali pour les familles qui aiment sortir.",
+   "txt": [
+    [
+     "Les familles à Seminyak",
+     "Villas avec piscine privée et resorts en bord de mer côtoient certains des meilleurs restaurants de Bali. Les familles partagent leurs journées entre la villa, la plage et les rues commerçantes."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Baby-sitting le soir pendant votre dîner ou votre soirée en beach club, piscine et jeux à la villa, et aide pour le rituel du coucher."
+    ],
+    [
+     "Bon à savoir",
+     "Les vagues sont fortes sur la plage de Seminyak — la surveillance près de l'eau est indispensable. Beaucoup de beach clubs visent surtout les adultes le soir : une baby-sitter à la villa est la solution simple."
+    ]
+   ]
+  },
+  "kuta-legian": {
+   "name": "Kuta & Legian",
+   "lead": "Près de l'aéroport et de Waterbom, Kuta et Legian sont une première étape facile pour les familles qui arrivent à Bali.",
+   "txt": [
+    [
+     "Les familles à Kuta & Legian",
+     "Grands hôtels avec piscines enfants, centres commerciaux et parc aquatique Waterbom rendent le quartier pratique, surtout après un long vol."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Nuits de décalage horaire avec une nounou de nuit, après-midis à la piscine de l'hôtel et une journée à Waterbom avec une paire de mains en plus."
+    ],
+    [
+     "Bon à savoir",
+     "La plage de Kuta a des écoles de surf pour débutants mais aussi des courants — baignez-vous entre les drapeaux. Les rues sont animées : nous prévoyons des sorties avec de courtes marches et des taxis."
+    ]
+   ]
+  },
+  "ubud": {
+   "name": "Ubud",
+   "lead": "Rizières, villas dans la jungle et air plus frais — Ubud est le cœur culturel de Bali et un endroit doux pour les enfants.",
+   "txt": [
+    [
+     "Les familles à Ubud",
+     "Villas dans la jungle avec piscine, ateliers d'artisanat, spectacles de danse et balades dans les rizières. Pas de plage, mais un climat plus doux que sur la côte."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Journées à la villa entre piscine et jeux dans la nature, compagnie lors des balades dans les rizières, et baby-sitting pendant votre cours de yoga ou de cuisine."
+    ],
+    [
+     "Bon à savoir",
+     "Beaucoup de villas ont des marches raides et des piscines sans barrière — décrivez-nous les lieux pour que nous prévoyions la sécurité. Tenez les enfants à l'écart des singes à la Monkey Forest et dans les temples."
+    ]
+   ]
+  },
+  "uluwatu": {
+   "name": "Uluwatu",
+   "lead": "Resorts à flanc de falaise, couchers de soleil célèbres et plages cachées — Uluwatu, c'est Bali dans toute sa splendeur.",
+   "txt": [
+    [
+     "Les familles à Uluwatu",
+     "Les familles logent généralement dans des resorts en haut des falaises ou des villas avec grande piscine. Des plages comme Padang Padang et Melasti sont superbes mais accessibles par des escaliers ou des routes raides."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Surveillance de la piscine à votre villa, plage aux endroits calmes quand la houle est faible, et baby-sitting le soir pour que vous assistiez à la danse Kecak ou à un coucher de soleil sur les falaises."
+    ],
+    [
+     "Bon à savoir",
+     "Beaucoup de plages sont réservées aux surfeurs expérimentés — choisissez les jours calmes et restez à proximité. Les singes du temple d'Uluwatu chapardent les affaires ; les petits y sont plus en sécurité en porte-bébé."
+    ]
+   ]
+  },
+  "jimbaran": {
+   "name": "Jimbaran",
+   "lead": "Une large baie calme, des dîners de fruits de mer sur le sable — et à 15 minutes seulement de l'aéroport.",
+   "txt": [
+    [
+     "Les familles à Jimbaran",
+     "La baie est plus douce que la côte ouest de Bali, et les grands resorts ont des clubs enfants et des bassins peu profonds. Les dîners de fruits de mer au coucher du soleil sur la plage sont une tradition familiale."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Matinées à la plage, piscine du resort et une baby-sitter le soir pour que les parents profitent d'un dîner au calme."
+    ],
+    [
+     "Bon à savoir",
+     "Les vagues sont généralement modérées mais varient selon la saison — vérifiez les conditions avant de vous baigner. Jimbaran est une base pratique pour les courts séjours près de l'aéroport."
+    ]
+   ]
+  },
+  "nusa-dua": {
+   "name": "Nusa Dua",
+   "lead": "Resorts soignés, plages calmes abritées par le récif et clubs enfants — Nusa Dua est la station familiale classique de Bali.",
+   "txt": [
+    [
+     "Les familles à Nusa Dua",
+     "Une enclave de resorts sécurisée, avec de larges plages, une eau calme et de grands hôtels pensés pour les familles. Tout est plat, propre et facile en poussette."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Garde privée quand le club enfants est complet ou que votre enfant est trop jeune, piscine et plage, et baby-sitting le soir dans votre chambre."
+    ],
+    [
+     "Bon à savoir",
+     "Les hôtels ont leurs propres règles pour les baby-sitters extérieures — nous nous coordonnons à l'avance avec la réception. Le quartier Bali Collection offre boutiques et restaurants à distance de marche."
+    ]
+   ]
+  },
+  "denpasar": {
+   "name": "Denpasar",
+   "lead": "La capitale de Bali, où vivent de nombreuses familles expatriées et locales, près des hôpitaux et écoles internationales.",
+   "txt": [
+    [
+     "Les familles à Denpasar",
+     "À Denpasar, on parle moins vacances que vie quotidienne : maisons, écoles, centres commerciaux et principaux hôpitaux de l'île."
+    ],
+    [
+     "Ce que font nos nounous ici",
+     "Nounous à long terme et à temps partiel pour les familles résidentes, garde après l'école et aide à la maison."
+    ],
+    [
+     "Bon à savoir",
+     "La circulation peut être dense : nous associons les familles à des nounous du même quartier et convenons d'horaires fixes."
+    ]
+   ]
+  }
+ }
+}

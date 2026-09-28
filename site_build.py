@@ -138,7 +138,7 @@ def build(lang):
         alt = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMAIN}/{T[l]["prefix"]}{path}">' for l in T) + f'<link rel="alternate" hreflang="x-default" href="{DOMAIN}/{path}">' if other_exists else ""
         here = f'{root}{t["prefix"]}{path}index.html'
         there = f'{root}{other_path}index.html' if other_exists else f'{root}{T[t["other"]]["prefix"]}index.html'
-        langs = {"en": ("English", here if lang=="en" else there), "ru": ("Русский", here if lang=="ru" else there)}
+        langs = {l: (LANG_NAMES[l], f'{root}{T[l]["prefix"]}{path}index.html') for l in T}
         globe = ('<div class="lang-menu"><button class="icon-btn globe" type="button" aria-label="Language" aria-haspopup="true" aria-expanded="false">'
                  '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"/></svg>'
                  f'<b>{lang.upper()}</b></button><div class="lang-pop" role="menu">'
@@ -211,7 +211,7 @@ b.addEventListener('click',play);v.addEventListener('click',()=>{{if(!document.b
     # AREAS
     page("areas/", AT[lang]["title"], AT[lang]["p"], f'<div class="wrap">{crumbs("../",(AT[lang]["nav"],None))}<section><div class="sec-head"><h1>{AT[lang]["h"]}</h1><p>{AT[lang]["p"]}</p></div>{area_grid("../")}</section></div>')
     for k,ar in enumerate(AREAS):
-        nm = ar[lang]; loc = ar["en"] if lang=="en" else ar["ru_in"]
+        nm = ar[lang]; loc = ar["ru_in"] if lang=="ru" else ar[lang]
         h1 = AT[lang]["h1"].format(loc=loc); cr = AREA_CREDITS[ar["slug"]]
         credit = f'<p class="credit">Photo: <a href="{cr["page"]}" rel="nofollow noopener" target="_blank">{html.escape(cr["author"][:60])}</a>, {cr["license"]}</p>' if cr["license"]!="CC0" else ""
         others = "".join(f'<a class="pill" href="../{o["slug"]}/index.html">{o[lang]}</a>' for o in AREAS if o is not ar)
@@ -286,15 +286,15 @@ b.addEventListener('click',play);v.addEventListener('click',()=>{{if(!document.b
     page("guides/", t["guides_t"], t["guides_p"], f'<div class="wrap">{crumbs("../",(t["guides_f"],None))}<section><div class="sec-head"><h1>{t["guides_hh"]}</h1></div>{hub_cards("../")}</section></div>')
     for hb in HUBS:
         hs = hub_slug(hb)
-        items = "".join((f'<li><a href="{a["slug"]}/index.html">{a["h1"] if lang=="en" else RU_ARTICLE["h1"]}</a></li>' if a["id"]==LIVE_ARTICLE else
+        items = "".join((f'<li><a href="{a["slug"]}/index.html">{a["h1"] if lang=="en" else ARTICLES[lang]["h1"]}</a></li>' if a["id"]==LIVE_ARTICLE else
                          (f'<li>{a["h1"]} <span class="soon">· {t["soon"]}</span></li>' if lang=="en" else "")) for a in A if a["hub"]==hb)
-        if lang=="ru":
+        if lang!="en":
             n = sum(1 for a in A if a["hub"]==hb and a["id"]!=LIVE_ARTICLE)
             items += f'<li class="soon">{n} {t["n_guides"]} — {t["soon"]}</li>'
         page(f"guides/{hs}/", t["hubs"][hb], t["guides_p"], f'<div class="wrap">{crumbs("../../",(t["guides_f"],"guides/"),(t["hubs"][hb],None))}<section><div class="sec-head"><h1>{t["hubs"][hb]}</h1></div><ul class="list">{items}</ul></section></div>')
 
     a = next(x for x in A if x["id"]==LIVE_ARTICLE)
-    art = EN_ARTICLE if lang=="en" else RU_ARTICLE
+    art = ARTICLES[lang]
     toc = "".join(f'<li><a href="#s{i}">{h}</a></li>' for i,(h,_) in enumerate(art["secs"],1))
     body = "".join(f'<h2 id="s{i}">{h}</h2><p>{p}</p>'  for i,(h,p) in enumerate(art["secs"],1))
     hm = "../../../"
@@ -325,6 +325,22 @@ RU_ARTICLE = dict(title="Санур с детьми: чем заняться (г
  ("Если идёт дождь","Мастер-классы по рукоделию и кулинарии, игровые центры и торговые центры соседнего Денпасара."),
  ("Вечером","Ночной рынок Синдху, закат на набережной — или ужин вдвоём, пока няня укладывает детей."),
  ("План на 3 дня","День 1: утро на пляже, бассейн и дневной сон, вечерняя прогулка. День 2: снорклинг или сап, потом мастер-класс. День 3: поездка в Bali Zoo или аквапарк и свободный вечер для родителей.")])
+
+# ---- языки из i18n/<code>.json (структура = i18n/en.source.json)
+import json as _j
+LANG_NAMES = {"en":"English","ru":"Русский","zh":"中文","hi":"हिन्दी","ko":"한국어","ja":"日本語","fr":"Français","de":"Deutsch","es":"Español","it":"Italiano","nl":"Nederlands","id":"Bahasa Indonesia"}
+HTML_LANG = {"zh":"zh-CN"}
+ARTICLES = {"en": EN_ARTICLE, "ru": RU_ARTICLE}
+for _code in [c for c in LANG_NAMES if c not in ("en","ru")]:
+    _f = HERE/"i18n"/f"{_code}.json"
+    if not _f.exists(): print("skip", _code); continue
+    d = _j.loads(_f.read_text(encoding="utf-8"))
+    T[_code] = dict(d["T"], prefix=f"{_code}/", html_lang=HTML_LANG.get(_code,_code), other="en", other_label="EN", locale=_code)
+    TBm.TB[_code] = d["TB"]; RM.RT[_code] = d["RT"]; AT[_code] = d["AT"]; SM[_code] = d["SM"]; VID[_code] = d["VID"]; ARTICLES[_code] = d["ARTICLE"]
+    for c in RM.CATS:
+        x = d["CATS"][c["slug"]]; c[_code] = (x["name"], x["desc"]); c["items_"+_code] = x["items"]
+    for a in AREAS:
+        x = d["AREAS"][a["slug"]]; a[_code] = x["name"]; a[_code+"_lead"] = x["lead"]; a[_code+"_txt"] = x["txt"]
 
 if OUT.exists(): shutil.rmtree(OUT)
 OUT.mkdir()
