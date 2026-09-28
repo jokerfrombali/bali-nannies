@@ -136,6 +136,38 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 }
 @media(max-width:560px){.hdr-wa{display:none}}
 
+/* ===== mobile hero (iPhone-first) ===== */
+.hv-close{display:none}
+@media(max-width:860px){
+ .hero-home{display:grid;grid-template-columns:1fr 112px;column-gap:16px;align-content:start;
+   grid-template-areas:"h1 h1" "lead vid" "cta cta" "trust trust";padding:20px 20px 28px;min-height:0}
+ .hero-home>div:first-child{display:contents}
+ .hero-home .eyebrow{grid-area:eye;justify-self:start;margin-bottom:14px}
+ .hero-home h1{grid-area:h1;font-size:clamp(2.05rem,9vw,2.5rem);line-height:1.08;margin-bottom:14px;letter-spacing:-.02em}
+ .hero-home .lead{grid-area:lead;font-size:.98rem;line-height:1.5;margin:0;align-self:center}
+ .hero-home .cta-row{grid-area:cta;margin:22px 0 16px;display:grid;grid-template-columns:1fr auto;gap:10px}
+ .hero-home .cta-row .btn{justify-content:center;padding:15px 18px}
+ .hero-home .trust{grid-area:trust;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+ .hero-home .trust li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:9px 10px;font-size:.8rem;line-height:1.25;color:var(--ink)}
+ .hero-home .hero-video{grid-area:vid;width:112px;height:152px;aspect-ratio:auto;min-height:0;border-radius:20px;align-self:center;
+   box-shadow:0 10px 24px rgba(27,43,39,.18);outline:3px solid #fff;outline-offset:-1px}
+ .hero-home .hero-video::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.45))}
+ .hero-home .hv-play{top:auto;bottom:10px;left:50%;padding:0;background:transparent;box-shadow:none;backdrop-filter:none}
+ .hero-home .hv-play:hover{transform:translate(-50%,0)}
+ .hero-home .hv-play{transform:translate(-50%,0)}
+ .hero-home .hv-play span{display:none}
+ .hero-home .hv-play svg{width:40px;height:40px;padding:11px;background:rgba(255,255,255,.95);fill:var(--brand);box-shadow:0 4px 14px rgba(0,0,0,.25)}
+ /* видео крупно поверх страницы */
+ .vid-backdrop{position:fixed;inset:0;background:rgba(10,20,17,.82);backdrop-filter:blur(4px);z-index:90;opacity:0;visibility:hidden;transition:opacity .25s}
+ .vid-open .vid-backdrop{opacity:1;visibility:visible}
+ .vid-open .hero-home .hero-video.playing{position:fixed;z-index:95;left:50%;top:50%;transform:translate(-50%,-50%);
+   width:min(88vw,calc(78svh * 480 / 848));height:auto;aspect-ratio:480/848;border-radius:24px;outline:0}
+ .vid-open .hero-home .hero-video.playing::before{display:none}
+ .vid-open .hv-close{display:grid;place-items:center;position:absolute;top:10px;right:10px;z-index:3;width:38px;height:38px;border:0;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:1rem;cursor:pointer}
+ .vid-open{overflow:hidden}
+}
+@media(max-width:360px){.hero-home{grid-template-columns:1fr 96px}.hero-home .hero-video{width:96px;height:132px}}
+
 .vet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .vet{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px}
 .vet h3{color:#fff;font-size:1.08rem;margin:10px 0 6px}.vet p{margin:0;font-size:.93rem;color:#C9DBD4}.vet-ico{font-size:1.6rem}
