@@ -94,7 +94,12 @@ T = {
 FLOWER = ('<svg class="flower" viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor">'
   + "".join(f'<path transform="rotate({k*72} 20 20)" d="M20 20C13.5 16 12.5 5 19 2.2c5.2-1.6 8.3 4.4 5.6 10.6C23.6 15.3 22 18 20 20z"/>' for k in range(5))
   + '</g><circle cx="20" cy="20" r="3.6" fill="#F6C453"/></svg>')
-HDR_JS = ("(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});"
+HDR_JS = ("(()=>{const bg=document.querySelector('.burger'),nv=document.getElementById('mainnav'),gl=document.querySelector('.globe'),lm=document.querySelector('.lang-menu');"
+  "bg.addEventListener('click',e=>{e.stopPropagation();const o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o);document.body.classList.toggle('nav-open',o);lm.classList.remove('open')});"
+  "gl.addEventListener('click',e=>{e.stopPropagation();const o=lm.classList.toggle('open');gl.setAttribute('aria-expanded',o);nv.classList.remove('open');document.body.classList.remove('nav-open')});"
+  "document.addEventListener('click',e=>{if(!lm.contains(e.target))lm.classList.remove('open')});"
+  "addEventListener('keydown',e=>{if(e.key==='Escape'){lm.classList.remove('open');nv.classList.remove('open');document.body.classList.remove('nav-open')}})})();"
+  "(()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -8% 0px'});"
   "const els=[...document.querySelectorAll('main section, .reveal')];els.forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pre');io.observe(el)}});"
   "const chk=()=>els.forEach(el=>{if(el.classList.contains('pre')&&el.getBoundingClientRect().top<innerHeight*.95)el.classList.add('in')});addEventListener('scroll',chk,{passive:true})})();"
   "(()=>{const b=document.querySelector('.hdr-wa'),t=document.querySelector('main .cta-row')||document.querySelector('main h1');"
@@ -131,11 +136,18 @@ def build(lang):
         home = root + t["prefix"]      # главная текущего языка
         other_path = T[t["other"]]["prefix"] + path
         alt = "".join(f'<link rel="alternate" hreflang="{l}" href="{DOMAIN}/{T[l]["prefix"]}{path}">' for l in T) + f'<link rel="alternate" hreflang="x-default" href="{DOMAIN}/{path}">' if other_exists else ""
+        here = f'{root}{t["prefix"]}{path}index.html'
+        there = f'{root}{other_path}index.html' if other_exists else f'{root}{T[t["other"]]["prefix"]}index.html'
+        langs = {"en": ("English", here if lang=="en" else there), "ru": ("Русский", here if lang=="ru" else there)}
+        globe = ('<div class="lang-menu"><button class="icon-btn globe" type="button" aria-label="Language" aria-haspopup="true" aria-expanded="false">'
+                 '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.6-3.8 9s1.3 6.4 3.8 9"/></svg>'
+                 f'<b>{lang.upper()}</b></button><div class="lang-pop" role="menu">'
+                 + "".join('<a role="menuitem" href="'+u+'" lang="'+l+'"'+(' aria-current="true"' if l==lang else '')+'>'+n+'</a>' for l,(n,u) in langs.items()) + '</div></div>')
         switch = f'<a class="lang" href="{root}{other_path}index.html">{t["other_label"]}</a>' if other_exists else f'<a class="lang" href="{root}{T[t["other"]]["prefix"]}index.html">{t["other_label"]}</a>'
         links = ["services","rentals","areas","prices","safety","guides"]
         nav = f"""<header><div class="wrap nav"><a class="logo" href="{home}index.html" aria-label="{BRAND}">Bali{FLOWER}Nannies</a>
-<nav class="links">{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(links,t["nav"]))}</nav>
-<div class="right">{switch}{btn(t["wa_short"], cls="btn-sm hdr-wa")}</div></div></header>"""
+<nav class="links" id="mainnav">{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(links,t["nav"]))}</nav>
+<div class="right">{btn(t["wa_short"], cls="btn-sm hdr-wa")}{globe}<button class="icon-btn burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button></div></div></header>"""
         foot = f"""<footer class="site-foot"><div class="wrap">
 <div class="foot-top"><div class="foot-brand"><a class="logo logo-light" href="{home}index.html">Bali{FLOWER}Nannies</a><p>{t["foot_p"]}</p>
 <a class="foot-wa" href="{wa(t['wa_default'])}" target="_blank" rel="noopener">{WA_SVG}<span>WhatsApp · +{WA}</span></a></div>

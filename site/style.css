@@ -111,6 +111,31 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 .hero-video.playing .hv-video{cursor:pointer}
 @media(max-width:860px){.hero-home .hero-video{aspect-ratio:4/5}}
 
+/* header: globe + burger */
+.right{gap:8px}
+.icon-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:42px;min-width:42px;padding:0 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer;font:600 .8rem Inter,system-ui,sans-serif}
+.icon-btn:hover{border-color:#cfd9d4}
+.globe svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6}
+.lang-menu{position:relative}
+.lang-pop{position:absolute;right:0;top:calc(100% + 8px);min-width:160px;background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(27,43,39,.12);padding:6px;display:none;z-index:50}
+.lang-menu.open .lang-pop{display:block}
+.lang-pop a{display:block;padding:10px 12px;border-radius:10px;color:var(--ink);text-decoration:none}
+.lang-pop a:hover{background:var(--brand-2)}.lang-pop a[aria-current]{font-weight:700;color:var(--brand)}
+.lang-pop a[aria-current]::after{content:" ✓"}
+.burger{display:none;flex-direction:column;gap:4px;padding:0}
+.burger span{display:block;width:18px;height:2px;border-radius:2px;background:var(--ink);transition:transform .25s,opacity .25s}
+.nav-open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-open .burger span:nth-child(2){opacity:0}
+.nav-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:860px){
+ .burger{display:inline-flex}
+ .links{display:flex;position:fixed;left:0;right:0;top:69px;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 20px 20px;box-shadow:0 20px 30px rgba(27,43,39,.08);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s;z-index:40}
+ .links.open{opacity:1;visibility:visible;transform:none}
+ .links a{padding:14px 4px;border-bottom:1px solid var(--line);font-size:1.05rem;color:var(--ink)}
+ .links a:last-child{border-bottom:0}
+}
+@media(max-width:560px){.hdr-wa{display:none}}
+
 .vet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .vet{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px}
 .vet h3{color:#fff;font-size:1.08rem;margin:10px 0 6px}.vet p{margin:0;font-size:.93rem;color:#C9DBD4}.vet-ico{font-size:1.6rem}
