@@ -228,3 +228,8 @@ html[lang="zh-CN"] h2,html[lang="ja"] h2,html[lang="ko"] h2,html[lang="hi"] h2{l
 .lang-hint a{color:var(--brand);text-decoration:none;padding:8px 10px;white-space:nowrap}
 .lang-hint button{width:34px;height:34px;border:0;border-radius:50%;background:var(--brand-2);color:var(--ink);cursor:pointer;flex:none;touch-action:manipulation}
 .vid-open .lang-hint{display:none}
+
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:8px 24px;margin:18px 0}
+.cc-row{display:grid;grid-template-columns:140px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}.cc-row:last-child{border:0}
+.cc-k{color:var(--muted);font-weight:600}.cc-v{font-weight:600;color:var(--ink);text-decoration:none}a.cc-v{color:var(--brand)}
+@media(max-width:560px){.cc-row{grid-template-columns:1fr;gap:4px}}

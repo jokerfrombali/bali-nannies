@@ -17,8 +17,10 @@ for i, a in enumerate(A, 1): a["id"] = f"A{i:03d}"
 
 # ---- настройки бизнеса (заполнить)
 BRAND = "Bali Nannies"
-WA = "62XXXXXXXXXX"            # номер WhatsApp: 62…, без +
-EMAIL = "hello@example.com"
+WA = "6287763685959"           # номер WhatsApp: 62…, без +
+WA_SHOW = "+62 877-6368-5959"
+EMAIL = "hello@example.com"   # заглушка: пока содержит example.com — на сайте не показывается
+EMAIL_OK = "example.com" not in EMAIL
 DOMAIN = "https://[domain]"     # после покупки домена
 OUT = HERE/"site"
 CSS = (HERE/"src/style.css").read_text(encoding="utf-8") + TBm.CSS + RM.CSS + PR.CSS
@@ -129,6 +131,20 @@ SM = {"en": dict(title="Site map", desc="Every page of Bali Nannies in one place
       "ru": dict(title="Карта сайта", desc="Все страницы Bali Nannies в одном месте.")}
 VID = {"en": dict(alt="Our nanny with a smiling baby at a Bali villa", play="Play video", label="Watch 30 sec"),
        "ru": dict(alt="Наша няня с улыбающимся малышом на вилле на Бали", play="Смотреть видео", label="Смотреть 30 сек")}
+CT = {
+ "en":dict(title="Contact",h1="Contact us",p="The fastest way to reach us is WhatsApp — we usually reply within 15 minutes.",wa="WhatsApp",email="Email",area="Area",area_v="Bali, Indonesia — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+ "ru":dict(title="Контакты",h1="Контакты",p="Быстрее всего — в WhatsApp, обычно отвечаем в течение 15 минут.",wa="WhatsApp",email="Email",area="Где работаем",area_v="Бали, Индонезия — Санур, Чангу, Семиньяк, Кута, Убуд, Улувату, Джимбаран, Нуса Дуа, Денпасар"),
+ "zh":dict(title="联系我们",h1="联系我们",p="最快的方式是 WhatsApp，我们通常在 15 分钟内回复。",wa="WhatsApp",email="邮箱",area="服务区域",area_v="印度尼西亚巴厘岛 — 萨努尔、仓古、水明漾、库塔、乌布、乌鲁瓦图、金巴兰、努沙杜瓦、登巴萨"),
+ "hi":dict(title="संपर्क",h1="हमसे संपर्क करें",p="सबसे तेज़ तरीका WhatsApp है — हम आमतौर पर 15 मिनट में जवाब देते हैं।",wa="WhatsApp",email="ईमेल",area="क्षेत्र",area_v="बाली, इंडोनेशिया — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+ "ko":dict(title="문의",h1="문의하기",p="가장 빠른 방법은 WhatsApp이에요. 보통 15분 안에 답장드려요.",wa="WhatsApp",email="이메일",area="서비스 지역",area_v="인도네시아 발리 — 사누르, 짱구, 스미냑, 꾸따, 우붓, 울루와뚜, 짐바란, 누사두아, 덴파사르"),
+ "ja":dict(title="お問い合わせ",h1="お問い合わせ",p="いちばん早いのは WhatsApp です。通常15分以内にお返事します。",wa="WhatsApp",email="メール",area="対応エリア",area_v="インドネシア・バリ島 — サヌール、チャングー、スミニャック、クタ、ウブド、ウルワツ、ジンバラン、ヌサドゥア、デンパサール"),
+ "fr":dict(title="Contact",h1="Nous contacter",p="Le plus rapide : WhatsApp. Nous répondons en général en 15 minutes.",wa="WhatsApp",email="E-mail",area="Zone",area_v="Bali, Indonésie — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+ "de":dict(title="Kontakt",h1="Kontakt",p="Am schnellsten per WhatsApp – wir antworten meist innerhalb von 15 Minuten.",wa="WhatsApp",email="E-Mail",area="Gebiet",area_v="Bali, Indonesien — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+ "es":dict(title="Contacto",h1="Contacto",p="Lo más rápido es WhatsApp: solemos responder en 15 minutos.",wa="WhatsApp",email="Email",area="Zona",area_v="Bali, Indonesia — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+ "it":dict(title="Contatti",h1="Contattaci",p="Il modo più rapido è WhatsApp: di solito rispondiamo entro 15 minuti.",wa="WhatsApp",email="Email",area="Zona",area_v="Bali, Indonesia — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+ "nl":dict(title="Contact",h1="Contact",p="Het snelst via WhatsApp — meestal reageren we binnen 15 minuten.",wa="WhatsApp",email="E-mail",area="Gebied",area_v="Bali, Indonesië — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+ "id":dict(title="Kontak",h1="Hubungi kami",p="Cara tercepat lewat WhatsApp — biasanya kami membalas dalam 15 menit.",wa="WhatsApp",email="Email",area="Area",area_v="Bali, Indonesia — Sanur, Canggu, Seminyak, Kuta, Ubud, Uluwatu, Jimbaran, Nusa Dua, Denpasar"),
+}
 AT = {
  "en": dict(nav="Areas", h="Where we work in Bali", p="Our nannies come to hotels, villas and homes across South Bali and Ubud.",
             title="Nanny Service Areas in Bali", title_one="Nanny & Babysitter in {loc}, Bali", h1="Nanny & babysitter in {loc}",
@@ -166,14 +182,14 @@ def build(lang):
 <div class="right">{btn(t["wa_short"], cls="btn-sm hdr-wa")}{globe}<button class="icon-btn burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mainnav"><span></span><span></span><span></span></button></div></div></header>"""
         foot = f"""<footer class="site-foot"><div class="wrap">
 <div class="foot-top"><div class="foot-brand"><a class="logo logo-light" href="{home}index.html">Bali{FLOWER}Nannies</a><p>{t["foot_p"]}</p>
-<a class="foot-wa" href="{wa(t['wa_default'])}" target="_blank" rel="noopener">{WA_SVG}<span>WhatsApp · +{WA}</span></a></div>
+<a class="foot-wa" href="{wa(t['wa_default'])}" target="_blank" rel="noopener">{WA_SVG}<span>WhatsApp · {WA_SHOW}</span></a></div>
 <nav class="foot-cols">
 <div><b>{t["services_f"]}</b>{''.join(f'<a href="{home}services/{s}/index.html">{n}</a>' for s,(n,_) in zip(SERVICES,t["svc"]))}</div>
 <div><b>{r["nav"]}</b>{''.join(f'<a href="{home}rentals/{c["slug"]}/index.html">{c[lang][0]}</a>' for c in RM.CATS)}</div>
 <div><b>{AT[lang]["nav"]}</b>{''.join(f'<a href="{home}areas/{a["slug"]}/index.html">{a[lang]}</a>' for a in AREAS)}</div>
-<div><b>{t["company"]}</b>{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(["how-it-works","safety","prices","faq","careers","guides"],[t["how"],t["safety_nav"],t["prices"],t["faq_short"],t["careers_nav"],t["guides_f"]]))}</div>
+<div><b>{t["company"]}</b>{''.join(f'<a href="{home}{l}/index.html">{n}</a>' for l,n in zip(["contact","how-it-works","safety","prices","faq","careers","guides"],[CT[lang]["title"],t["how"],t["safety_nav"],t["prices"],t["faq_short"],t["careers_nav"],t["guides_f"]]))}</div>
 </nav></div>
-<div class="foot-bottom"><span>© 2026 {BRAND} · Bali, Indonesia</span><span><a href="{home}sitemap/index.html">{SM[lang]["title"]}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a> · {switch}</span></div>
+<div class="foot-bottom"><span>© 2026 {BRAND} · Bali, Indonesia</span><span><a href="{home}sitemap/index.html">{SM[lang]["title"]}</a>{f' · <a href="mailto:{EMAIL}">{EMAIL}</a>' if EMAIL_OK else ""} · {switch}</span></div>
 </div></footer>
 <script>{HDR_JS}{HINT_JS}</script>"""
         doc = f"""<!doctype html><html lang="{t['html_lang']}" translate="no"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -244,7 +260,7 @@ b.addEventListener('click',play);v.addEventListener('click',()=>{{if(!document.b
     groups = [(t["services_f"], [(f"services/{s}/", n) for s,(n,_) in zip(SERVICES,t["svc"])]),
               (r["nav"], [("rentals/", r["h1"])] + [(f"rentals/{c['slug']}/", c[lang][0]) for c in RM.CATS]),
               (AT[lang]["nav"], [(f"areas/{a['slug']}/", a[lang]) for a in AREAS]),
-              (t["company"], [("how-it-works/",t["how"]),("safety/",t["safety_nav"]),("prices/",t["prices"]),("faq/",t["faq_short"]),("careers/",t["careers_nav"])]),
+              (t["company"], [("contact/",CT[lang]["title"]),("how-it-works/",t["how"]),("safety/",t["safety_nav"]),("prices/",t["prices"]),("faq/",t["faq_short"]),("careers/",t["careers_nav"])]),
               (t["guides_f"], [(f"guides/{hub_slug(h)}/", t["hubs"][h]) for h in HUBS])]
     sm = "".join(f'<div class="sm-group"><h2>{g}</h2><ul>' + "".join(f'<li><a href="../{u}index.html">{n}</a></li>' for u,n in items) + "</ul></div>" for g,items in groups)
     page("sitemap/", SM[lang]["title"], SM[lang]["desc"], f'<div class="wrap">{crumbs("../",(SM[lang]["title"],None))}<section><div class="sec-head"><h1>{SM[lang]["title"]}</h1><p>{SM[lang]["desc"]}</p></div><div class="sm-grid">{sm}</div></section></div>')
@@ -279,6 +295,14 @@ b.addEventListener('click',play);v.addEventListener('click',()=>{{if(!document.b
 <section><div class="sec-head"><h2>{pf["steps_h"]}</h2></div>{pf_steps}</section>
 <section><table class="price-table"><tr><th>{c0[lang][0]}</th><th>{t["th"][1]}</th></tr><tr><td>{c0["items_"+lang][0]}</td><td>{r["from_"]} [IDR —]{r["per_day"]}</td></tr></table></section>
 <section>{combo}</section><section><div class="sec-head"><h2>{t["faq_short"]}</h2></div>{pf_faq}</section></div>""")
+
+    # CONTACT
+    ct = CT[lang]
+    page("contact/", ct["h1"], ct["p"], f"""<div class="wrap article">{crumbs("../",(ct["title"],None))}<h1>{ct["h1"]}</h1><p class="lead">{ct["p"]}</p>
+<div class="contact-card"><div class="cc-row"><span class="cc-k">{ct["wa"]}</span><a class="cc-v" href="{wa(t['wa_default'])}" target="_blank" rel="noopener">{WA_SHOW}</a></div>
+{f'<div class="cc-row"><span class="cc-k">{ct["email"]}</span><a class="cc-v" href="mailto:{EMAIL}">{EMAIL}</a></div>' if EMAIL_OK else ""}
+<div class="cc-row"><span class="cc-k">{ct["area"]}</span><span class="cc-v">{ct["area_v"]}</span></div></div>
+<div class="cta-row">{btn()}</div></div>""")
 
     # SERVICES
     page("services/", t["services_t"], t["services_d"], f'<div class="wrap">{crumbs("../",(t["services_h"],None))}<section><div class="sec-head"><h1>{t["services_h"]}</h1></div>{services_grid("../")}</section></div>')
