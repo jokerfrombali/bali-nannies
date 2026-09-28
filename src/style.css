@@ -210,3 +210,7 @@ header{-webkit-transform:translateZ(0)}
  .hero-home .hv-play .heart{width:30px;height:30px;padding:0;background:none;box-shadow:none;fill:initial}
  .hero-home .hero-video::before{background:linear-gradient(200deg,rgba(0,0,0,.28),rgba(0,0,0,0) 35%)}
 }
+/* красное сердечко, крупнее */
+.hv-play .heart .h{fill:#FF2D55}
+.hv-play .heart{width:40px;height:40px}
+@media(max-width:860px){.hero-home .hv-play .heart{width:40px;height:40px}.hero-home .hv-play,.hero-home .hv-play:hover{top:6px;right:6px}}
