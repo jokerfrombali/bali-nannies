@@ -4,12 +4,12 @@
 RATE_HOUR = 120_000
 EXTRA_CHILD = 25_000   # +IDR/час за второго ребёнка (частная разница няни 100k→125k)
 PRICES = {
-    "hourly-babysitter":       dict(idr=RATE_HOUR, unit="hour", min_h=5, extra_child=EXTRA_CHILD),
+    "hourly-babysitter":       dict(idr=RATE_HOUR, unit="hour", min_h=6, extra_child=EXTRA_CHILD),
     "day-nanny":               dict(idr=RATE_HOUR * 10, unit="day", hours=10),
     "night-nanny":             dict(idr=1_700_000, unit="night"),
-    "hotel-villa-babysitting": dict(idr=RATE_HOUR, unit="hour", min_h=5, extra_child=EXTRA_CHILD),
-    "event-babysitting":       dict(idr=RATE_HOUR, unit="hour", min_h=5, meal=True),
-    "travel-nanny":            dict(idr=RATE_HOUR, unit="hour", min_h=5, travel=True),
+    "hotel-villa-babysitting": dict(idr=RATE_HOUR, unit="hour", min_h=6, extra_child=EXTRA_CHILD),
+    "event-babysitting":       dict(idr=RATE_HOUR, unit="hour", min_h=6, meal=True),
+    "travel-nanny":            dict(idr=RATE_HOUR, unit="hour", min_h=6, travel=True),
 }
 
 # запасные курсы IDR→валюта (open.er-api.com, 28.09.2026); на странице подтягиваются свежие
@@ -52,7 +52,7 @@ def price_cells(slug, lang):
     if x.get("travel"): extra.append(p["travel"])
     if extra: rate += "".join(f'<br><span class="note">{e}</span>' for e in extra)
     if x["unit"] == "hour":
-        return rate, f'{p["min_h"].format(n=x["min_h"])}<br><span class="note">{p["min_total"]}: </span>{money(x["idr"]*x["min_h"])}'
+        return rate, p["min_h"].format(n=x["min_h"])
     if x["unit"] == "day":
         return rate, p["day_note"].format(n=x["hours"])
     return rate, "—"
