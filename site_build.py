@@ -19,6 +19,7 @@ for i, a in enumerate(A, 1): a["id"] = f"A{i:03d}"
 BRAND = "Bali Nannies"
 WA = "6287763685959"           # номер WhatsApp: 62…, без +
 WA_SHOW = "+62 877-6368-5959"
+INDEXING = False   # False = сайт закрыт от поисковиков (meta noindex + robots.txt Disallow). True — при запуске на домене.
 EMAIL = "hello@example.com"   # заглушка: пока содержит example.com — на сайте не показывается
 EMAIL_OK = "example.com" not in EMAIL
 DOMAIN = "https://[domain]"     # после покупки домена
@@ -192,7 +193,7 @@ def build(lang):
 <div class="foot-bottom"><span>© 2026 {BRAND} · Bali, Indonesia</span><span><a href="{home}sitemap/index.html">{SM[lang]["title"]}</a>{f' · <a href="mailto:{EMAIL}">{EMAIL}</a>' if EMAIL_OK else ""} · {switch}</span></div>
 </div></footer>
 <script>{HDR_JS}{HINT_JS}</script>"""
-        doc = f"""<!doctype html><html lang="{t['html_lang']}" translate="no"><head><meta charset="utf-8"><meta name="google" content="notranslate"><meta name="viewport" content="width=device-width,initial-scale=1">
+        doc = f"""<!doctype html><html lang="{t['html_lang']}" translate="no"><head><meta charset="utf-8"><meta name="google" content="notranslate">{'' if INDEXING else '<meta name="robots" content="noindex,nofollow,noarchive">'}<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{html.escape(title)} | {BRAND}</title><meta name="description" content="{html.escape(desc)}"><link rel="canonical" href="{DOMAIN}/{full}">{alt}
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="{root}favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="{root}style.css?v={CSS_V}">{schema}</head><body>{nav}<main>{body.replace("{ROOT}", root)}</main>{foot}</body></html>"""
@@ -390,7 +391,7 @@ shutil.copytree(HERE/"src/img", OUT/"img")
 shutil.copytree(HERE/"src/video", OUT/"video")
 (OUT/".nojekyll").write_text("")
 (OUT/"favicon.svg").write_text(FLOWER.replace('class="flower" ','xmlns="http://www.w3.org/2000/svg" ').replace("currentColor","#E8845B"), encoding="utf-8")
-(OUT/"robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n", encoding="utf-8")
+(OUT/"robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n" if INDEXING else "User-agent: *\nDisallow: /\n", encoding="utf-8")
 urls = sorted(p.relative_to(OUT).as_posix().replace("index.html","") for p in OUT.rglob("index.html"))
 (OUT/"sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join(f"<url><loc>{DOMAIN}/{u}</loc></url>" for u in urls)+"</urlset>", encoding="utf-8")
 print(len(urls), "pages ->", OUT)
