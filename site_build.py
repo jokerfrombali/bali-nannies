@@ -106,6 +106,8 @@ def hub_slug(h): return HUBS[h][1].split("/")[2]
 
 SM = {"en": dict(title="Site map", desc="Every page of Bali Nannies in one place."),
       "ru": dict(title="Карта сайта", desc="Все страницы Bali Nannies в одном месте.")}
+VID = {"en": dict(alt="Our nanny with a smiling baby at a Bali villa", play="Play video", label="Watch 30 sec"),
+       "ru": dict(alt="Наша няня с улыбающимся малышом на вилле на Бали", play="Смотреть видео", label="Смотреть 30 сек")}
 AT = {
  "en": dict(nav="Areas", h="Where we work in Bali", p="Our nannies come to hotels, villas and homes across South Bali and Ubud.",
             title="Nanny Service Areas in Bali", title_one="Nanny & Babysitter in {loc}, Bali", h1="Nanny & babysitter in {loc}",
@@ -173,7 +175,13 @@ def build(lang):
     page("", t["title_home"], t["desc_home"], f"""<div class="wrap hero hero-home"><div><span class="eyebrow">{t["eyebrow"]}</span><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>
 <div class="cta-row">{btn(t["book"])}<a class="btn btn-ghost" href="prices/index.html">{t["see_prices"]}</a></div>
 <ul class="trust">{''.join(f'<li>{x}</li>' for x in b["hero_trust"])}</ul></div>
-<div class="photo"><img src="{{ROOT}}img/hero.jpg" alt="{t['photo']}" width="960" height="640" fetchpriority="high"><div class="chip">{t["chip"]}</div></div></div>
+<div class="photo hero-video" id="heroVideo"><img class="hv-poster" src="{{ROOT}}img/hero-video-poster.jpg" alt="{VID[lang]['alt']}" width="480" height="848" fetchpriority="high">
+<video class="hv-video" muted loop playsinline preload="none" poster="{{ROOT}}img/hero-video-poster.jpg"><source src="{{ROOT}}video/hero.mp4" type="video/mp4"></video>
+<button class="hv-play" type="button" aria-label="{VID[lang]['play']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg><span>{VID[lang]['label']}</span></button>
+<div class="chip">{t["chip"]}</div></div></div>
+<script>(()=>{{const w=document.getElementById('heroVideo'),v=w.querySelector('video'),b=w.querySelector('.hv-play');
+const play=()=>{{w.classList.add('playing');v.play().catch(()=>w.classList.remove('playing'))}};
+b.addEventListener('click',play);v.addEventListener('click',()=>{{v.pause();w.classList.remove('playing')}});}})()</script>
 <section><div class="wrap"><div class="sec-head"><h2>{t["svc_h"]}</h2><p>{t["svc_p"]}</p></div>{services_grid("")}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{r["home_h"]}</h2><p>{r["home_p"]}</p></div>{RM.fence_banner(lang, "", btn)}
 <div style="margin-top:18px">{RM.rent_grid(lang, "", RM.CATS[1:4])}</div><div class="cta-row"><a class="btn btn-ghost" href="rentals/index.html">{r["all"]} →</a></div></div></section>
@@ -311,6 +319,7 @@ OUT.mkdir()
 for lang in T: build(lang)
 (OUT/"style.css").write_text(CSS, encoding="utf-8")
 shutil.copytree(HERE/"src/img", OUT/"img")
+shutil.copytree(HERE/"src/video", OUT/"video")
 (OUT/".nojekyll").write_text("")
 (OUT/"favicon.svg").write_text(FLOWER.replace('class="flower" ','xmlns="http://www.w3.org/2000/svg" ').replace("currentColor","#E8845B"), encoding="utf-8")
 (OUT/"robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {DOMAIN}/sitemap.xml\n", encoding="utf-8")
