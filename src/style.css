@@ -196,3 +196,17 @@ header{-webkit-transform:translateZ(0)}
 @media(max-width:860px){.hero-home .trust-ico li{padding:9px 10px;gap:8px}.hero-home .trust-ico .ti{font-size:1.2rem}}
 /* WhatsApp в шапке — ровно как соседние кнопки */
 @media(max-width:560px){.hdr-wa.show{box-shadow:none;border:1px solid rgba(0,0,0,.06)}}
+
+/* heart play button */
+.hv-play .heart{width:34px;height:34px;padding:0!important;background:none!important;box-shadow:none!important;border-radius:0!important;filter:drop-shadow(0 3px 6px rgba(0,0,0,.25))}
+.hv-play .heart .h{fill:#E8845B}.hv-play .heart .t{fill:#fff}
+.hero-video .hv-play{top:auto;bottom:18px;left:18px;transform:none;padding:7px 16px 7px 8px;gap:8px;font-size:.92rem}
+.hero-video .hv-play:hover{transform:scale(1.04)}
+@keyframes hbeat{0%,100%{transform:scale(1)}12%{transform:scale(1.12)}24%{transform:scale(1)}36%{transform:scale(1.08)}48%{transform:scale(1)}}
+.hv-play .heart{animation:hbeat 2.4s ease-in-out infinite;transform-origin:50% 55%}
+@media(prefers-reduced-motion:reduce){.hv-play .heart{animation:none}}
+@media(max-width:860px){
+ .hero-home .hv-play,.hero-home .hv-play:hover{top:8px;right:8px;bottom:auto;left:auto;transform:none;padding:0;background:transparent;box-shadow:none}
+ .hero-home .hv-play .heart{width:30px;height:30px;padding:0;background:none;box-shadow:none;fill:initial}
+ .hero-home .hero-video::before{background:linear-gradient(200deg,rgba(0,0,0,.28),rgba(0,0,0,0) 35%)}
+}
