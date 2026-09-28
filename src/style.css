@@ -168,3 +168,4 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 }
 @media(max-width:360px){.hero-home{grid-template-columns:1fr 96px}.hero-home .hero-video{width:96px;height:132px}}
 @media(max-width:860px){.hero-home .cta-row{grid-template-columns:1fr}.hero-home .cta-row .btn-ghost{display:none}.hero-home .cta-row .btn-wa{white-space:nowrap;font-size:1.02rem}}
+@media(max-width:860px){.hero-home{row-gap:0;gap:0 16px}.hero-home h1{margin-bottom:16px}.hero-home .cta-row{margin:22px 0 14px}}
