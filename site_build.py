@@ -188,12 +188,12 @@ def build(lang):
 <div class="cta-row">{btn(t["book"])}<a class="btn btn-ghost" href="prices/index.html">{t["see_prices"]}</a></div>
 <ul class="trust">{''.join(f'<li>{x}</li>' for x in b["hero_trust"])}</ul></div>
 <div class="photo hero-video" id="heroVideo"><img class="hv-poster" src="{{ROOT}}img/hero-video-poster.jpg" alt="{VID[lang]['alt']}" width="480" height="848" fetchpriority="high">
-<video class="hv-video" muted loop playsinline preload="none" poster="{{ROOT}}img/hero-video-poster.jpg"><source src="{{ROOT}}video/hero.mp4" type="video/mp4"></video>
+<video class="hv-video" muted loop playsinline webkit-playsinline preload="metadata" poster="{{ROOT}}img/hero-video-poster.jpg"><source src="{{ROOT}}video/hero.mp4" type="video/mp4"></video>
 <button class="hv-play" type="button" aria-label="{VID[lang]['play']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg><span>{VID[lang]['label']}</span></button><button class="hv-close" type="button" aria-label="Close">✕</button>
 </div></div>
 <script>(()=>{{const w=document.getElementById('heroVideo'),v=w.querySelector('video'),b=w.querySelector('.hv-play');
-const bd=document.createElement('div');bd.className='vid-backdrop';document.body.appendChild(bd);const stop=()=>{{v.pause();w.classList.remove('playing');document.body.classList.remove('vid-open')}};const play=()=>{{w.classList.add('playing');if(matchMedia('(max-width:860px)').matches)document.body.classList.add('vid-open');v.play().catch(stop)}};bd.addEventListener('click',stop);w.querySelector('.hv-close').addEventListener('click',e=>{{e.stopPropagation();stop()}});
-b.addEventListener('click',play);v.addEventListener('click',stop);}})()</script>
+const bd=document.createElement('div');bd.className='vid-backdrop';document.body.appendChild(bd);const stop=()=>{{v.pause();v.controls=false;w.classList.remove('playing');document.body.classList.remove('vid-open')}};const play=()=>{{w.classList.add('playing');const m=matchMedia('(max-width:860px)').matches;if(m){{document.body.classList.add('vid-open');v.controls=true}}v.muted=true;const pr=v.play();if(pr&&pr.catch)pr.catch(()=>{{v.controls=true;if(!m)stop()}})}};bd.addEventListener('click',stop);w.querySelector('.hv-close').addEventListener('click',e=>{{e.stopPropagation();stop()}});
+b.addEventListener('click',play);v.addEventListener('click',()=>{{if(!document.body.classList.contains('vid-open'))stop()}});}})()</script>
 <section><div class="wrap"><div class="sec-head"><h2>{t["svc_h"]}</h2><p>{t["svc_p"]}</p></div>{services_grid("")}</div></section>
 <section><div class="wrap"><div class="sec-head"><h2>{r["home_h"]}</h2><p>{r["home_p"]}</p></div>{RM.fence_banner(lang, "", btn)}
 <div style="margin-top:18px">{RM.rent_grid(lang, "", RM.CATS[1:4])}</div><div class="cta-row"><a class="btn btn-ghost" href="rentals/index.html">{r["all"]} →</a></div></div></section>
