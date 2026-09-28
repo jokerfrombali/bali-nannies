@@ -8,6 +8,7 @@ import sys; sys.path.insert(0, str(HERE))
 from areas import AREAS
 import trust_blocks as TBm
 import rentals as RM
+import prices as PR
 import json as _json
 AREA_CREDITS = _json.loads((HERE/"src/img/areas/credits.json").read_text(encoding="utf-8"))
 exec((HERE/"build_seo.py").read_text(encoding="utf-8").split("# ---------------------------------------------------------------- СЕМАНТИКА")[0], ns)
@@ -20,7 +21,7 @@ WA = "62XXXXXXXXXX"            # номер WhatsApp: 62…, без +
 EMAIL = "hello@example.com"
 DOMAIN = "https://[domain]"     # после покупки домена
 OUT = HERE/"site"
-CSS = (HERE/"src/style.css").read_text(encoding="utf-8") + TBm.CSS + RM.CSS
+CSS = (HERE/"src/style.css").read_text(encoding="utf-8") + TBm.CSS + RM.CSS + PR.CSS
 import hashlib
 CSS_V = hashlib.md5(CSS.encode()).hexdigest()[:8]
 WA_SVG = (HERE/"src/wa.svg").read_text(encoding="utf-8")
@@ -35,7 +36,7 @@ T = {
   wa_default="Hi! I'd like to book a nanny in Bali.",
   wa_service="Hi! I'm interested in: {s}. Dates: ",
   nav=["Services","Rentals","Areas","Prices","Safety","Guides"], safety_nav="Safety", home="Home",
-  svc=[("Hourly babysitter","Dinner out, spa, a surf lesson — from 3 hours."),("Full-day nanny","Beach, pool, naps and meals while you get a real holiday."),("Night nanny","Settling, feeds and night wakings so you can sleep."),("Newborn & baby care","Nannies experienced with babies under 12 months."),("Travel nanny","Joins your family on day trips and island hops."),("Hotel & villa babysitting","We come to your hotel or villa across Bali."),("Weddings & events","Kids' corner and sitters for celebrations."),("Long-term nanny","For expat families living in Bali.")],
+  svc=[("Hourly babysitter","Dinner out, spa, a surf lesson — from 5 hours."),("Full-day nanny","Beach, pool, naps and meals while you get a real holiday."),("Night nanny","Settling, feeds and night wakings so you can sleep."),("Newborn & baby care","Nannies experienced with babies under 12 months."),("Travel nanny","Joins your family on day trips and island hops."),("Hotel & villa babysitting","We come to your hotel or villa across Bali."),("Weddings & events","Kids' corner and sitters for celebrations."),("Long-term nanny","For expat families living in Bali.")],
   wa_btn="Chat on WhatsApp", wa_short="WhatsApp", book="Book on WhatsApp", see_prices="See prices", prices="Prices",
   title_home="Nanny & Babysitter in Bali — Sanur, Canggu, Ubud & more", desc_home="English-speaking, first-aid trained nannies and babysitters across Bali: Sanur, Canggu, Seminyak, Ubud, Uluwatu, Nusa Dua. Hotel & villa visits, night nannies, day trips. Book in minutes on WhatsApp.",
   eyebrow="Bali · Indonesia", h1="Trusted nannies for your family holiday in Bali",
@@ -65,7 +66,7 @@ T = {
   wa_default="Здравствуйте! Хочу забронировать няню на Бали.",
   wa_service="Здравствуйте! Интересует: {s}. Даты: ",
   nav=["Услуги","Прокат","Районы","Цены","Безопасность","Гайды"], safety_nav="Безопасность", home="Главная",
-  svc=[("Няня на час","Ужин, спа, урок сёрфинга — от 3 часов."),("Няня на весь день","Пляж, бассейн, сон и еда, пока у вас настоящий отпуск."),("Ночная няня","Укладывание, кормления и ночные пробуждения — а вы высыпаетесь."),("Няня для малыша","Няни с опытом ухода за детьми до года."),("Няня в поездки","Едет с семьёй на экскурсии и острова."),("Няня в отель или виллу","Приедем в ваш отель или виллу по всему Бали."),("Свадьбы и мероприятия","Детская зона и няни на праздники."),("Няня на длительный срок","Для семей, которые живут на Бали.")],
+  svc=[("Няня на час","Ужин, спа, урок сёрфинга — от 5 часов."),("Няня на весь день","Пляж, бассейн, сон и еда, пока у вас настоящий отпуск."),("Ночная няня","Укладывание, кормления и ночные пробуждения — а вы высыпаетесь."),("Няня для малыша","Няни с опытом ухода за детьми до года."),("Няня в поездки","Едет с семьёй на экскурсии и острова."),("Няня в отель или виллу","Приедем в ваш отель или виллу по всему Бали."),("Свадьбы и мероприятия","Детская зона и няни на праздники."),("Няня на длительный срок","Для семей, которые живут на Бали.")],
   wa_btn="Написать в WhatsApp", wa_short="WhatsApp", book="Забронировать в WhatsApp", see_prices="Цены", prices="Цены",
   title_home="Няня на Бали — Санур, Чангу, Убуд и другие районы", desc_home="Проверенные няни с сертификатом первой помощи по всему Бали: Санур, Чангу, Семиньяк, Убуд, Улувату, Нуса Дуа. Приезд в отель и виллу, ночные няни, поездки. Бронь за пару минут в WhatsApp.",
   eyebrow="Бали · Индонезия", h1="Надёжные няни для семейного отдыха на Бали",
@@ -269,14 +270,14 @@ b.addEventListener('click',play);v.addEventListener('click',()=>{{if(!document.b
     for s,i,(n,d) in zip(SERVICES,ICONS,t["svc"]):
         hm = "../../"
         page(f"services/{s}/", t["svc_title"].format(s=n), f"{t['svc_h1'].format(s=n)}: {d}", f"""<div class="wrap">{crumbs(hm,(t["services_h"],"services/"),(n,None))}
-<div class="hero" style="padding-top:32px"><div><span class="eyebrow">{i} {n}</span><h1>{t["svc_h1"].format(s=n)}</h1><p class="lead">{d}</p>
+<div class="hero" style="padding-top:32px"><div><span class="eyebrow">{i} {n}</span><h1>{t["svc_h1"].format(s=n)}</h1><p class="lead">{d}</p>{PR.price_line(s, lang)}{PR.js(lang) if s in PR.PRICES else ""}
 <div class="cta-row">{btn(t["check"], t["wa_service"].format(s=n))}<a class="btn btn-ghost" href="{hm}prices/index.html">{t["prices"]}</a></div></div>
 <div class="photo"><img src="{{ROOT}}img/{s}.jpg" alt="{n}" width="960" height="640"></div></div>
 <section><div class="sec-head"><h2>{t["how"]}</h2></div>{steps}</section><section>{TBm.guar_html(b)}</section><section>{TBm.bring_html(b)}</section><section><div class="sec-head"><h2>{t["faq_short"]}</h2></div>{faq}</section></div>""")
 
-    rows = "".join(f"<tr><td>{n}</td><td>[IDR —]</td><td>[—]</td></tr>" for n,_ in t["svc"])
+    rows = "".join(f"<tr><td>{n}</td><td>{PR.price_cells(sl, lang)[0]}</td><td>{PR.price_cells(sl, lang)[1]}</td></tr>" for sl,(n,_) in zip(SERVICES, t["svc"]))
     page("prices/", t["prices_t"], t["prices_p"], f"""<div class="wrap">{crumbs("../",(t["prices"],None))}<section><div class="sec-head"><h1>{t["prices_h"]}</h1><p>{t["prices_p"]}</p></div>
-<table class="price-table"><tr>{''.join(f'<th>{x}</th>' for x in t["th"])}</tr>{rows}</table><p class="note" style="margin-top:14px">{t["price_note"]}</p><div class="cta-row">{btn(t["quote"])}</div></section></div>""")
+{PR.cur_select(lang)}<table class="price-table"><tr>{''.join(f'<th>{x}</th>' for x in t["th"])}</tr>{rows}</table>{PR.js(lang)}<p class="note" style="margin-top:14px">{t["price_note"]}</p><div class="cta-row">{btn(t["quote"])}</div></section></div>""")
     page("how-it-works/", t["hiw_t"], t["hiw_d"], f'<div class="wrap">{crumbs("../",(t["how"],None))}<section><div class="sec-head"><h1>{t["how"]}</h1></div>{steps}</section><section>{TBm.meet_html(b, "{ROOT}")}</section><section>{TBm.check_html(b)}</section><section>{TBm.guar_html(b)}</section><div class="cta-row" style="justify-content:center;margin-bottom:64px">{btn()}</div></div>')
     page("safety/", t["safety_t"], t["safety_d"], f'<div class="wrap">{crumbs("../",(t["safety_nav"],None))}<section><div class="vet-band"><div class="sec-head"><h1 style="color:#fff">{t["safety_t"]}</h1><p>{b["vet_p"]}</p></div>{TBm.vet_html(b)}</div></section><section>{TBm.check_html(b)}</section><section>{TBm.guar_html(b)}</section></div><div class="wrap article" style="padding-top:0"><img class="art-img" src="{{ROOT}}img/safety.jpg" alt="{t["safety_t"]}" loading="lazy">' + "".join(f"<h2>{a}</h2><p>{b}</p>" for a,b in t["safety_body"]) + f"{btn()}</div>")
     page("faq/", t["faq_t"], t["faq_d"], f'<div class="wrap article">{crumbs("../",(t["faq_short"],None))}<h1>{t["faq_t"]}</h1>{faq}<div class="cta-row">{btn()}</div></div>')
