@@ -186,7 +186,7 @@ def build(lang):
     schema = f'<script type="application/ld+json">{{"@context":"https://schema.org","@type":"ChildCare","name":"{BRAND}","areaServed":[{AREA_LD}],"telephone":"+{WA}","url":"{DOMAIN}/{t["prefix"]}"}}</script>'
     page("", t["title_home"], t["desc_home"], f"""<div class="wrap hero hero-home"><div><h1>{t["h1"]}</h1><p class="lead">{t["lead"]}</p>
 <div class="cta-row">{btn(t["book"])}<a class="btn btn-ghost" href="prices/index.html">{t["see_prices"]}</a></div>
-<ul class="trust">{''.join(f'<li>{x}</li>' for x in b["hero_trust"])}</ul></div>
+<ul class="trust trust-ico">{''.join(f'<li><span class="ti" aria-hidden="true">{i}</span>{x}</li>' for i,x in zip(["🛡️","👋","🔄","💳"], b["hero_trust"]))}</ul></div>
 <div class="photo hero-video" id="heroVideo"><img class="hv-poster" src="{{ROOT}}img/hero-video-poster.jpg" alt="{VID[lang]['alt']}" width="480" height="848" fetchpriority="high">
 <video class="hv-video" muted loop playsinline webkit-playsinline preload="metadata" poster="{{ROOT}}img/hero-video-poster.jpg"><source src="{{ROOT}}video/hero.mp4" type="video/mp4"></video>
 <button class="hv-play" type="button" aria-label="{VID[lang]['play']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg><span>{VID[lang]['label']}</span></button><button class="hv-close" type="button" aria-label="Close">✕</button>
