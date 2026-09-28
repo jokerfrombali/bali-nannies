@@ -178,7 +178,7 @@ def build(lang):
 <div class="photo hero-video" id="heroVideo"><img class="hv-poster" src="{{ROOT}}img/hero-video-poster.jpg" alt="{VID[lang]['alt']}" width="480" height="848" fetchpriority="high">
 <video class="hv-video" muted loop playsinline preload="none" poster="{{ROOT}}img/hero-video-poster.jpg"><source src="{{ROOT}}video/hero.mp4" type="video/mp4"></video>
 <button class="hv-play" type="button" aria-label="{VID[lang]['play']}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg><span>{VID[lang]['label']}</span></button>
-<div class="chip">{t["chip"]}</div></div></div>
+</div></div>
 <script>(()=>{{const w=document.getElementById('heroVideo'),v=w.querySelector('video'),b=w.querySelector('.hv-play');
 const play=()=>{{w.classList.add('playing');v.play().catch(()=>w.classList.remove('playing'))}};
 b.addEventListener('click',play);v.addEventListener('click',()=>{{v.pause();w.classList.remove('playing')}});}})()</script>

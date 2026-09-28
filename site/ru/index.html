@@ -9,7 +9,7 @@
 <div class="photo hero-video" id="heroVideo"><img class="hv-poster" src="../img/hero-video-poster.jpg" alt="Наша няня с улыбающимся малышом на вилле на Бали" width="480" height="848" fetchpriority="high">
 <video class="hv-video" muted loop playsinline preload="none" poster="../img/hero-video-poster.jpg"><source src="../video/hero.mp4" type="video/mp4"></video>
 <button class="hv-play" type="button" aria-label="Смотреть видео"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg><span>Смотреть 30 сек</span></button>
-<div class="chip">🟢 Няня свободна сегодня вечером</div></div></div>
+</div></div>
 <script>(()=>{const w=document.getElementById('heroVideo'),v=w.querySelector('video'),b=w.querySelector('.hv-play');
 const play=()=>{w.classList.add('playing');v.play().catch(()=>w.classList.remove('playing'))};
 b.addEventListener('click',play);v.addEventListener('click',()=>{v.pause();w.classList.remove('playing')});})()</script>

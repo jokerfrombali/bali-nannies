@@ -9,7 +9,7 @@
 <div class="photo hero-video" id="heroVideo"><img class="hv-poster" src="img/hero-video-poster.jpg" alt="Our nanny with a smiling baby at a Bali villa" width="480" height="848" fetchpriority="high">
 <video class="hv-video" muted loop playsinline preload="none" poster="img/hero-video-poster.jpg"><source src="video/hero.mp4" type="video/mp4"></video>
 <button class="hv-play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.2-6.5a1 1 0 0 0 0-1.7L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg><span>Watch 30 sec</span></button>
-<div class="chip">🟢 Nanny available tonight</div></div></div>
+</div></div>
 <script>(()=>{const w=document.getElementById('heroVideo'),v=w.querySelector('video'),b=w.querySelector('.hv-play');
 const play=()=>{w.classList.add('playing');v.play().catch(()=>w.classList.remove('playing'))};
 b.addEventListener('click',play);v.addEventListener('click',()=>{v.pause();w.classList.remove('playing')});})()</script>
